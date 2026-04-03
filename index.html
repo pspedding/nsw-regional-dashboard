@@ -332,11 +332,15 @@ sa2Sel.addEventListener('change', () => selectSA2(sa2Sel.value));
 const lgaSel = document.getElementById('lga-select');
 lgaSel.addEventListener('change', () => {
   const lgaCode = lgaSel.value;
-  // Filter SA2 dropdown
-  Array.from(sa2Sel.options).forEach(opt => {
-    if (!opt.value) return;
-    const row = sa2Map[opt.value];
-    opt.hidden = lgaCode && row && String(row['LGA Code']) !== lgaCode;
+  // Rebuild SA2 dropdown for selected LGA
+  const filtered = lgaCode
+    ? SA2_DATA.filter(r => String(r['LGA Code']) === lgaCode)
+    : SA2_DATA;
+  sa2Sel.innerHTML = '<option value="">— Click map or select —</option>';
+  [...filtered].sort((a,b)=>a['SA2 Name'].localeCompare(b['SA2 Name'])).forEach(r => {
+    const o = document.createElement('option');
+    o.value = String(r['SA2 Code']); o.textContent = r['SA2 Name'];
+    sa2Sel.appendChild(o);
   });
   // Re-render choropleth with filtered SA2s highlighted
   updateChoropleth(lgaCode);
