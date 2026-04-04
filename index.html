@@ -857,13 +857,15 @@ function renderAtAGlance(row, scopeData, scopeLabel) {
     const pct = pctRank(vals, v);
     const formatted = fmt(v);
 
-    if (pct <= 10) {
-      const qualifier = lowIsBad ? '⚠️' : '📉';
-      findings.push({ icon: qualifier, text: `Has the <strong>lowest</strong> ${label} in ${scopeLabel} at ${formatted}.` });
+    const isLowest = vals.length > 1 && v === Math.min(...vals);
+    const isHighest = vals.length > 1 && v === Math.max(...vals);
+    if (isLowest) {
+      const icon = lowIsBad ? '⚠️' : '📉';
+      findings.push({ icon, text: `Has the <strong>lowest</strong> ${label} in ${scopeLabel} at ${formatted}.` });
     } else if (pct <= 25) {
-      const qualifier = lowIsBad ? '⚠️' : '📉';
-      findings.push({ icon: qualifier, text: `Has a <strong>low</strong> ${label} at ${formatted} (bottom 25% of ${scopeLabel}).` });
-    } else if (pct >= 90) {
+      const icon = lowIsBad ? '⚠️' : '📉';
+      findings.push({ icon, text: `Has a <strong>low</strong> ${label} at ${formatted} (bottom 25% of ${scopeLabel}).` });
+    } else if (isHighest) {
       findings.push({ icon: '📈', text: `Has the <strong>highest</strong> ${label} in ${scopeLabel} at ${formatted}.` });
     } else if (pct >= 75) {
       findings.push({ icon: '📈', text: `Has a <strong>high</strong> ${label} at ${formatted} (top 25% of ${scopeLabel}).` });
