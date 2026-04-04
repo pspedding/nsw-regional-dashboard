@@ -54,11 +54,14 @@
     .compare-controls label { font-size:0.72rem; color:#666; display:block; margin-bottom:4px; }
 
     /* At a glance */
-    .glance-wrap { padding:10px 14px; border-top:1px solid #eee; }
-    .glance-wrap h3 { font-size:0.72rem; text-transform:uppercase; color:#666; letter-spacing:.05em; margin-bottom:7px; }
+    .glance-wrap { border-top:1px solid #eee; }
+    .glance-header { display:flex; justify-content:space-between; align-items:center; padding:8px 14px; cursor:pointer; background:#f7f9fc; }
+    .glance-header:hover { background:#eef2f7; }
+    .glance-header h3 { font-size:0.72rem; text-transform:uppercase; color:#666; letter-spacing:.05em; }
+    #glance-body { padding:8px 14px 12px; }
     .glance-item { display:flex; gap:6px; font-size:0.78rem; line-height:1.5; margin-bottom:5px; color:#333; }
     .glance-item span strong { color:#003366; }
-    #glance-panel { min-height:30px; }
+    #glance-panel { min-height:20px; }
 
     /* Info modal */
     .info-overlay {
@@ -189,8 +192,13 @@
     </div>
 
     <div class="glance-wrap" id="glance-wrap" style="display:none">
-      <h3>At a Glance</h3>
-      <div id="glance-panel"></div>
+      <div class="glance-header" onclick="toggleGlance()">
+        <h3 style="margin:0">At a Glance</h3>
+        <span id="glance-toggle-icon" style="font-size:0.8rem;color:#666">▲</span>
+      </div>
+      <div id="glance-body">
+        <div id="glance-panel"></div>
+      </div>
     </div>
 
   </div>
@@ -677,6 +685,13 @@ buildInfoTable();
 let compareMode = false;
 let compareSA2Code = null;
 let compareChart = null;
+
+let glanceOpen = true;
+function toggleGlance() {
+  glanceOpen = !glanceOpen;
+  document.getElementById('glance-body').style.display = glanceOpen ? 'block' : 'none';
+  document.getElementById('glance-toggle-icon').textContent = glanceOpen ? '▲' : '▼';
+}
 
 function initCompare() {
   // Populate compare dropdown
