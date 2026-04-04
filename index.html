@@ -45,6 +45,21 @@
     #radarChart { max-height: 200px; }
     .placeholder { color: #aaa; font-style: italic; font-size: 0.82rem; padding: 16px 0; }
 
+    /* Bar chart tabs */
+    .chart-tabs { display:flex; border-bottom:2px solid #eee; padding:0 14px; background:white; }
+    .chart-tab { padding:8px 14px; font-size:0.8rem; cursor:pointer; border:none; background:none; color:#666; border-bottom:2px solid transparent; margin-bottom:-2px; }
+    .chart-tab.tab-active { color:#003366; font-weight:600; border-bottom-color:#003366; }
+    .compare-controls { padding:8px 14px; background:#f7f9fc; border-bottom:1px solid #eee; display:none; }
+    .compare-controls select { width:100%; padding:5px 8px; border:1px solid #ccd; border-radius:5px; font-size:0.82rem; }
+    .compare-controls label { font-size:0.72rem; color:#666; display:block; margin-bottom:4px; }
+
+    /* At a glance */
+    .glance-wrap { padding:10px 14px; border-top:1px solid #eee; }
+    .glance-wrap h3 { font-size:0.72rem; text-transform:uppercase; color:#666; letter-spacing:.05em; margin-bottom:7px; }
+    .glance-item { display:flex; gap:6px; font-size:0.78rem; line-height:1.5; margin-bottom:5px; color:#333; }
+    .glance-item span strong { color:#003366; }
+    #glance-panel { min-height:30px; }
+
     /* Info modal */
     .info-overlay {
       display: none; position: fixed; inset: 0;
@@ -182,6 +197,14 @@
     <div class="bar-panel-header">
       SA2 Ranking
       <span id="bar-title">Select an indicator</span>
+    </div>
+    <div class="chart-tabs">
+      <button class="chart-tab tab-active" id="ranked-tab">📊 Ranked</button>
+      <button class="chart-tab" id="compare-tab">⚖️ Compare</button>
+    </div>
+    <div class="compare-controls" id="compare-controls">
+      <label>Compare selected SA2 against:</label>
+      <select id="sa2-compare"><option value="">— Select SA2 —</option></select>
     </div>
     <div id="barChartWrap">
       <canvas id="barChart"></canvas>
@@ -355,6 +378,7 @@ lgaSel.addEventListener('change', () => {
     if (bounds.isValid()) map.fitBounds(bounds, {padding:[20,20]});
   } else if (geojsonLayer) {
     map.fitBounds(geojsonLayer.getBounds());
+    initCompare();
   }
 });
 
@@ -504,6 +528,14 @@ function selectSA2(code) {
     }</div>`;
 
   updateRadar(row);
+  // At a glance
+  const lgaCode2 = document.getElementById('lga-select') ? document.getElementById('lga-select').value : '';
+  const scope = lgaCode2 ? SA2_DATA.filter(r => String(r['LGA Code']) === lgaCode2) : SA2_DATA;
+  const scopeLabel = lgaCode2 ? (row['LGA Name'] || 'the LGA') : 'the region';
+  document.getElementById('glance-wrap').style.display = 'block';
+  renderAtAGlance(row, scope, scopeLabel);
+  // Compare
+  if (compareMode) renderCompareChart();
 
   // Highlight on map
   if (geojsonLayer) {
@@ -634,6 +666,199 @@ function toggleInfo() {
 
 buildInfoTable();
 
+// ── COMPARE MODE ────────────────────────────────────────────────────────
+// Completely isolated — no modifications to existing selectSA2 / updateBarChart
+let compareMode = false;
+let compareSA2Code = null;
+let compareChart = null;
+
+function initCompare() {
+  // Populate compare dropdown
+  const sel = document.getElementById('sa2-compare');
+  function rebuildCompareDropdown(lgaCode) {
+    sel.innerHTML = '<option value="">— Select SA2 to compare —</option>';
+    const filtered = lgaCode
+      ? SA2_DATA.filter(r => String(r['LGA Code']) === lgaCode)
+      : SA2_DATA;
+    [...filtered].sort((a,b) => a['SA2 Name'].localeCompare(b['SA2 Name'])).forEach(r => {
+      const o = document.createElement('option');
+      o.value = String(r['SA2 Code']);
+      o.textContent = r['SA2 Name'];
+      sel.appendChild(o);
+    });
+  }
+  rebuildCompareDropdown('');
+
+  // Rebuild when LGA filter changes
+  const lgaSel = document.getElementById('lga-select');
+  if (lgaSel) lgaSel.addEventListener('change', () => rebuildCompareDropdown(lgaSel.value));
+
+  sel.addEventListener('change', () => {
+    compareSA2Code = sel.value || null;
+    if (compareMode) renderCompareChart();
+  });
+
+  document.getElementById('compare-tab').addEventListener('click', () => {
+    compareMode = true;
+    document.getElementById('compare-tab').classList.add('tab-active');
+    document.getElementById('ranked-tab').classList.remove('tab-active');
+    document.getElementById('compare-controls').style.display = 'block';
+    if (selectedSA2Code) renderCompareChart();
+    else {
+      document.getElementById('bar-title').textContent = 'Select an SA2 on the map to start comparing';
+    }
+  });
+
+  document.getElementById('ranked-tab').addEventListener('click', () => {
+    compareMode = false;
+    document.getElementById('ranked-tab').classList.add('tab-active');
+    document.getElementById('compare-tab').classList.remove('tab-active');
+    document.getElementById('compare-controls').style.display = 'none';
+    if (compareChart) { compareChart.destroy(); compareChart = null; }
+    const lgaCode = document.getElementById('lga-select') ? document.getElementById('lga-select').value : '';
+    updateBarChart(lgaCode);
+  });
+}
+
+function renderCompareChart() {
+  if (!selectedSA2Code) return;
+  const rowA = sa2Map[selectedSA2Code];
+  const rowB = compareSA2Code ? sa2Map[compareSA2Code] : null;
+
+  const lgaCode = document.getElementById('lga-select') ? document.getElementById('lga-select').value : '';
+  const scopeData = lgaCode ? SA2_DATA.filter(r => String(r['LGA Code']) === lgaCode) : SA2_DATA;
+
+  // Only indicators with a value in rowA
+  const indicators = Object.keys(INDICATOR_LABELS).filter(k => {
+    const v = rowA[k]; return v != null && !isNaN(v);
+  });
+
+  const labelsArr = indicators.map(k => INDICATOR_LABELS[k].label);
+  const pctA = indicators.map(k => {
+    const all = scopeData.map(r => r[k]).filter(v => v != null && !isNaN(v));
+    return pctRank(all, rowA[k]);
+  });
+  const pctB = rowB ? indicators.map(k => {
+    const v = rowB[k];
+    if (v == null || isNaN(v)) return null;
+    const all = scopeData.map(r => r[k]).filter(v => v != null && !isNaN(v));
+    return pctRank(all, v);
+  }) : null;
+
+  const nameA = rowA['SA2 Name'];
+  const nameB = rowB ? rowB['SA2 Name'] : null;
+  document.getElementById('bar-title').textContent = nameB
+    ? `${nameA} vs ${nameB} — percentile rank within ${lgaCode ? rowA['LGA Name'] : 'region'}`
+    : `${nameA} — select a second SA2 to compare`;
+
+  const height = Math.max(500, indicators.length * 26);
+  const canvas = document.getElementById('barChart');
+  canvas.style.height = height + 'px';
+
+  const datasets = [{
+    label: nameA,
+    data: pctA,
+    backgroundColor: 'rgba(0,51,102,0.75)',
+    borderColor: '#003366',
+    borderWidth: 1,
+  }];
+  if (pctB) datasets.push({
+    label: nameB,
+    data: pctB,
+    backgroundColor: 'rgba(215,48,39,0.65)',
+    borderColor: '#d73027',
+    borderWidth: 1,
+  });
+
+  if (compareChart) compareChart.destroy();
+  if (barChart) { barChart.destroy(); barChart = null; }
+
+  compareChart = new Chart(canvas, {
+    type: 'bar',
+    data: { labels: labelsArr, datasets },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: !!rowB, position: 'top', labels: { font: { size: 10 } } },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const k = indicators[ctx.dataIndex];
+              const meta = INDICATOR_LABELS[k];
+              const row = ctx.datasetIndex === 0 ? rowA : rowB;
+              const raw = row ? row[k] : null;
+              const formatted = (raw != null && !isNaN(raw)) ? meta.fmt(raw) : 'N/A';
+              return `${ctx.dataset.label}: ${formatted} (${ctx.raw}th pctile)`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: { min: 0, max: 100, ticks: { font: { size: 9 } }, title: { display: true, text: 'Percentile rank (0=lowest, 100=highest)', font: { size: 9 } } },
+        y: { ticks: { font: { size: 9 } } }
+      }
+    }
+  });
+}
+
+
+// ── AT A GLANCE ────────────────────────────────────────────────────────
+// Generates plain-English summary for a selected SA2
+// Pure function — no side effects outside of rendering to #glance-panel
+
+const GLANCE_CHECKS = [
+  { key: 'Unemployment Rate (%)',                           label: 'unemployment rate',              fmt: v => v.toFixed(1)+'%',                   lowIsBad: true  },
+  { key: 'House Price (Current)',                           label: 'median house price',             fmt: v => '$'+Math.round(v/1000)+'k',          lowIsBad: false },
+  { key: 'Index of Relative Socio-economic Disadvantage ', label: 'socioeconomic disadvantage index', fmt: v => v.toFixed(0),                      lowIsBad: true  },
+  { key: 'Median Household Income',                        label: 'median household income',        fmt: v => '$'+v.toLocaleString()+'/wk',        lowIsBad: true  },
+  { key: 'Airbnb Active Listings',                         label: 'Airbnb active listings',         fmt: v => v.toLocaleString(),                  lowIsBad: false },
+  { key: 'Total Businesses',                               label: 'business count',                 fmt: v => v.toLocaleString(),                  lowIsBad: false },
+  { key: '% Under 20',                                     label: 'share of population under 20',   fmt: v => v.toFixed(1)+'%',                   lowIsBad: false },
+  { key: 'Disability Support Pension',                     label: 'disability support recipients',  fmt: v => v.toLocaleString(),                  lowIsBad: false },
+  { key: 'JobSeeker Payment',                              label: 'jobseeker recipients',           fmt: v => v.toLocaleString(),                  lowIsBad: false },
+  { key: 'Visitor Spend',                                  label: 'visitor retail spend',           fmt: v => '$'+Math.round(v/1e6).toFixed(1)+'M', lowIsBad: false },
+];
+
+function renderAtAGlance(row, scopeData, scopeLabel) {
+  const panel = document.getElementById('glance-panel');
+  if (!panel) return;
+
+  const name = row['SA2 Name'];
+  const findings = [];
+
+  GLANCE_CHECKS.forEach(({ key, label, fmt, lowIsBad }) => {
+    const v = row[key];
+    if (v == null || isNaN(v)) return;
+    const vals = scopeData.map(r => r[key]).filter(x => x != null && !isNaN(x));
+    if (vals.length < 3) return;
+    const pct = pctRank(vals, v);
+    const formatted = fmt(v);
+
+    if (pct <= 10) {
+      const qualifier = lowIsBad ? '⚠️' : '📉';
+      findings.push({ icon: qualifier, text: `Has the <strong>lowest</strong> ${label} in ${scopeLabel} at ${formatted}.` });
+    } else if (pct <= 25) {
+      const qualifier = lowIsBad ? '⚠️' : '📉';
+      findings.push({ icon: qualifier, text: `Has a <strong>low</strong> ${label} at ${formatted} (bottom 25% of ${scopeLabel}).` });
+    } else if (pct >= 90) {
+      findings.push({ icon: '📈', text: `Has the <strong>highest</strong> ${label} in ${scopeLabel} at ${formatted}.` });
+    } else if (pct >= 75) {
+      findings.push({ icon: '📈', text: `Has a <strong>high</strong> ${label} at ${formatted} (top 25% of ${scopeLabel}).` });
+    }
+  });
+
+  if (!findings.length) {
+    panel.innerHTML = `<p style="color:#888;font-style:italic;font-size:0.8rem">${name} is close to the regional average across all indicators.</p>`;
+  } else {
+    panel.innerHTML = findings.map(f =>
+      `<div class="glance-item">${f.icon} <span>${f.text}</span></div>`
+    ).join('');
+  }
+}
+
+
 // ── INIT ────────────────────────────────────────────────────────────────
 let SA2_GEOJSON;
 const barWrap = document.getElementById('barChartWrap');
@@ -646,6 +871,7 @@ fetch('all_lgas_sa2.geojson')
     updateChoropleth();
     updateBarChart();
     map.fitBounds(geojsonLayer.getBounds());
+    initCompare();
   });
 </script>
 </body>
