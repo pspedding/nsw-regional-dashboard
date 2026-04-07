@@ -53,6 +53,21 @@
     .compare-controls select { width:100%; padding:5px 8px; border:1px solid #ccd; border-radius:5px; font-size:0.82rem; }
     .compare-controls label { font-size:0.72rem; color:#666; display:block; margin-bottom:4px; }
 
+    /* Trend arrows */
+    .trend-up   { color:#16a34a; font-size:0.85rem; margin-left:3px; }
+    .trend-down { color:#dc2626; font-size:0.85rem; margin-left:3px; }
+    .trend-flat { color:#999;    font-size:0.75rem; margin-left:3px; }
+
+    /* Scatter plot */
+    .scatter-tab-btn { padding:8px 16px; font-size:0.82rem; cursor:pointer; border:none; background:#eee; border-radius:6px 6px 0 0; margin-right:4px; color:#555; }
+    .scatter-tab-btn.active { background:#003366; color:white; }
+    #scatter-wrap { display:none; grid-column:2; grid-row:1/3; background:white; flex-direction:column; }
+    #scatter-wrap.visible { display:flex; }
+    .scatter-header { padding:12px 16px; border-bottom:1px solid #eee; display:flex; gap:12px; align-items:center; }
+    .scatter-header label { font-size:0.78rem; color:#666; }
+    .scatter-header select { padding:5px 8px; border:1px solid #ccd; border-radius:5px; font-size:0.82rem; }
+    #scatterChart { flex:1; padding:12px; }
+
     /* At a glance */
     .glance-wrap { border-top:1px solid #eee; }
     .glance-header { display:flex; justify-content:space-between; align-items:center; padding:8px 14px; cursor:pointer; background:#f7f9fc; }
@@ -151,7 +166,11 @@
     <h1>NSW Hunter &amp; Central Coast — SA2 Economic Dashboard</h1>
     <span>Prototype v0.1 · For internal use only</span>
   </div>
-  <button id="info-btn" onclick="toggleInfo()" title="Indicator metadata" style="margin-left:auto;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.4);color:white;border-radius:50%;width:32px;height:32px;font-size:1rem;cursor:pointer;flex-shrink:0;">ℹ</button>
+  <div style="display:flex;gap:6px;margin-left:auto;align-items:center">
+    <button class="scatter-tab-btn active" id="map-tab-btn" onclick="showView('map')">🗺 Map</button>
+    <button class="scatter-tab-btn" id="scatter-tab-btn" onclick="showView('scatter')">⚬ Scatter</button>
+    <button id="info-btn" onclick="toggleInfo()" title="Indicator metadata" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.4);color:white;border-radius:50%;width:32px;height:32px;font-size:1rem;cursor:pointer;flex-shrink:0;">ℹ</button>
+  </div>
 </header>
 
 <div class="layout">
@@ -225,6 +244,18 @@
     </div>
   </div>
 
+</div>
+
+<!-- ── Scatter Plot Panel ── -->
+<div id="scatter-wrap">
+  <div class="scatter-header">
+    <label>X-axis:</label>
+    <select id="scatter-x"></select>
+    <label style="margin-left:12px">Y-axis:</label>
+    <select id="scatter-y"></select>
+    <span id="scatter-info" style="margin-left:auto;font-size:0.75rem;color:#888"></span>
+  </div>
+  <div id="scatterChart"><canvas id="scatterCanvas"></canvas></div>
 </div>
 
 <!-- ── Info Modal ── -->
@@ -356,7 +387,13 @@ Object.entries(cats).forEach(([cat, items]) => {
 });
 selectedIndicator = Object.keys(INDICATOR_LABELS)[0];
 indSel.value = selectedIndicator;
-indSel.addEventListener('change', () => { selectedIndicator = indSel.value; const lga = document.getElementById('lga-select').value; updateChoropleth(lga); updateBarChart(lga); });
+indSel.addEventListener('change', () => {
+  selectedIndicator = indSel.value;
+  const lga = document.getElementById('lga-select').value;
+  updateChoropleth(lga); updateBarChart(lga);
+  const xSel = document.getElementById('scatter-x');
+  if (xSel) xSel.value = selectedIndicator;
+});
 
 // ── SA2 SELECT ────────────────────────────────────────────────────────
 const sa2Sel = document.getElementById('sa2-select');
@@ -393,6 +430,8 @@ lgaSel.addEventListener('change', () => {
   } else if (geojsonLayer) {
     map.fitBounds(geojsonLayer.getBounds());
     initCompare();
+    initScatter();
+    applyUrlParams();
   }
 });
 
@@ -537,7 +576,12 @@ function selectSA2(code) {
       Object.entries(INDICATOR_LABELS).map(([key,meta]) => {
         const v = row[key];
         const disp = (v!=null&&!isNaN(v)) ? meta.fmt(v) : '—';
-        return `<div class="kpi-card"><div class="label">${meta.label}</div><div class="value">${disp}</div></div>`;
+        const trendKey = 'trend_' + key;
+        const trend = row[trendKey];
+        const trendHtml = trend === 'Up' ? '<span class="trend-up">▲</span>'
+          : trend === 'Down' ? '<span class="trend-down">▼</span>'
+          : trend === 'Flat' ? '<span class="trend-flat">→</span>' : '';
+        return `<div class="kpi-card"><div class="label">${meta.label}</div><div class="value">${disp}${trendHtml}</div></div>`;
       }).join('')
     }</div>`;
 
@@ -882,6 +926,122 @@ function renderAtAGlance(row, scopeData, scopeLabel) {
 }
 
 
+
+// ── VIEW TOGGLE (Map / Scatter) ────────────────────────────────────────
+function showView(view) {
+  const mapEl = document.getElementById('map');
+  const barPanel = document.querySelector('.bar-panel');
+  const scatterWrap = document.getElementById('scatter-wrap');
+  document.getElementById('map-tab-btn').classList.toggle('active', view === 'map');
+  document.getElementById('scatter-tab-btn').classList.toggle('active', view === 'scatter');
+  if (view === 'map') {
+    mapEl.style.display = '';
+    barPanel.style.display = '';
+    scatterWrap.classList.remove('visible');
+  } else {
+    mapEl.style.display = 'none';
+    barPanel.style.display = 'none';
+    scatterWrap.classList.add('visible');
+    renderScatter();
+  }
+}
+
+// ── SCATTER PLOT ───────────────────────────────────────────────────────
+let scatterChart = null;
+
+function initScatter() {
+  const xSel = document.getElementById('scatter-x');
+  const ySel = document.getElementById('scatter-y');
+  const keys = Object.keys(INDICATOR_LABELS);
+  keys.forEach((k, i) => {
+    const mx = document.createElement('option'); mx.value = k; mx.textContent = INDICATOR_LABELS[k].label; xSel.appendChild(mx);
+    const my = document.createElement('option'); my.value = k; my.textContent = INDICATOR_LABELS[k].label; ySel.appendChild(my);
+  });
+  // Default Y to second indicator
+  if (ySel.options.length > 1) ySel.selectedIndex = 1;
+  xSel.addEventListener('change', renderScatter);
+  ySel.addEventListener('change', renderScatter);
+}
+
+function renderScatter() {
+  const xKey = document.getElementById('scatter-x').value;
+  const yKey = document.getElementById('scatter-y').value;
+  const lgaCode = document.getElementById('lga-select') ? document.getElementById('lga-select').value : '';
+  const scope = lgaCode ? SA2_DATA.filter(r => String(r['LGA Code']) === lgaCode) : SA2_DATA;
+
+  // Sync X to current map indicator
+  const xSel = document.getElementById('scatter-x');
+  if (selectedIndicator && xSel.value !== selectedIndicator) {
+    xSel.value = selectedIndicator;
+  }
+
+  const xMeta = INDICATOR_LABELS[xSel.value] || { label: xSel.value, fmt: v => v };
+  const yMeta = INDICATOR_LABELS[document.getElementById('scatter-y').value] || { label: document.getElementById('scatter-y').value, fmt: v => v };
+  const xK = xSel.value, yK = document.getElementById('scatter-y').value;
+
+  const points = scope
+    .filter(r => r[xK] != null && !isNaN(r[xK]) && r[yK] != null && !isNaN(r[yK]))
+    .map(r => ({
+      x: r[xK], y: r[yK],
+      label: r['SA2 Name'],
+      lga: r['LGA Name'],
+      selected: String(r['SA2 Code']) === selectedSA2Code,
+    }));
+
+  document.getElementById('scatter-info').textContent = `${points.length} SA2s plotted`;
+
+  const bgColors = points.map(p => p.selected ? '#ff6600' : 'rgba(0,51,102,0.5)');
+  const radii = points.map(p => p.selected ? 8 : 5);
+
+  if (scatterChart) scatterChart.destroy();
+  scatterChart = new Chart(document.getElementById('scatterCanvas'), {
+    type: 'scatter',
+    data: { datasets: [{ data: points.map(p => ({x:p.x, y:p.y})), backgroundColor: bgColors, pointRadius: radii, pointHoverRadius: 8 }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const p = points[ctx.dataIndex];
+              return [`${p.label} (${p.lga})`, `${xMeta.label}: ${xMeta.fmt(ctx.raw.x)}`, `${yMeta.label}: ${yMeta.fmt(ctx.raw.y)}`];
+            }
+          }
+        }
+      },
+      scales: {
+        x: { title: { display: true, text: xMeta.label } },
+        y: { title: { display: true, text: yMeta.label } }
+      },
+      onClick: (e, elements) => {
+        if (elements.length) {
+          const p = points[elements[0].index];
+          const row = SA2_DATA.find(r => r['SA2 Name'] === p.label);
+          if (row) selectSA2(String(row['SA2 Code']));
+        }
+      }
+    }
+  });
+}
+
+// ── URL PARAMS ─────────────────────────────────────────────────────────
+function applyUrlParams() {
+  const params = new URLSearchParams(window.location.search);
+  const lgaParam = params.get('lga') || params.get('LGA');
+  if (!lgaParam) return;
+  const lgaSel = document.getElementById('lga-select');
+  if (!lgaSel) return;
+  // Match by name (case-insensitive)
+  const opt = Array.from(lgaSel.options).find(o =>
+    o.textContent.toLowerCase() === lgaParam.toLowerCase()
+  );
+  if (opt) {
+    lgaSel.value = opt.value;
+    lgaSel.dispatchEvent(new Event('change'));
+  }
+}
+
 // ── INIT ────────────────────────────────────────────────────────────────
 let SA2_GEOJSON;
 const barWrap = document.getElementById('barChartWrap');
@@ -895,6 +1055,8 @@ fetch('all_lgas_sa2.geojson')
     updateBarChart();
     map.fitBounds(geojsonLayer.getBounds());
     initCompare();
+    initScatter();
+    applyUrlParams();
   });
 </script>
 </body>
