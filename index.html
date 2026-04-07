@@ -22,8 +22,11 @@
     .layout {
       display: grid;
       grid-template-columns: 300px 1fr 320px;
+      grid-template-rows: auto 1fr;
       height: calc(100vh - 50px);
     }
+    .sidebar { grid-row: 1 / 3; }
+    .bar-panel { grid-row: 1 / 3; }
 
     /* ── Sidebar ── */
     .sidebar {
@@ -59,7 +62,6 @@
     .trend-flat { color:#999;    font-size:0.75rem; margin-left:3px; }
 
     /* Scatter plot */
-    .view-bar { display:flex; justify-content:space-between; align-items:center; background:#f0f4f8; border-bottom:2px solid #dde; padding:6px 16px; }
     .view-btn { padding:6px 14px; font-size:0.82rem; cursor:pointer; border:1px solid #ccd; background:white; border-radius:5px; margin-right:4px; color:#555; }
     .view-btn.active { background:#003366; color:white; border-color:#003366; }
     #scatter-wrap { display:none; position:absolute; inset:0; background:white; flex-direction:column; z-index:10; }
@@ -165,7 +167,7 @@
 <header>
   <div>
     <h1>NSW Hunter &amp; Central Coast — SA2 Economic Dashboard</h1>
-    <span>Prototype v0.1 · For internal use only</span>
+    <span>Prototype v0.9 · For internal use only</span>
   </div>
   <button id="info-btn" onclick="toggleInfo()" title="Indicator metadata" style="margin-left:auto;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.4);color:white;border-radius:50%;width:32px;height:32px;font-size:1rem;cursor:pointer;flex-shrink:0;">ℹ</button>
 </header>
@@ -227,6 +229,7 @@
 
   </div>
 
+  <!-- ── Map/Scatter Toggle ── -->
   <!-- ── Map ── -->
   <div style="position:relative;grid-column:2;grid-row:1/3">
     <div id="map" style="position:absolute;inset:0"></div>
@@ -236,7 +239,7 @@
         <label style="margin-left:12px">Y-axis:</label><select id="scatter-y"></select>
         <span id="scatter-info" style="margin-left:auto;font-size:0.75rem;color:#888"></span>
       </div>
-      <div style="flex:1;position:relative;min-height:0"><canvas id="scatterCanvas" style="position:absolute;inset:0;width:100%!important;height:100%!important"></canvas></div>
+      <div style="flex:1;overflow:hidden;padding:8px 8px 0"><canvas id="scatterCanvas"></canvas></div>
     </div>
   </div>
 
@@ -996,6 +999,9 @@ function renderScatter() {
   const radii = points.map(p => p.selected ? 8 : 5);
 
   if (scatterChart) scatterChart.destroy();
+  // Abbreviated labels for dots (suburb first word only, for larger dots)
+  const shortLabels = points.map(p => p.label.split(' - ')[0].split(' (')[0]);
+  
   scatterChart = new Chart(document.getElementById('scatterCanvas'), {
     type: 'scatter',
     data: { datasets: [{ data: points.map(p => ({x:p.x, y:p.y})), backgroundColor: bgColors, pointRadius: radii, pointHoverRadius: 8 }] },
@@ -1013,8 +1019,16 @@ function renderScatter() {
         }
       },
       scales: {
-        x: { title: { display: true, text: xMeta.label } },
-        y: { title: { display: true, text: yMeta.label } }
+        x: {
+          title: { display: true, text: xMeta.label, font: { size: 11 } },
+          ticks: { font: { size: 10 } },
+          grid: { color: '#eee' }
+        },
+        y: {
+          title: { display: true, text: yMeta.label, font: { size: 11 } },
+          ticks: { font: { size: 10 } },
+          grid: { color: '#eee' }
+        }
       },
       onClick: (e, elements) => {
         if (elements.length) {
@@ -1023,7 +1037,26 @@ function renderScatter() {
           if (row) selectSA2(String(row['SA2 Code']));
         }
       }
-    }
+    },
+    plugins: [{
+      id: 'scatterLabels',
+      afterDatasetsDraw(chart) {
+        const ctx = chart.ctx;
+        const ds = chart.data.datasets[0];
+        const meta = chart.getDatasetMeta(0);
+        ctx.save();
+        ctx.font = '9px Segoe UI, sans-serif';
+        ctx.fillStyle = '#333';
+        ctx.textAlign = 'center';
+        meta.data.forEach((pt, i) => {
+          const r = ds.pointRadius instanceof Array ? ds.pointRadius[i] : ds.pointRadius;
+          if (r >= 7 || points[i].selected) {  // label selected + larger dots
+            ctx.fillText(shortLabels[i], pt.x, pt.y - r - 3);
+          }
+        });
+        ctx.restore();
+      }
+    }]
   });
 }
 
