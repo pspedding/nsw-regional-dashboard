@@ -25,8 +25,8 @@
       grid-template-rows: auto 1fr;
       height: calc(100vh - 50px);
     }
-    .sidebar { grid-row: 1 / 3; }
-    .bar-panel { grid-row: 1 / 3; }
+    .sidebar { grid-column:1; grid-row: 1 / 3; }
+    .bar-panel { grid-column:3; grid-row: 1 / 3; }
 
     /* ── Sidebar ── */
     .sidebar {
@@ -172,14 +172,6 @@
   <button id="info-btn" onclick="toggleInfo()" title="Indicator metadata" style="margin-left:auto;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.4);color:white;border-radius:50%;width:32px;height:32px;font-size:1rem;cursor:pointer;flex-shrink:0;">ℹ</button>
 </header>
 
-<div class="view-bar">
-  <div class="view-bar-left">
-    <button class="view-btn active" id="map-tab-btn" onclick="showView('map')">🗺 Map view</button>
-    <button class="view-btn" id="scatter-tab-btn" onclick="showView('scatter')">⬤ Scatter plot</button>
-  </div>
-  <div class="view-bar-right"></div>
-</div>
-
 <div class="layout">
 
   <!-- ── Sidebar ── -->
@@ -230,16 +222,23 @@
   </div>
 
   <!-- ── Map/Scatter Toggle ── -->
+  <div style="grid-column:2;grid-row:1;display:flex;justify-content:center;align-items:center;gap:8px;background:#f0f4f8;border-bottom:2px solid #dde;padding:7px;">
+    <button class="view-btn active" id="map-tab-btn" onclick="showView('map')">🗺 Map View</button>
+    <button class="view-btn" id="scatter-tab-btn" onclick="showView('scatter')">⬤ Scatter Plot</button>
+  </div>
+
   <!-- ── Map ── -->
-  <div style="position:relative;grid-column:2;grid-row:1/3">
+  <div style="position:relative;grid-column:2;grid-row:2">
     <div id="map" style="position:absolute;inset:0"></div>
-    <div id="scatter-wrap">
+    <div id="scatter-wrap" style="display:none;position:absolute;inset:0;flex-direction:column;background:white;">
       <div class="scatter-header">
         <label>X-axis:</label><select id="scatter-x"></select>
         <label style="margin-left:12px">Y-axis:</label><select id="scatter-y"></select>
         <span id="scatter-info" style="margin-left:auto;font-size:0.75rem;color:#888"></span>
       </div>
-      <div style="flex:1;overflow:hidden;padding:8px 8px 0"><canvas id="scatterCanvas"></canvas></div>
+      <div style="flex:1;min-height:0;padding:8px;">
+        <canvas id="scatterCanvas" style="width:100%;height:100%;display:block;"></canvas>
+      </div>
     </div>
   </div>
 
@@ -1006,7 +1005,9 @@ function renderScatter() {
     type: 'scatter',
     data: { datasets: [{ data: points.map(p => ({x:p.x, y:p.y})), backgroundColor: bgColors, pointRadius: radii, pointHoverRadius: 8 }] },
     options: {
-      responsive: true, maintainAspectRatio: false,
+      responsive: true,
+      maintainAspectRatio: false,
+      layout: { padding: { bottom: 10, right: 10 } },
       plugins: {
         legend: { display: false },
         tooltip: {
@@ -1020,14 +1021,16 @@ function renderScatter() {
       },
       scales: {
         x: {
-          title: { display: true, text: xMeta.label, font: { size: 11 } },
-          ticks: { font: { size: 10 } },
-          grid: { color: '#eee' }
+          display: true,
+          title: { display: true, text: xMeta.label, font: { size: 11 }, color: '#333' },
+          ticks: { display: true, font: { size: 10 }, maxRotation: 0 },
+          grid: { display: true, color: '#eee' }
         },
         y: {
-          title: { display: true, text: yMeta.label, font: { size: 11 } },
-          ticks: { font: { size: 10 } },
-          grid: { color: '#eee' }
+          display: true,
+          title: { display: true, text: yMeta.label, font: { size: 11 }, color: '#333' },
+          ticks: { display: true, font: { size: 10 } },
+          grid: { display: true, color: '#eee' }
         }
       },
       onClick: (e, elements) => {
@@ -1042,15 +1045,22 @@ function renderScatter() {
       id: 'scatterLabels',
       afterDatasetsDraw(chart) {
         const ctx = chart.ctx;
-        const ds = chart.data.datasets[0];
         const meta = chart.getDatasetMeta(0);
+        const ds = chart.data.datasets[0];
+        // Find overlapping dots to skip labels for
+        const positions = meta.data.map(pt => ({x: pt.x, y: pt.y}));
         ctx.save();
         ctx.font = '9px Segoe UI, sans-serif';
         ctx.fillStyle = '#333';
         ctx.textAlign = 'center';
         meta.data.forEach((pt, i) => {
-          const r = ds.pointRadius instanceof Array ? ds.pointRadius[i] : ds.pointRadius;
-          if (r >= 7 || points[i].selected) {  // label selected + larger dots
+          const r = ds.pointRadius instanceof Array ? ds.pointRadius[i] : 5;
+          // Check if another dot is too close (skip label if crowded, unless selected)
+          const crowded = !points[i].selected && positions.some((p2, j) =>
+            j !== i && Math.hypot(p2.x - pt.x, p2.y - pt.y) < 30
+          );
+          if (!crowded || points[i].selected) {
+            ctx.fillStyle = points[i].selected ? '#ff6600' : '#333';
             ctx.fillText(shortLabels[i], pt.x, pt.y - r - 3);
           }
         });
