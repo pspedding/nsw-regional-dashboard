@@ -59,9 +59,10 @@
     .trend-flat { color:#999;    font-size:0.75rem; margin-left:3px; }
 
     /* Scatter plot */
-    .scatter-tab-btn { padding:8px 16px; font-size:0.82rem; cursor:pointer; border:none; background:#eee; border-radius:6px 6px 0 0; margin-right:4px; color:#555; }
-    .scatter-tab-btn.active { background:#003366; color:white; }
-    #scatter-wrap { display:none; grid-column:2; grid-row:1/3; background:white; flex-direction:column; }
+    .view-bar { display:flex; justify-content:space-between; align-items:center; background:#f0f4f8; border-bottom:2px solid #dde; padding:6px 16px; }
+    .view-btn { padding:6px 14px; font-size:0.82rem; cursor:pointer; border:1px solid #ccd; background:white; border-radius:5px; margin-right:4px; color:#555; }
+    .view-btn.active { background:#003366; color:white; border-color:#003366; }
+    #scatter-wrap { display:none; position:absolute; inset:0; background:white; flex-direction:column; z-index:10; }
     #scatter-wrap.visible { display:flex; }
     .scatter-header { padding:12px 16px; border-bottom:1px solid #eee; display:flex; gap:12px; align-items:center; }
     .scatter-header label { font-size:0.78rem; color:#666; }
@@ -166,12 +167,16 @@
     <h1>NSW Hunter &amp; Central Coast — SA2 Economic Dashboard</h1>
     <span>Prototype v0.1 · For internal use only</span>
   </div>
-  <div style="display:flex;gap:6px;margin-left:auto;align-items:center">
-    <button class="scatter-tab-btn active" id="map-tab-btn" onclick="showView('map')">🗺 Map</button>
-    <button class="scatter-tab-btn" id="scatter-tab-btn" onclick="showView('scatter')">⚬ Scatter</button>
-    <button id="info-btn" onclick="toggleInfo()" title="Indicator metadata" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.4);color:white;border-radius:50%;width:32px;height:32px;font-size:1rem;cursor:pointer;flex-shrink:0;">ℹ</button>
-  </div>
+  <button id="info-btn" onclick="toggleInfo()" title="Indicator metadata" style="margin-left:auto;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.4);color:white;border-radius:50%;width:32px;height:32px;font-size:1rem;cursor:pointer;flex-shrink:0;">ℹ</button>
 </header>
+
+<div class="view-bar">
+  <div class="view-bar-left">
+    <button class="view-btn active" id="map-tab-btn" onclick="showView('map')">🗺 Map view</button>
+    <button class="view-btn" id="scatter-tab-btn" onclick="showView('scatter')">⬤ Scatter plot</button>
+  </div>
+  <div class="view-bar-right"></div>
+</div>
 
 <div class="layout">
 
@@ -223,7 +228,17 @@
   </div>
 
   <!-- ── Map ── -->
-  <div id="map"></div>
+  <div style="position:relative;grid-column:2;grid-row:1/3">
+    <div id="map" style="position:absolute;inset:0"></div>
+    <div id="scatter-wrap">
+      <div class="scatter-header">
+        <label>X-axis:</label><select id="scatter-x"></select>
+        <label style="margin-left:12px">Y-axis:</label><select id="scatter-y"></select>
+        <span id="scatter-info" style="margin-left:auto;font-size:0.75rem;color:#888"></span>
+      </div>
+      <div style="flex:1;position:relative;min-height:0"><canvas id="scatterCanvas" style="position:absolute;inset:0;width:100%!important;height:100%!important"></canvas></div>
+    </div>
+  </div>
 
   <!-- ── Bar Chart Panel ── -->
   <div class="bar-panel">
@@ -246,17 +261,6 @@
 
 </div>
 
-<!-- ── Scatter Plot Panel ── -->
-<div id="scatter-wrap">
-  <div class="scatter-header">
-    <label>X-axis:</label>
-    <select id="scatter-x"></select>
-    <label style="margin-left:12px">Y-axis:</label>
-    <select id="scatter-y"></select>
-    <span id="scatter-info" style="margin-left:auto;font-size:0.75rem;color:#888"></span>
-  </div>
-  <div id="scatterChart"><canvas id="scatterCanvas"></canvas></div>
-</div>
 
 <!-- ── Info Modal ── -->
 <div class="info-overlay" id="info-overlay" onclick="if(event.target===this)toggleInfo()">
@@ -930,18 +934,16 @@ function renderAtAGlance(row, scopeData, scopeLabel) {
 // ── VIEW TOGGLE (Map / Scatter) ────────────────────────────────────────
 function showView(view) {
   const mapEl = document.getElementById('map');
-  const barPanel = document.querySelector('.bar-panel');
   const scatterWrap = document.getElementById('scatter-wrap');
   document.getElementById('map-tab-btn').classList.toggle('active', view === 'map');
   document.getElementById('scatter-tab-btn').classList.toggle('active', view === 'scatter');
   if (view === 'map') {
     mapEl.style.display = '';
-    barPanel.style.display = '';
-    scatterWrap.classList.remove('visible');
+    scatterWrap.style.display = 'none';
+    setTimeout(() => map.invalidateSize(), 50);
   } else {
     mapEl.style.display = 'none';
-    barPanel.style.display = 'none';
-    scatterWrap.classList.add('visible');
+    scatterWrap.style.display = 'flex';
     renderScatter();
   }
 }
@@ -1028,18 +1030,14 @@ function renderScatter() {
 // ── URL PARAMS ─────────────────────────────────────────────────────────
 function applyUrlParams() {
   const params = new URLSearchParams(window.location.search);
-  const lgaParam = params.get('lga') || params.get('LGA');
+  const lgaParam = (params.get('lga') || params.get('LGA') || '').trim();
   if (!lgaParam) return;
   const lgaSel = document.getElementById('lga-select');
   if (!lgaSel) return;
-  // Match by name (case-insensitive)
-  const opt = Array.from(lgaSel.options).find(o =>
-    o.textContent.toLowerCase() === lgaParam.toLowerCase()
-  );
-  if (opt) {
-    lgaSel.value = opt.value;
-    lgaSel.dispatchEvent(new Event('change'));
-  }
+  // Normalise: lowercase, strip punctuation for fuzzy match
+  const norm = s => s.toLowerCase().replace(/[^a-z0-9]/g,' ').replace(/\s+/g,' ').trim();
+  const opt = Array.from(lgaSel.options).find(o => norm(o.textContent) === norm(lgaParam));
+  if (opt) { lgaSel.value = opt.value; lgaSel.dispatchEvent(new Event('change')); }
 }
 
 // ── INIT ────────────────────────────────────────────────────────────────
