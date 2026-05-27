@@ -930,19 +930,26 @@ async function sendQA() {
 
   // Compact key columns only — avoid token blowout
   const KEY_COLS = ['SA2 Name','Region (SA3)','Total Population','Median Household Income',
-    'Unemployment Rate (%)','House Price (Current)','Total Businesses','Healthcare Businesses',
-    'Tourism Businesses','Index of Relative Socio-economic Disadvantage ',
-    'Population Change 2023-24','Airbnb  Gross Revenue','Age Pension','Disability Support Pension',
-    'Homelessness','% Bachelor Degree','% Over 69','% Indigenous'];
+    'Unemployment Rate (%)','Unemployment','JobSeeker Payment','Labour Force',
+    'House Price (Current)','House Rent (P/W)','Unit Price (Current)','Unit Rent (P/W)',
+    'Total Businesses','Healthcare Businesses','Tourism Businesses',
+    'Index of Relative Socio-economic Disadvantage ',
+    'Population Change 2023-24','Airbnb  Gross Revenue','Airbnb Occupancy Rate','Airbnb ADR',
+    'Age Pension','Disability Support Pension','Commonwealth Rent Assistance',
+    'Visitor Spend','Resident Spend','Number of dwellings approved','Value of building job(s)',
+    'Homelessness','% Bachelor Degree','% Completed Year 12','% Over 69','% Under 20','% Indigenous'];
   const rows = scopedRows.map(r => {
     const out = {};
     KEY_COLS.forEach(k => { if (r[k] != null) out[k] = r[k]; });
     return out;
   });
 
-  const systemMsg = `You are a regional economics analyst. Answer questions about SA2 suburb data for ${scopeName} in NSW, Australia. ` +
-    `Be concise (2–4 sentences). Use specific suburb names and numbers from the data. ` +
-    `Dataset:\n${JSON.stringify(rows)}`;
+  const systemMsg = `You are a regional economics analyst for Central Coast Council (NSW). ` +
+    `The dataset below contains CURRENT data for ${scopeName} SA2 suburbs, with indicators as at April 2026. ` +
+    `This is real, live data — do NOT say it is outdated or refer to any other time period. ` +
+    `Answer using ONLY the numbers in this dataset. Be concise (2–4 sentences). Use specific suburb names and numbers. ` +
+    `If a question asks about change or increase, compare values across suburbs in the dataset — the highest value indicates the most. ` +
+    `Dataset (April 2026):\n${JSON.stringify(rows)}`;
 
   try {
     const resp = await fetch(qaEndpoint, {
