@@ -419,7 +419,7 @@
       <button id="qa-send" onclick="sendQA()">Ask</button>
     </div>
     <div class="qa-key-row">
-      <input type="password" id="qa-api-key" placeholder="OpenAI API key (sk-…)" />
+      <input type="password" id="qa-api-key" placeholder="OpenAI key (sk-…) or OpenRouter key (sk-or-…)" />
       <button class="qa-key-save" onclick="saveKey()">Save key</button>
     </div>
     <p class="qa-hint" id="qa-key-hint"></p>
@@ -903,11 +903,20 @@ async function sendQA() {
   // Ensure API key is present
   const apiKey = localStorage.getItem('cc_openai_key') || '';
   if (!apiKey.startsWith('sk-')) {
-    document.getElementById('qa-key-hint').textContent = '⚠️ Enter your OpenAI API key below first.';
+    document.getElementById('qa-key-hint').textContent = '⚠️ Enter an OpenAI (sk-…) or OpenRouter (sk-or-…) API key below first.';
     document.getElementById('qa-api-key').style.display = 'block';
     document.querySelector('.qa-key-save').style.display = 'inline-block';
     return;
   }
+
+  // Route to correct endpoint: OpenRouter vs OpenAI
+  const isOpenRouter = apiKey.startsWith('sk-or-');
+  const qaEndpoint = isOpenRouter
+    ? 'https://openrouter.ai/api/v1/chat/completions'
+    : 'https://api.openai.com/v1/chat/completions';
+  const qaModel = isOpenRouter ? 'openai/gpt-4o-mini' : 'gpt-4o-mini';
+  const qaHeaders = { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + apiKey };
+  if (isOpenRouter) qaHeaders['HTTP-Referer'] = 'https://pspedding.github.io/nsw-regional-dashboard-dev/';
 
   addQAMsg('user', q); input.value = '';
   const thinkingEl = addQAMsg('ai', '⏳ Thinking...');
@@ -933,11 +942,11 @@ async function sendQA() {
     `Dataset:\n${JSON.stringify(rows)}`;
 
   try {
-    const resp = await fetch('https://api.openai.com/v1/chat/completions', {
+    const resp = await fetch(qaEndpoint, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + apiKey },
+      headers: qaHeaders,
       body: JSON.stringify({
-        model: 'gpt-4o-mini',
+        model: qaModel,
         max_tokens: 300,
         messages: [
           { role: 'system', content: systemMsg },
