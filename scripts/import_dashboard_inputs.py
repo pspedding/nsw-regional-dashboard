@@ -22,12 +22,14 @@ DATA_XLSX = INPUT_DIR / "Output-Mapped-SA2-Level-Data-Pivot-All-LGAs.xlsx"
 LOOKUP_XLSX = INPUT_DIR / "Output-Indicator-Lookup.xlsx"
 PRIOR_XLSX = INPUT_DIR / "Output-Mapped-SA2-Level-Data-Pivot-All-LGAs-Prior-Month.xlsx"
 TRENDS_CSV = INPUT_DIR / "Output-Trends.csv"
+QUARTERLY_TRENDS_XLSX = INPUT_DIR / "Output-Trends-Quarterly.xlsx"
 SHAPEFILE = Path("/home/azureuser/council-work/sa2-dashboard/shapefile/SA2_2021_AUST_GDA2020.shp")
 
 DATA_JS = ROOT / "data.js"
 LOOKUP_JS = ROOT / "indicator-lookup.js"
 DATA_CSV = ROOT / "sa2_kpi_wide.csv"
 GEOJSON_OUT = ROOT / "all_lgas_sa2.geojson"
+TREND_SERIES_JSON = ROOT / "public" / "data" / "trend_series.json"
 
 TREND_COLUMN_MAP = {
     "Trent.Labour Force": "Labour Force",
@@ -49,6 +51,12 @@ TREND_COLUMN_MAP = {
     "Trend.Healthcare Businesses": "Healthcare Businesses",
     "Trend.Tourism Businesses": "Tourism Businesses",
     "Trend.Manufacturing Businesses": "Manufacturing Businesses",
+}
+
+TREND_SERIES_INDICATOR_MAP = {
+    "Unemployment Rate": "Unemployment Rate (%)",
+    "Age Pension": "Age Pension",
+    "JobSeeker Payment": "JobSeeker Payment",
 }
 
 ID_COLUMNS = {"SA2 Code", "SA2 Name", "Region (SA3)", "LGA Code", "LGA Name"}
@@ -136,6 +144,41 @@ def write_geojson_subset(df: pd.DataFrame):
     return len(subset), missing
 
 
+def write_trend_series_json(current_df: pd.DataFrame):
+    TREND_SERIES_JSON.parent.mkdir(parents=True, exist_ok=True)
+    if not QUARTERLY_TRENDS_XLSX.exists():
+        TREND_SERIES_JSON.write_text(json.dumps({"meta": {"available": False}, "periods": [], "by_sa2": {}}, indent=2), encoding="utf-8")
+        return 0
+
+    df = pd.read_excel(QUARTERLY_TRENDS_XLSX, sheet_name=0)
+    df = df.dropna(subset=["SA2 Code", "SA2 Name", "Indicator"]).copy()
+    df["SA2 Code"] = df["SA2 Code"].astype(int).astype(str)
+    periods = [c for c in df.columns if c not in {"SA2 Code", "SA2 Name", "Indicator"}]
+    valid_codes = set(current_df["SA2 Code"].astype(str))
+    df = df[df["SA2 Code"].isin(valid_codes)].copy()
+
+    out = {
+        "meta": {
+            "available": True,
+            "source": QUARTERLY_TRENDS_XLSX.name,
+            "period_count": len(periods),
+            "series_count": int(len(df)),
+        },
+        "periods": periods,
+        "by_sa2": {}
+    }
+
+    for _, row in df.iterrows():
+        code = row["SA2 Code"]
+        indicator = TREND_SERIES_INDICATOR_MAP.get(str(row["Indicator"]).strip(), str(row["Indicator"]).strip())
+        if code not in out["by_sa2"]:
+            out["by_sa2"][code] = {"sa2_name": row["SA2 Name"], "series": {}}
+        out["by_sa2"][code]["series"][indicator] = [to_native(row[p]) for p in periods]
+
+    TREND_SERIES_JSON.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
+    return len(out["by_sa2"])
+
+
 def main():
     for path in [DATA_XLSX, LOOKUP_XLSX, SHAPEFILE]:
         if not path.exists():
@@ -148,11 +191,13 @@ def main():
     write_data_outputs(df)
     write_lookup_output()
     feature_count, missing = write_geojson_subset(df)
+    trend_series_sa2 = write_trend_series_json(df)
 
     print(f"Rows written: {len(df)}")
     print(f"Columns written to data.js: {len(df.columns)}")
     print(f"Trend fields merged: {len([c for c in df.columns if c.startswith('trend_')])}")
     print(f"Prior fields merged: {len([c for c in df.columns if c.startswith('prior_')])}")
+    print(f"Quarterly trend series SA2s: {trend_series_sa2}")
     print(f"GeoJSON features written: {feature_count}")
     print(f"Unique LGAs: {df['LGA Code'].nunique() if 'LGA Code' in df.columns else 'n/a'}")
     if missing:
