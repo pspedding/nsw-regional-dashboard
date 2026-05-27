@@ -921,6 +921,9 @@ async function sendQA() {
     qaHeaders = { 'Content-Type': 'application/json' };
   }
 
+  // Inject a stronger instruction for models that tend to hallucinate
+  const forceDatasetInstruction = 'You MUST answer using ONLY the dataset provided below. Do NOT use any outside knowledge. Do NOT guess. If the answer is not in the dataset, say so explicitly.';
+
   addQAMsg('user', q); input.value = '';
   const thinkingEl = addQAMsg('ai', '⏳ Thinking...');
 
@@ -947,8 +950,9 @@ async function sendQA() {
   const systemMsg = `You are a regional economics analyst for Central Coast Council (NSW). ` +
     `The dataset below contains CURRENT data for ${scopeName} SA2 suburbs, with indicators as at April 2026. ` +
     `This is real, live data — do NOT say it is outdated or refer to any other time period. ` +
-    `Answer using ONLY the numbers in this dataset. Be concise (2–4 sentences). Use specific suburb names and numbers. ` +
-    `If a question asks about change or increase, compare values across suburbs in the dataset — the highest value indicates the most. ` +
+    `You MUST answer using ONLY the numbers in the dataset below. Do NOT use any outside knowledge. ` +
+    `Do NOT guess. If the answer is not in the dataset, say "The dataset does not contain that information." ` +
+    `Be concise (2–4 sentences). Use specific suburb names and exact numbers from the data. ` +
     `Dataset (April 2026):\n${JSON.stringify(rows)}`;
 
   try {
