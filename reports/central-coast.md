@@ -1,7 +1,8 @@
 # Central Coast SA2 Intelligence Report
-**Prepared:** May 2026 | **Data Coverage:** 30 SA2 areas, Central Coast LGA (NSW)
+**Prepared:** May 2026 (refreshed) | **Indicators:** April 2026 | **Data Coverage:** 30 SA2 areas, Central Coast LGA (NSW)
 **Sources:** ABS Census, CoreLogic, Airdna, Services Australia
 
+---
 
 ## Executive Summary
 
@@ -9,16 +10,17 @@ The Central Coast LGA encompasses **354,803 residents** across 30 Statistical Ar
 
 **Five headline findings:**
 
-1. **A persistent Gosford–Wyong socioeconomic divide**: Gosford SA3 records average house prices 36% higher ($1,346,674 vs $990,336), median incomes 12% higher ($1,443 vs $1,286/wk), and unemployment rates nearly half that of Wyong (2.4% vs 4.2%)
+1. **A persistent Gosford–Wyong socioeconomic divide**: Gosford SA3 records average house prices 35% higher ($1,348,703 vs $995,895), median incomes 12% higher ($1,443 vs $1,286/wk), and unemployment rates nearly half that of Wyong (2.4% vs 4.2%)
 
-2. **Critical housing affordability crisis**: With an LGA-wide average house price of approximately $1.17M against median weekly household income of $1,370, the price-to-income ratio exceeds **16×** — far beyond sustainable thresholds
+2. **Critical housing affordability crisis**: With an LGA-wide average house price of $1,191,900 against median weekly household income of $1,370, the price-to-income ratio has risen to **16.7×** — far beyond sustainable thresholds and worsening since last period
 
-3. **Concentrated disadvantage corridor**: The five most disadvantaged suburbs (Wyong, Gorokan–Kanwal–Charmhaven, Blue Haven–San Remo, Toukley–Norah Head, The Entrance) form a contiguous band through northern Wyong with SEIFA scores 55–103 points below the national benchmark
+3. **Welfare dependency accelerating — JobSeeker up 11.6%**: JobSeeker recipients have risen to **12,550** (up from 11,240 in the prior period), with Commonwealth Rent Assistance recipients at 27,695 — signalling deepening income stress and housing affordability pressure across the LGA
 
-4. **Warnervale–Wadalba emerges as the growth engine**: Absorbing 22% of LGA population growth (+650 residents) with the youngest median age (35) and highest dwelling approvals (222), this greenfield corridor requires urgent infrastructure investment
+4. **Concentrated disadvantage corridor**: The five most disadvantaged suburbs (Wyong, Gorokan–Kanwal–Charmhaven, Blue Haven–San Remo, Toukley–Norah Head, The Entrance) form a contiguous band through northern Wyong with SEIFA scores 55–103 points below the national benchmark
 
-5. **Accelerating aged care demand**: 49,290 Age Pension recipients (13.9% of population) with concentrations exceeding 25% of residents aged 69+ in Erina–Green Point and Lake Munmorah–Mannering Park
+5. **Short-stay economy expanding**: Total Airbnb gross revenue has risen to **$3.91M** across 1,692 active listings — up 41% — with premium coastal properties increasingly out-competing long-term rental stock
 
+---
 
 ## 1. Regional Overview: The Gosford–Wyong Divide
 
@@ -27,17 +29,19 @@ The Central Coast LGA encompasses **354,803 residents** across 30 Statistical Ar
 | SA2 Areas | 16 | 14 | — |
 | Total Population | 181,658 | 173,145 | +4.9% Gosford |
 | Population Growth (2023–24) | +1,378 | +1,525 | Wyong growing faster |
-| Avg House Price | $1,346,674 | $990,336 | +36% Gosford |
+| Avg House Price | $1,348,703 | $995,895 | +35% Gosford |
 | Avg Median Weekly Income | $1,443 | $1,286 | +12% Gosford |
 | Avg Unemployment Rate | 2.4% | 4.2% | 1.8pp higher in Wyong |
 | Total Businesses | 16,040 | 11,087 | +45% Gosford |
 | Avg SEIFA Disadvantage Index | 1,028.5 | 974.4 | +54pts Gosford |
-| Age Pension Recipients | 24,745 | 24,545 | Near parity |
-| DSP Recipients | 6,120 | 8,125 | +33% higher in Wyong |
+| Age Pension Recipients | 24,805 | 24,555 | Near parity |
+| DSP Recipients | 6,160 | 8,170 | +33% higher in Wyong |
+| JobSeeker Recipients | 5,460 | 7,090 | +30% higher in Wyong |
 | Homelessness Count | 570 | 1,170 | +105% higher in Wyong |
 
-**Key insight:** Wyong is growing faster in absolute population terms (+1,525 vs +1,378) yet starts from a substantially weaker economic base. The combination of accelerating growth pressure, lower household incomes, fewer employment-generating businesses, and double the homelessness rate creates compounding demand on social infrastructure in the northern corridor. Notably, while Age Pension recipients are nearly equal between regions (reflecting similar aged populations), Disability Support Pension recipients are 33% higher in Wyong — signalling deeper entrenchment of health-related disadvantage.
+**Key insight:** Wyong is growing faster in absolute population terms (+1,525 vs +1,378) yet starts from a substantially weaker economic base. The combination of accelerating growth pressure, lower household incomes, fewer employment-generating businesses, and double the homelessness rate creates compounding demand on social infrastructure in the northern corridor. The jump in JobSeeker recipients — 7,090 in Wyong vs 5,460 in Gosford — reflects diverging economic trajectories between the two sub-regions. Wyong carries a disproportionate 57% of all JobSeeker recipients despite holding 49% of population.
 
+---
 
 ## 2. Housing Market Analysis
 
@@ -45,100 +49,106 @@ The Central Coast LGA encompasses **354,803 residents** across 30 Statistical Ar
 
 **Premium tier suburbs (house price > $1.5M) — all Gosford SA3:**
 
-| Suburb | House Price | House Rent (P/W) | Region |
+| Suburb | House Price | House Rent (P/W) | Change vs Prior |
 |---|---|---|---|
-| Erina – Green Point | $2,087,500 | $940 | Gosford |
-| Avoca Beach – Copacabana | $1,722,500 | $873 | Gosford |
-| Wamberal – Forresters Beach | $1,674,250 | $850 | Gosford |
-| Box Head – MacMasters Beach | $1,664,357 | $889 | Gosford |
-| Terrigal – North Avoca | $1,634,000 | $889 | Gosford |
+| Erina – Green Point | $1,974,000 | $919 | ↓ softened from $2.09M |
+| Box Head – MacMasters Beach | $1,680,214 | $1,086 | ↑ |
+| Wamberal – Forresters Beach | $1,680,000 | $850 | → stable |
+| Avoca Beach – Copacabana | $1,665,500 | $865 | ↓ softened |
+| Terrigal – North Avoca | $1,605,000 | $900 | ↓ softened |
+
+**Erina – Green Point** remains the LGA's most expensive suburb at $1,974,000 — but has softened by approximately $114,000 since the previous period. All five premium-tier suburbs have seen house prices moderate, suggesting some cooling at the top end. Rental yields remain strong: Box Head – MacMasters Beach commands $1,086/wk — the highest weekly rent in the LGA.
 
 **Entry-level suburbs (house price < $900k) — all Wyong SA3:**
 
 | Suburb | House Price | House Rent (P/W) | Region |
 |---|---|---|---|
-| Blue Haven – San Remo | $808,500 | $600 | Wyong |
-| Budgewoi – Buff Point – Halekulani | $825,000 | $584 | Wyong |
-| Tuggerah – Kangy Angy | $838,000 | $650 | Wyong |
-| Gorokan – Kanwal – Charmhaven | $850,417 | $596 | Wyong |
-| Wyong | $860,000 | $630 | Wyong |
+| Tuggerah – Kangy Angy | $800,000 | $650 | Wyong |
+| Blue Haven – San Remo | $828,250 | $605 | Wyong |
+| Budgewoi – Buff Point – Halekulani | $846,250 | $603 | Wyong |
+| Gorokan – Kanwal – Charmhaven | $859,133 | $606 | Wyong |
+| Wyong | $875,500 | $630 | Wyong |
 
-The price differential between the LGA's most expensive suburb (Erina – Green Point, $2.09M) and its most affordable (Blue Haven – San Remo, $808,500) is **$1.28M** — a 2.6× multiplier within a single local government area. This represents two fundamentally different housing markets operating under one council jurisdiction, requiring differentiated planning approaches.
+The price differential between the LGA's most expensive suburb (Erina – Green Point, $1,974,000) and its most affordable (Tuggerah – Kangy Angy, $800,000) is **$1.174M** — a 2.5× multiplier within a single local government area. This represents two fundamentally different housing markets operating under one council jurisdiction, requiring differentiated planning approaches. Entry-level prices have continued to creep upward across all northern Wyong suburbs, compressing affordability even at the bottom of the market.
 
 ### 2.2 Rental Market
 
-Weekly house rents range from **$584/wk** (Budgewoi – Buff Point – Halekulani) to **$940/wk** (Erina – Green Point), with the LGA-wide average at approximately **$709/wk** for houses with available data.
+Weekly house rents range from **$588/wk** (Toukley – Norah Head) to **$1,086/wk** (Box Head – MacMasters Beach), with the LGA-wide average at approximately **$729/wk** (suburbs with data). The average has risen from the prior period's $709/wk.
 
 | Rent Band | Representative Suburbs | Weekly Rent Range |
 |---|---|---|
-| Premium (>$850) | Erina–Green Point, Terrigal–North Avoca, Box Head–MacMasters Beach | $850–$940 |
-| Mid-market ($700–$850) | Warnervale–Wadalba, Niagara Park–Lisarow, Kariong | $735–$765 |
-| Entry (<$650) | Blue Haven–San Remo, Budgewoi, Toukley–Norah Head, Gorokan | $584–$630 |
+| Premium (>$850) | Box Head–MacMasters Beach, Erina–Green Point, Avoca Beach–Copacabana, Terrigal–North Avoca | $865–$1,086 |
+| Mid-market ($700–$850) | Kariong, Warnervale–Wadalba, Niagara Park–Lisarow, Saratoga–Davistown | $700–$775 |
+| Entry (<$650) | Blue Haven–San Remo, Budgewoi, Toukley–Norah Head, Gorokan, Summerland Point | $588–$650 |
 
-**Affordability stress calculation:** For a household in Wyong (median income $1,056/wk), the local median rent of $630/wk consumes **59.7% of gross income** — nearly double the 30% housing stress threshold. Even in Blue Haven–San Remo with the lowest rents ($600/wk) against local income ($1,250/wk), rental burden sits at **48%**. Rental stress is endemic across the Wyong corridor.
+**Affordability stress calculation:** For a household in Wyong town (median income $1,056/wk), the local median rent of $630/wk consumes **59.7% of gross income** — nearly double the 30% housing stress threshold. Even in Blue Haven–San Remo with rents at $605/wk against local income ($1,250/wk), rental burden sits at **48.4%**. Rental stress is endemic across the Wyong corridor, and the rising LGA average rent is pushing more households into crisis territory.
 
 ### 2.3 New Supply Pipeline
 
-Development activity (dwellings approved) is concentrated in growth corridors:
+Development activity (dwellings approved) has eased from the prior period but remains concentrated in growth corridors:
 
 | Suburb | Dwellings Approved | Building Value ($'000) | Region |
 |---|---|---|---|
-| Warnervale – Wadalba | 222 | $98,926 | Wyong |
-| Gosford – Springfield | 173 | $163,328 | Gosford |
-| The Entrance | 156 | $98,591 | Wyong |
-| Summerland Point – Gwandalan | 137 | $66,706 | Wyong |
-| Umina – Booker Bay – Patonga | 124 | $84,425 | Gosford |
+| Warnervale – Wadalba | 204 | $91,085 | Wyong |
+| Gosford – Springfield | 171 | $133,525 | Gosford |
+| The Entrance | 136 | $89,190 | Wyong |
+| Summerland Point – Gwandalan | 125 | $60,023 | Wyong |
+| Umina – Booker Bay – Patonga | 106 | $77,160 | Gosford |
+| Lake Munmorah – Mannering Park | 98 | $31,759 | Wyong |
 
-**Total LGA dwelling approvals: 1,329** across all SA2s, with **66% of approvals in Wyong** despite its smaller population share. This supply skew toward the northern corridor may moderate price pressure in Wyong's entry-level market, but does little to address affordability in high-demand Gosford coastal suburbs where approvals remain constrained (Terrigal: 34, Avoca Beach: 29, Wamberal: 26).
+**Total LGA dwelling approvals: 1,331** across all SA2s, with **62% of approvals in Wyong**. Warnervale – Wadalba has eased from 222 to 204 approvals — still the LGA's busiest construction suburb, but the pipeline is moderating. The Entrance saw the sharpest pullback (156 → 136). Gosford – Springfield is notable for generating the highest building value ($133.5M) despite fewer approvals than Warnervale, reflecting larger/higher-value projects in the CBD corridor.
+
+The supply skew toward northern Wyong may moderate price pressure at the entry level, but does little to address affordability in high-demand Gosford coastal suburbs where approvals remain constrained (Terrigal: 33, Avoca Beach: 23, Wamberal: 26).
 
 ### 2.4 Affordability Stress Assessment
 
 | Metric | Value |
 |---|---|
-| Average house price (suburbs with data) | $1,168,505 |
-| LGA median weekly household income (computed) | $1,370 |
-| Annual household income | $71,240 |
-| Price-to-income ratio | **16.4×** |
+| Average house price (suburbs with data) | $1,191,900 |
+| LGA average median weekly household income | $1,370 |
+| Annual household income (52 weeks) | $71,221 |
+| Price-to-income ratio | **16.7×** |
 
-Even in the most affordable suburb (Blue Haven, $808,500) against local median income ($1,250/wk = $65,000/yr), the price-to-income ratio is **12.4×** — more than double the 6× threshold typically considered sustainable. This is a structural affordability crisis requiring supply-side intervention, not a cyclical market correction.
+Even in the most affordable suburb (Tuggerah–Kangy Angy, $800,000) against local median income ($1,516/wk = $78,832/yr), the price-to-income ratio is **10.1×** — still well above the 6× threshold considered sustainable. This is a structural affordability crisis. The LGA-wide ratio has worsened from 16.4× to 16.7× — house prices have risen faster than incomes across the period.
 
+---
 
 ## 3. Employment & Economic Wellbeing
 
 ### 3.1 Unemployment Hotspots
 
-Unemployment is heavily concentrated in northern Wyong:
+Unemployment is heavily concentrated in northern Wyong and has not materially improved:
 
 | Suburb | Region | Unemployment Rate | JobSeeker Recipients | Median Income/wk |
 |---|---|---|---|---|
-| Wyong | Wyong | **8.1%** | 590 | $1,056 |
-| Blue Haven – San Remo | Wyong | 5.8% | 580 | $1,250 |
-| Gorokan – Kanwal – Charmhaven | Wyong | 5.8% | 1,160 | $1,051 |
-| The Entrance | Wyong | 5.6% | 905 | $984 |
-| Toukley – Norah Head | Wyong | 5.4% | 490 | $971 |
+| Wyong | Wyong | **8.1%** | 595 | $1,056 |
+| Blue Haven – San Remo | Wyong | 5.8% | 585 | $1,250 |
+| Gorokan – Kanwal – Charmhaven | Wyong | 5.8% | 1,165 | $1,051 |
+| The Entrance | Wyong | 5.6% | 920 | $984 |
+| Toukley – Norah Head | Wyong | 5.4% | 480 | $971 |
 | Woy Woy – Blackwall | Gosford | 5.1% | 735 | $1,040 |
-| Budgewoi – Buff Point – Halekulani | Wyong | 4.7% | 455 | $1,005 |
+| Budgewoi – Buff Point – Halekulani | Wyong | 4.7% | 475 | $1,005 |
 
-The suburb of **Wyong** records 8.1% unemployment — **3.4× the Gosford SA3 average** (2.4%) and more than **7× the rate in Avoca Beach–Copacabana** (1.1%). This is structural, place-based unemployment requiring targeted intervention, not general economic stimulus.
+The suburb of **Wyong** records 8.1% unemployment — **3.4× the Gosford SA3 average** (2.4%) and more than **7× the rate in Avoca Beach–Copacabana** (1.1%). This is structural, place-based unemployment. Gorokan–Kanwal–Charmhaven carries 1,165 individual JobSeeker recipients — the highest absolute count of any suburb, reflecting its role as the largest concentrator of disadvantage in the LGA.
 
 **Low-unemployment Gosford suburbs (all below 1.5%):**
 
 | Suburb | Unemployment Rate | JobSeeker Recipients |
 |---|---|---|
 | Avoca Beach – Copacabana | 1.1% | 135 |
-| Box Head – MacMasters Beach | 1.3% | 210 |
 | Saratoga – Davistown | 1.3% | 135 |
-| Terrigal – North Avoca | 1.3% | 265 |
-| Wamberal – Forresters Beach | 1.4% | 175 |
+| Box Head – MacMasters Beach | 1.3% | 210 |
+| Terrigal – North Avoca | 1.3% | 260 |
+| Wamberal – Forresters Beach | 1.4% | 180 |
 
 ### 3.2 Business Activity
 
 | Metric | Gosford SA3 | Wyong SA3 | LGA Total |
 |---|---|---|---|
 | Total Businesses | 16,040 | 11,087 | **27,127** |
-| Healthcare Businesses | 1,578 | 816 | 2,394 |
-| Tourism Businesses | 644 | 499 | 1,143 |
-| Manufacturing Businesses | 570 | 425 | 995 |
+| Healthcare Businesses | 1,578 | 872 | 2,450 |
+| Tourism Businesses | 675 | 499 | 1,174 |
+| Manufacturing Businesses | 570 | 423 | 993 |
 
 Gosford holds **59%** of all business registrations despite representing 51% of population. **Gosford – Springfield** (2,629 businesses) is the clear commercial centre, followed by **Erina – Green Point** (1,807) and **Terrigal – North Avoca** (1,577). These three suburbs alone account for 37% of Gosford's total business base.
 
@@ -148,25 +158,31 @@ In Wyong, business activity is more dispersed, with **Bateau Bay – Killarney V
 
 | Payment Type | Total Recipients | % of Population |
 |---|---|---|
-| Age Pension | **49,290** | 13.9% |
-| Family Tax Benefit A | 18,225 | 5.1% |
-| Disability Support Pension | 14,245 | 4.0% |
-| Commonwealth Rent Assistance | 23,785 | 6.7% |
-| JobSeeker Payment | 11,240 | 3.2% |
-| Youth Allowance (other) | 1,520 | 0.4% |
+| Age Pension | **49,360** | 13.9% |
+| Commonwealth Rent Assistance | **27,695** | 7.8% |
+| Family Tax Benefit A | 17,955 | 5.1% |
+| Health Care Card | 16,280 | 4.6% |
+| Disability Support Pension | 14,330 | 4.0% |
+| **JobSeeker Payment** | **12,550** | **3.5%** ▲ |
+| Carer Allowance | 11,245 | 3.2% |
+| Parenting Payment Single | 5,965 | 1.7% |
+| Youth Allowance (other) | 1,515 | 0.4% |
 
-**DSP concentration analysis:** Wyong SA3 carries **57% of all DSP recipients** (8,125 vs 6,120) despite having 49% of the population. The suburbs with highest DSP loads are:
+**The most significant change this period is the 11.6% rise in JobSeeker recipients** — from 11,240 to 12,550. This is broadly consistent with the LGA-level unemployment snapshot (April 2026 rate of 4.8%, above the NSW average) and reflects a deteriorating labour market position, particularly in Wyong. Commonwealth Rent Assistance recipients have also risen sharply to 27,695 — a signal that more low-income households are now in private rentals under financial stress.
+
+**DSP concentration:** Wyong SA3 carries **57% of all DSP recipients** (8,170 vs 6,160) despite having 49% of the population:
 
 | Suburb | DSP Recipients | Population | DSP Rate |
 |---|---|---|---|
-| Gorokan – Kanwal – Charmhaven | 1,495 | 22,740 | 6.6% |
-| Gosford – Springfield | 1,125 | 22,599 | 5.0% |
-| Umina – Booker Bay – Patonga | 965 | 25,007 | 3.9% |
-| Bateau Bay – Killarney Vale | 925 | 22,990 | 4.0% |
-| The Entrance | 910 | 16,155 | 5.6% |
+| Gorokan – Kanwal – Charmhaven | 1,520 | 22,740 | 6.7% |
+| Gosford – Springfield | 1,150 | 22,599 | 5.1% |
+| The Entrance | 920 | 16,155 | 5.7% |
+| Umina – Booker Bay – Patonga | 980 | 25,007 | 3.9% |
+| Bateau Bay – Killarney Vale | 915 | 22,990 | 4.0% |
 
-The correlation between high DSP rates and high unemployment suggests entrenched health-related barriers to workforce participation in disadvantaged suburbs.
+The correlation between high DSP rates and high unemployment suggests entrenched health-related barriers to workforce participation in disadvantaged suburbs — a trend that is not improving.
 
+---
 
 ## 4. Socioeconomic Disadvantage (SEIFA Analysis)
 
@@ -209,14 +225,11 @@ Wyong → Gorokan → Blue Haven → Toukley → The Entrance → Budgewoi → L
                               Woy Woy (Gosford outlier)
 ```
 
-This spatial clustering is not coincidental. It reflects:
-- Historical patterns of social housing allocation
-- Distance from employment centres (Gosford CBD, Sydney)
-- Lower land values attracting lower-income households
-- Self-reinforcing cycles of underinvestment
+This spatial clustering reflects historical patterns of social housing allocation, distance from employment centres, lower land values attracting lower-income households, and self-reinforcing cycles of underinvestment. The rising JobSeeker and CRA figures confirm this corridor is not recovering — it is deepening in disadvantage relative to the broader LGA.
 
 **Policy implication:** Dispersed, individual-focused interventions will be insufficient. Area-based place-making investment is required — targeting the entire corridor with coordinated employment, education, transport, and housing interventions.
 
+---
 
 ## 5. Demographics & Population
 
@@ -247,9 +260,7 @@ The LGA gained **2,903 residents** in 2023–24. Growth drivers vary significant
 | Summerland Point – Gwandalan | +161 | +110 | +21 | Internal migration |
 | Chittaway Bay – Tumbi Umbi | +131 | +21 | +93 | Mixed |
 
-**Warnervale – Wadalba** absorbed **22% of all LGA population growth**, driven overwhelmingly by internal migration (+469) — households relocating from elsewhere in Australia (likely Sydney) seeking affordable family housing. This suburb's growth rate of 2.9% far exceeds the LGA average.
-
-**Gosford – Springfield** leads overseas migration (+305), reflecting its role as the regional centre with urban amenity, employment opportunities, and established migrant settlement services.
+**Warnervale – Wadalba** absorbed **22% of all LGA population growth**, driven overwhelmingly by internal migration (+469) — households relocating from elsewhere in Australia (predominantly Sydney) seeking affordable family housing. **Gosford – Springfield** leads overseas migration (+305), reflecting its role as the regional centre with urban amenity, employment opportunities, and established migrant settlement services.
 
 **Declining suburbs:** Toukley – Norah Head (-19), Lake Munmorah – Mannering Park (-27), and Kincumber – Picketts Valley (-8) recorded population losses — predominantly older coastal areas with ageing-in-place populations and limited new housing supply.
 
@@ -257,20 +268,20 @@ The LGA gained **2,903 residents** in 2023–24. Growth drivers vary significant
 
 The Central Coast median age of **42.3 years** exceeds the national average (38.4 years). Age distribution varies dramatically by suburb:
 
-**Oldest suburbs (median age ≥ 47):**
+**Oldest suburbs (median age ≥ 47 years):**
 
 | Suburb | Median Age | % Over 69 | % Under 20 | Age Pension Recipients |
 |---|---|---|---|---|
 | Lake Munmorah – Mannering Park | 49 | 25.7% | 19.5% | 2,750 |
-| Erina – Green Point | 49 | 26.0% | 21.5% | 2,840 |
-| Toukley – Norah Head | 48 | 20.7% | 20.7% | 1,850 |
-| Box Head – MacMasters Beach | 47 | 19.5% | 22.0% | 1,585 |
-| Kincumber – Picketts Valley | 47 | 24.4% | 22.9% | 1,415 |
-| Woy Woy – Blackwall | 47 | 19.9% | 19.9% | 2,580 |
+| Erina – Green Point | 49 | 26.0% | 21.5% | 2,835 |
+| Toukley – Norah Head | 48 | 20.7% | 20.7% | 1,830 |
+| Box Head – MacMasters Beach | 47 | 19.5% | 22.0% | 1,590 |
+| Kincumber – Picketts Valley | 47 | 24.4% | 22.9% | 1,430 |
+| Woy Woy – Blackwall | 47 | 19.9% | 19.9% | 2,590 |
 
-Over **one quarter of residents** in Erina – Green Point (26.0%) and Lake Munmorah – Mannering Park (25.7%) are aged 69 or above. These suburbs will experience accelerating demand for aged care, healthcare, accessible housing, and transport services.
+Over **one quarter of residents** in Erina – Green Point (26.0%) and Lake Munmorah – Mannering Park (25.7%) are aged 69 or above. These suburbs will experience accelerating demand for aged care, healthcare, accessible housing, and transport services. Age Pension recipients now total **49,360** across the LGA (13.9% of population) — a number that will continue to rise as the resident cohort ages.
 
-**Youngest suburbs (median age ≤ 37):**
+**Youngest suburbs (median age ≤ 37 years):**
 
 | Suburb | Median Age | % Under 20 | % Over 69 |
 |---|---|---|---|
@@ -309,16 +320,16 @@ The gap between highest and lowest suburbs is **11.7 percentage points** for bac
 
 ### 5.5 Cultural Diversity & Indigenous Population
 
-The LGA is predominantly English-speaking, with modest cultural diversity concentrated in specific suburbs:
+The LGA is predominantly English-speaking, with cultural diversity concentrated in specific suburbs:
 
 **Highest cultural diversity:**
 
 | Suburb | % Born Overseas | % LOTE | Key Observation |
 |---|---|---|---|
 | Gosford – Springfield | 21.2% | 13.2% | Regional centre attracting migrants |
-| Point Clare – Koolewong | 19.2% | 8.1% | Sydney commuter suburb |
-| Terrigal – North Avoca | 19.2% | 6.4% | Coastal amenity attracting international buyers |
 | Erina – Green Point | 19.6% | 6.9% | Commercial/retail employment hub |
+| Terrigal – North Avoca | 19.2% | 6.4% | Coastal amenity attracting international buyers |
+| Point Clare – Koolewong | 19.2% | 8.1% | Sydney commuter suburb |
 | Tuggerah – Kangy Angy | 18.5% | 10.4% | Industrial/logistics employment |
 
 **Indigenous population concentration:**
@@ -331,60 +342,60 @@ The LGA is predominantly English-speaking, with modest cultural diversity concen
 | Gorokan – Kanwal – Charmhaven | 5.6% | 1,247 | 917.4 |
 | Toukley – Norah Head | 4.9% | 482 | 938.6 |
 
-The five suburbs with highest Indigenous population share are **all in the most disadvantaged quintile** (SEIFA-D < 955). This concentration reflects broader patterns of Indigenous disadvantage and highlights the need for culturally appropriate services, Indigenous employment programs, and Closing the Gap investment in these areas. **Gorokan – Kanwal – Charmhaven** has the largest absolute Indigenous population (1,247) and should be prioritised for Indigenous-specific service delivery.
+The five suburbs with the highest Indigenous population share are **all in the most disadvantaged quintile** (SEIFA-D < 955). **Gorokan – Kanwal – Charmhaven** has the largest absolute Indigenous population (1,247) and should be prioritised for Indigenous-specific service delivery. The spatial overlap between Indigenous concentration and socioeconomic disadvantage reinforces the urgency of Closing the Gap investment in the northern Wyong corridor.
 
+---
 
 ## 6. Tourism & Short-Stay Economy
 
 ### 6.1 Airbnb Performance
 
-Nine SA2 areas have measurable Airbnb activity. Performance metrics:
+Short-stay accommodation activity has expanded significantly, with total Airbnb gross revenue reaching **$3.91M** across 1,692 active listings — up from $2.78M and 1,637 listings in the prior period.
 
 | Suburb | Gross Revenue | Occupancy (%) | ADR ($) | Active Listings |
 |---|---|---|---|---|
-| Avoca Beach – Copacabana | $533,431 | 12.5% | $503 | 348 |
-| Terrigal – North Avoca | $459,368 | 16.0% | $423 | 264 |
-| Umina – Booker Bay – Patonga | $417,231 | 16.7% | $377 | 288 |
-| The Entrance | $413,722 | 21.0% | $326 | 273 |
-| Box Head – MacMasters Beach | $351,270 | 14.0% | $465 | 194 |
-| Wamberal – Forresters Beach | $276,244 | 16.5% | $534 | 119 |
-| Toukley – Norah Head | $163,413 | 23.0% | $338 | 63 |
-| Bateau Bay – Killarney Vale | $92,883 | 33.0% | $221 | 53 |
-| Woy Woy – Blackwall | $59,666 | 24.0% | $306 | 31 |
-| Kincumber – Picketts Valley | $13,913 | 12.0% | $497 | 12 |
-
-**Total estimated Airbnb gross revenue: $2.78M** across active listings.
+| Avoca Beach – Copacabana | $675,611 | 18.5% | $510 | 347 |
+| Terrigal – North Avoca | $661,707 | 22.5% | $494 | 268 |
+| Umina – Booker Bay – Patonga | $621,698 | 23.3% | $391 | 301 |
+| Box Head – MacMasters Beach | $591,908 | 18.8% | $616 | 202 |
+| The Entrance | $583,473 | 26.8% | $381 | 296 |
+| Wamberal – Forresters Beach | $336,195 | 22.0% | $537 | 121 |
+| Toukley – Norah Head | $191,867 | 26.0% | $336 | 65 |
+| Bateau Bay – Killarney Vale | $119,564 | 43.0% | $245 | 50 |
+| Woy Woy – Blackwall | $107,640 | 33.0% | $402 | 31 |
+| Kincumber – Picketts Valley | $20,661 | 20.0% | $517 | 10 |
 
 **Key patterns:**
-- **Wamberal – Forresters Beach** commands the highest ADR ($534), reflecting its premium beachfront positioning
-- **Avoca Beach – Copacabana** generates highest total revenue ($533k) through volume (348 listings) despite lower occupancy (12.5%)
-- **Bateau Bay – Killarney Vale** achieves highest occupancy (33%) but lowest ADR ($221) — a budget/family segment
-- Premium coastal Gosford suburbs (Wamberal, Box Head, Avoca) operate in the $465–$534 ADR band, while Wyong suburbs (The Entrance, Toukley) operate at $326–$338
+- **Box Head – MacMasters Beach** now commands the highest ADR ($616), displacing Wamberal as the top-yield short-stay destination — consistent with its position as the top house rent suburb ($1,086/wk)
+- **Avoca Beach – Copacabana** generates highest total revenue ($675k) through volume (347 listings) — a 27% increase on the prior period
+- **Bateau Bay – Killarney Vale** achieves the highest occupancy (43%) at a budget ADR ($245) — serving a high-volume, lower-yield family/group segment
+- **The Entrance** has grown strongly (296 listings, 26.8% occupancy) — positioned as a mid-tier coastal destination competing on accessibility and price
+
+The 41% revenue increase across the portfolio signals that short-stay accommodation is actively competing with long-term rental stock in coastal suburbs, contributing to reduced rental availability and upward pressure on rents.
 
 ### 6.2 Visitor vs Resident Economic Activity
 
-For suburbs with tourism spending data:
-
 | Category | Total Value | % of Total |
 |---|---|---|
-| Visitor Spend | $62,577,000 | 23.4% |
-| Resident Spend | $204,888,000 | 76.6% |
-| **Total Economic Activity** | **$267,465,000** | 100% |
+| Visitor Spend | $69,076,000 | 16.8% |
+| Resident Spend | $341,471,000 | 83.2% |
+| **Total Economic Activity** | **$410,547,000** | 100% |
 
 **Top visitor spend suburbs:**
 
 | Suburb | Visitor Spend | Resident Spend | Visitor Share |
 |---|---|---|---|
-| Tuggerah – Kangy Angy | $9,869,000 | $38,330,000 | 20.5% |
-| Gosford – Springfield | $7,037,000 | $43,587,000 | 13.9% |
-| Erina – Green Point | $5,101,000 | $65,120,000 | 7.3% |
-| Gorokan – Kanwal – Charmhaven | $4,031,000 | $25,750,000 | 13.5% |
-| Wyong | $3,729,000 | $10,033,000 | 27.1% |
+| Umina – Booker Bay – Patonga | $3,973,000 | $17,945,000 | 18.1% |
+| The Entrance | $4,029,000 | $10,856,000 | 27.1% |
+| Terrigal – North Avoca | $3,385,000 | $6,659,000 | 33.7% |
+| Wyong | $3,995,000 | $9,216,000 | 30.2% |
+| Gosford – Springfield | $6,741,000 | $42,476,000 | 13.7% |
 
-**Jilliby – Yarramalong** stands out with visitor spend ($2,870,000) exceeding resident spend ($606,000) — a visitor-to-resident ratio of **4.7:1**, reflecting its character as a rural tourism/events destination rather than a residential suburb.
+**Terrigal – North Avoca** has the highest visitor share of any suburb with substantial activity (33.7%) — consistent with its premium coastal hospitality positioning. **Jilliby – Yarramalong** continues to generate visitor spend ($2,884,000) that substantially exceeds its resident spend ($631,000) — a visitor-to-resident ratio of **4.6:1**, reflecting its character as a rural tourism/events destination.
 
-**Policy implication:** While tourism contributes meaningfully (23% of tracked economic activity), the regional economy is fundamentally driven by its permanent resident base. Employment support, income growth, and local business development for residents should take precedence over tourism promotion in economic development strategy.
+**Policy implication:** While tourism contributes meaningfully, the regional economy is fundamentally driven by its permanent resident base (83% of tracked activity). Employment support, income growth, and local business development for residents should take precedence over tourism promotion in economic development strategy.
 
+---
 
 ## 7. Homelessness & Housing Vulnerability
 
@@ -410,10 +421,58 @@ Wyong records **more than double** the homelessness rate of Gosford (6.8 vs 3.1 
 | Gorokan – Kanwal – Charmhaven | 138 | 22,740 | 6.1 |
 | Toukley – Norah Head | 134 | 9,847 | 13.6 |
 
-**Wyong** records the highest homelessness rate in the LGA at **25.2 per 1,000** — five times the LGA average and eight times the Gosford SA3 average. Combined with 8.1% unemployment and the lowest SEIFA score in the region, Wyong requires intensive wraparound service delivery.
+**Wyong** records the highest homelessness rate in the LGA at **25.2 per 1,000** — five times the LGA average and eight times the Gosford SA3 average. Combined with 8.1% unemployment, the lowest SEIFA score in the region, and high JobSeeker dependency, Wyong requires intensive wraparound service delivery.
 
 ### 7.2 Rent Assistance as Housing Stress Indicator
 
+Commonwealth Rent Assistance recipients have risen to **27,695** — up 16% from the prior period's 23,785. This is the most alarming single indicator in the April 2026 dataset. CRA is only available to recipients of certain income support payments who pay rent above a threshold; a 16% rise suggests a significant expansion of private rental stress, particularly in Wyong where:
+
 | Suburb | CRA Recipients | Population | CRA Rate (%) |
 |---|---|---|---|
-| Gorokan – Kanwal – Charmhaven | 2,545 | 22,740 | 11
+| Gorokan – Kanwal – Charmhaven | 2,565 | 22,740 | 11.3% |
+| The Entrance | 2,030 | 16,155 | 12.6% |
+| Umina – Booker Bay – Patonga | 2,425 | 25,007 | 9.7% |
+| Lake Munmorah – Mannering Park | 1,890 | 11,055 | 17.1% |
+| Wyong | 1,180 | 9,360 | 12.6% |
+| Bateau Bay – Killarney Vale | 1,465 | 22,990 | 6.4% |
+
+**Lake Munmorah – Mannering Park** at 17.1% CRA rate is particularly concerning — nearly one in five residents is receiving rent assistance, reflecting a combination of low incomes, high welfare dependency (49-year median age, 25.7% aged 69+), and a tight local rental market.
+
+---
+
+## 8. Key Findings & Priorities for April 2026
+
+### What Has Changed Since Prior Period
+
+| Indicator | Prior | Current | Trend |
+|---|---|---|---|
+| LGA avg house price | $1,168,505 | $1,191,900 | ↑ Rising |
+| Price-to-income ratio | 16.4× | 16.7× | ↑ Worsening |
+| JobSeeker recipients | ~11,240 | 12,550 | ↑ +11.6% |
+| Commonwealth Rent Assistance | ~23,785 | 27,695 | ↑ +16.4% |
+| Erina – Green Point house price | $2,087,500 | $1,974,000 | ↓ Softening |
+| Premium tier prices generally | — | Moderating | ↓ |
+| Airbnb gross revenue | $2.78M | $3.91M | ↑ +41% |
+| Warnervale approvals | 222 | 204 | ↓ Easing |
+| LGA avg weekly rent | $709 | $729 | ↑ Rising |
+
+### Priority Issues
+
+**1. Income support crisis in northern Wyong**
+The 11.6% increase in JobSeeker and 16.4% increase in CRA are the most urgent signals in this dataset. The five suburbs forming the northern disadvantage corridor — Wyong, Gorokan, Blue Haven, Toukley, The Entrance — require targeted employment programs, not general economic stimulus. Structural unemployment in these suburbs does not respond to region-wide job creation.
+
+**2. Housing affordability at a breaking point**
+A price-to-income ratio of 16.7× is unsustainable. The easing in Gosford's premium tier ($1.97M → down from $2.09M at Erina) has not translated to affordability improvement; entry-level Wyong prices have continued rising. Without accelerated social and affordable housing supply, rental stress will deepen further.
+
+**3. Short-stay accommodation is displacing renters**
+The 41% increase in Airbnb revenue signals an accelerating shift of coastal housing stock to short-stay use. Without proactive regulation, this will continue to reduce rental availability and push vulnerable households further into housing stress.
+
+**4. Aged care demand is building**
+49,360 Age Pension recipients — 13.9% of the LGA — with suburban concentrations exceeding 25% aged 69+ in Erina–Green Point and Lake Munmorah. Infrastructure planning must anticipate step-change increases in healthcare, transport, and in-home support requirements.
+
+**5. Warnervale–Wadalba infrastructure deficit**
+With 22% of LGA population growth and 204 dwelling approvals — still the highest in the LGA — this suburb's infrastructure (schools, childcare, transport, health) continues to lag supply. The youngest median age (35) and highest under-20 share (31.5%) mean demand for education and family services will intensify for the next decade.
+
+---
+
+*Report generated from April 2026 indicator data (May 2026 refresh). SA2-level data sourced from ABS, CoreLogic, Airdna, and Services Australia administrative datasets. All dollar values in AUD. Population data based on 2021 Census with 2023–24 ERP update.*
