@@ -81,10 +81,10 @@ Commit only the data files. Example commit message:
 data: refresh dashboard with June 2026 data (May indicators)
 ```
 
-Push to both remotes:
+Push to both remotes (origin uses main branch; dev uses gh-pages branch for GitHub Pages):
 ```bash
 git push origin main
-git push dev main
+git push dev main:gh-pages
 ```
 
 ---
