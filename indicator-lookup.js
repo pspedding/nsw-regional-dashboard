@@ -169,15 +169,15 @@ const INDICATOR_LOOKUP = {
   },
   "Unemployment Rate (%)": {
     "contentArea": "Economy",
-    "frequency": "Quarterly",
-    "dataset": "SALM",
-    "latestPeriod": "2025-12-01"
+    "frequency": "Monthly",
+    "dataset": "ABS Labour Force",
+    "latestPeriod": "2026-04-01"
   },
   "Labour Force": {
     "contentArea": "Economy",
-    "frequency": "Quarterly",
-    "dataset": "SALM",
-    "latestPeriod": "2025-12-01"
+    "frequency": "Monthly",
+    "dataset": "ABS Labour Force",
+    "latestPeriod": "2026-04-01"
   },
   "% Completed Year 12": {
     "contentArea": "Demographics",
@@ -277,9 +277,9 @@ const INDICATOR_LOOKUP = {
   },
   "Unemployment": {
     "contentArea": "Economy",
-    "frequency": "Quarterly",
-    "dataset": "SALM",
-    "latestPeriod": "2025-12-01"
+    "frequency": "Monthly",
+    "dataset": "ABS Labour Force",
+    "latestPeriod": "2026-04-01"
   },
   "House Price (Current)": {
     "contentArea": "Economy",
