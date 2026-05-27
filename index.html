@@ -418,11 +418,11 @@
       <input type="text" id="qa-input" placeholder="e.g. Which SA2 has the highest unemployment?" onkeydown="if(event.key==='Enter')sendQA()" />
       <button id="qa-send" onclick="sendQA()">Ask</button>
     </div>
-    <div class="qa-key-row">
-      <input type="password" id="qa-api-key" placeholder="OpenAI key (sk-…) or OpenRouter key (sk-or-…)" />
+    <div class="qa-key-row" id="qa-key-row" style="display:none">
+      <input type="password" id="qa-api-key" placeholder="Optional: OpenAI (sk-…) or OpenRouter (sk-or-…) key" />
       <button class="qa-key-save" onclick="saveKey()">Save key</button>
     </div>
-    <p class="qa-hint" id="qa-key-hint"></p>
+    <p class="qa-hint" id="qa-key-hint">✨ No API key needed — using free AI</p>
   </div>
 </div>
 
@@ -877,7 +877,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('cc_openai_key');
   if (saved) {
     document.getElementById('qa-api-key').value = saved;
-    document.getElementById('qa-key-hint').textContent = '✅ Key loaded from browser storage.';
+    document.getElementById('qa-key-row').style.display = 'flex';
+    document.getElementById('qa-key-hint').textContent = '✅ Using saved API key. Clear to use free AI.';
   }
 });
 
@@ -900,23 +901,25 @@ async function sendQA() {
   const q = input.value.trim();
   if (!q) return;
 
-  // Ensure API key is present
+  // Use saved API key if present, otherwise fall back to free Pollinations endpoint
   const apiKey = localStorage.getItem('cc_openai_key') || '';
-  if (!apiKey.startsWith('sk-')) {
-    document.getElementById('qa-key-hint').textContent = '⚠️ Enter an OpenAI (sk-…) or OpenRouter (sk-or-…) API key below first.';
-    document.getElementById('qa-api-key').style.display = 'block';
-    document.querySelector('.qa-key-save').style.display = 'inline-block';
-    return;
-  }
+  const hasKey = apiKey.startsWith('sk-');
 
-  // Route to correct endpoint: OpenRouter vs OpenAI
-  const isOpenRouter = apiKey.startsWith('sk-or-');
-  const qaEndpoint = isOpenRouter
-    ? 'https://openrouter.ai/api/v1/chat/completions'
-    : 'https://api.openai.com/v1/chat/completions';
-  const qaModel = isOpenRouter ? 'openai/gpt-4o-mini' : 'gpt-4o-mini';
-  const qaHeaders = { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + apiKey };
-  if (isOpenRouter) qaHeaders['HTTP-Referer'] = 'https://pspedding.github.io/nsw-regional-dashboard-dev/';
+  let qaEndpoint, qaModel, qaHeaders;
+  if (hasKey) {
+    const isOpenRouter = apiKey.startsWith('sk-or-');
+    qaEndpoint = isOpenRouter
+      ? 'https://openrouter.ai/api/v1/chat/completions'
+      : 'https://api.openai.com/v1/chat/completions';
+    qaModel = isOpenRouter ? 'openai/gpt-4o-mini' : 'gpt-4o-mini';
+    qaHeaders = { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + apiKey };
+    if (isOpenRouter) qaHeaders['HTTP-Referer'] = 'https://pspedding.github.io/nsw-regional-dashboard-dev/';
+  } else {
+    // Free, no-key endpoint via Pollinations.ai
+    qaEndpoint = 'https://text.pollinations.ai/openai';
+    qaModel = 'openai';
+    qaHeaders = { 'Content-Type': 'application/json' };
+  }
 
   addQAMsg('user', q); input.value = '';
   const thinkingEl = addQAMsg('ai', '⏳ Thinking...');
