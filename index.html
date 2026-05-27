@@ -1247,7 +1247,7 @@ async function renderIntelligence() {
     }
     panel.innerHTML = '<div class="intel-report-loading">⏳ Loading intelligence report…</div>';
     try {
-      const resp = await fetch(reportPath + '?v=1779861915');
+      const resp = await fetch(reportPath + '?v=1779863558');
       if (!resp.ok) throw new Error('fetch failed ' + resp.status);
       const md = await resp.text();
       const html = marked.parse(md);
