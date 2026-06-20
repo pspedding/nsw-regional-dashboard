@@ -1181,16 +1181,22 @@ function renderCompareChart() {
 // Pure function — no side effects outside of rendering to #glance-panel
 
 const GLANCE_CHECKS = [
-  { key: 'Unemployment Rate (%)',                           label: 'unemployment rate',              fmt: v => v.toFixed(1)+'%',                   lowIsBad: true  },
-  { key: 'House Price (Current)',                           label: 'median house price',             fmt: v => '$'+Math.round(v/1000)+'k',          lowIsBad: false },
-  { key: 'Index of Relative Socio-economic Disadvantage ', label: 'socioeconomic disadvantage index', fmt: v => v.toFixed(0),                      lowIsBad: true  },
-  { key: 'Median Household Income',                        label: 'median household income',        fmt: v => '$'+v.toLocaleString()+'/wk',        lowIsBad: true  },
-  { key: 'Airbnb Active Listings',                         label: 'Airbnb active listings',         fmt: v => v.toLocaleString(),                  lowIsBad: false },
-  { key: 'Total Businesses',                               label: 'business count',                 fmt: v => v.toLocaleString(),                  lowIsBad: false },
-  { key: '% Under 20',                                     label: 'share of population under 20',   fmt: v => v.toFixed(1)+'%',                   lowIsBad: false },
-  { key: 'Disability Support Pension',                     label: 'disability support recipients',  fmt: v => v.toLocaleString(),                  lowIsBad: false },
-  { key: 'JobSeeker Payment',                              label: 'jobseeker recipients',           fmt: v => v.toLocaleString(),                  lowIsBad: false },
-  { key: 'Visitor Spend',                                  label: 'visitor retail spend',           fmt: v => '$'+Math.round(v/1e6).toFixed(1)+'M', lowIsBad: false },
+  { key: 'Unemployment Rate (%)',                               label: 'unemployment rate',               fmt: v => v.toFixed(1)+'%',                    lowIsBad: true  },
+  { key: 'House Price (Current)',                               label: 'median house price',              fmt: v => '$'+Math.round(v/1000)+'k',           lowIsBad: false },
+  { key: 'Index of Relative Socio-economic Disadvantage ',      label: 'socioeconomic disadvantage index', fmt: v => v.toFixed(0),                       lowIsBad: true  },
+  { key: 'Median Household Income',                            label: 'median household income',         fmt: v => '$'+v.toLocaleString()+'/wk',         lowIsBad: true  },
+  { key: 'Airbnb Active Listings',                             label: 'Airbnb active listings',          fmt: v => v.toLocaleString(),                   lowIsBad: false },
+  { key: 'Total Businesses',                                   label: 'business count',                  fmt: v => v.toLocaleString(),                   lowIsBad: false },
+  { key: '% Under 20',                                         label: 'share of population under 20',    fmt: v => v.toFixed(1)+'%',                    lowIsBad: false },
+  { key: 'Disability Support Pension',                         label: 'disability support recipients',   fmt: v => v.toLocaleString(),                   lowIsBad: false },
+  { key: 'JobSeeker Payment',                                  label: 'jobseeker recipients',            fmt: v => v.toLocaleString(),                   lowIsBad: false },
+  { key: 'Visitor Spend',                                      label: 'visitor retail spend',            fmt: v => '$'+Math.round(v/1e6).toFixed(1)+'M', lowIsBad: false },
+  // Crime — high values are the notable/concerning signal
+  { key: 'Assault Rate (per 1,000)',                            label: 'assault rate (per 1k)',           fmt: v => v.toFixed(2)+' per 1k',              highIsBad: true },
+  { key: 'Theft Rate (per 1,000)',                              label: 'theft rate (per 1k)',             fmt: v => v.toFixed(2)+' per 1k',              highIsBad: true },
+  { key: 'Drug Offences Rate (per 1,000)',                      label: 'drug offences rate (per 1k)',     fmt: v => v.toFixed(2)+' per 1k',              highIsBad: true },
+  { key: 'Intimidation, Stalking & Harassment Rate (per 1,000)', label: 'intimidation & harassment rate (per 1k)', fmt: v => v.toFixed(2)+' per 1k', highIsBad: true },
+  { key: 'Malicious Damage to Property Rate (per 1,000)',       label: 'malicious damage rate (per 1k)',  fmt: v => v.toFixed(2)+' per 1k',              highIsBad: true },
 ];
 
 function renderAtAGlance(row, scopeData, scopeLabel) {
@@ -1200,7 +1206,7 @@ function renderAtAGlance(row, scopeData, scopeLabel) {
   const name = row['SA2 Name'];
   const findings = [];
 
-  GLANCE_CHECKS.forEach(({ key, label, fmt, lowIsBad }) => {
+  GLANCE_CHECKS.forEach(({ key, label, fmt, lowIsBad, highIsBad }) => {
     const v = row[key];
     if (v == null || isNaN(v)) return;
     const vals = scopeData.map(r => r[key]).filter(x => x != null && !isNaN(x));
@@ -1210,16 +1216,30 @@ function renderAtAGlance(row, scopeData, scopeLabel) {
 
     const isLowest = vals.length > 1 && v === Math.min(...vals);
     const isHighest = vals.length > 1 && v === Math.max(...vals);
-    if (isLowest) {
-      const icon = lowIsBad ? '⚠️' : '📉';
-      findings.push({ icon, text: `Has the <strong>lowest</strong> ${label} in ${scopeLabel} at ${formatted}.` });
-    } else if (pct <= 25) {
-      const icon = lowIsBad ? '⚠️' : '📉';
-      findings.push({ icon, text: `Has a <strong>low</strong> ${label} at ${formatted} (bottom 25% of ${scopeLabel}).` });
-    } else if (isHighest) {
-      findings.push({ icon: '📈', text: `Has the <strong>highest</strong> ${label} in ${scopeLabel} at ${formatted}.` });
-    } else if (pct >= 75) {
-      findings.push({ icon: '📈', text: `Has a <strong>high</strong> ${label} at ${formatted} (top 25% of ${scopeLabel}).` });
+
+    if (highIsBad) {
+      // High values are concerning (crime indicators)
+      if (isHighest) {
+        findings.push({ icon: '🚨', text: `Has the <strong>highest</strong> ${label} in ${scopeLabel} at ${formatted}.` });
+      } else if (pct >= 75) {
+        findings.push({ icon: '⚠️', text: `Has a <strong>high</strong> ${label} at ${formatted} (top 25% of ${scopeLabel}).` });
+      } else if (isLowest) {
+        findings.push({ icon: '✅', text: `Has the <strong>lowest</strong> ${label} in ${scopeLabel} at ${formatted}.` });
+      } else if (pct <= 25) {
+        findings.push({ icon: '✅', text: `Has a <strong>low</strong> ${label} at ${formatted} (bottom 25% of ${scopeLabel}).` });
+      }
+    } else {
+      if (isLowest) {
+        const icon = lowIsBad ? '⚠️' : '📉';
+        findings.push({ icon, text: `Has the <strong>lowest</strong> ${label} in ${scopeLabel} at ${formatted}.` });
+      } else if (pct <= 25) {
+        const icon = lowIsBad ? '⚠️' : '📉';
+        findings.push({ icon, text: `Has a <strong>low</strong> ${label} at ${formatted} (bottom 25% of ${scopeLabel}).` });
+      } else if (isHighest) {
+        findings.push({ icon: '📈', text: `Has the <strong>highest</strong> ${label} in ${scopeLabel} at ${formatted}.` });
+      } else if (pct >= 75) {
+        findings.push({ icon: '📈', text: `Has a <strong>high</strong> ${label} at ${formatted} (top 25% of ${scopeLabel}).` });
+      }
     }
   });
 
