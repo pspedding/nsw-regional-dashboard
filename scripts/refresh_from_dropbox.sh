@@ -74,7 +74,37 @@ if $DRY_RUN; then
   exit 0
 fi
 
-# ── 4. Commit & push ─────────────────────────────────────────────────
+# ── 4. Regenerate report downloads (PDF + DOCX) ──────────────────────
+echo ""
+echo ">> Step 4: Regenerating report downloads ..."
+for MD in "$REPO_DIR"/reports/*.md; do
+  BASE="$(basename "$MD" .md)"
+  DOCX="$REPO_DIR/reports/${BASE}.docx"
+  HTML="/tmp/${BASE}-report.html"
+  PDF="$REPO_DIR/reports/${BASE}.pdf"
+
+  if command -v pandoc &>/dev/null; then
+    pandoc "$MD" --from markdown --to docx --standalone --output "$DOCX" 2>/dev/null \
+      && echo "   Generated: reports/${BASE}.docx" \
+      || echo "   WARN: docx generation failed for $MD"
+
+    pandoc "$MD" --from markdown --to html5 --standalone \
+      --metadata title="Central Coast SA2 Intelligence Report" \
+      --output "$HTML" 2>/dev/null
+    if command -v wkhtmltopdf &>/dev/null && [[ -f "$HTML" ]]; then
+      wkhtmltopdf --page-size A4 --margin-top 20mm --margin-bottom 20mm \
+        --margin-left 20mm --margin-right 20mm --encoding utf-8 \
+        --enable-local-file-access --quiet \
+        "$HTML" "$PDF" 2>/dev/null \
+        && echo "   Generated: reports/${BASE}.pdf" \
+        || echo "   WARN: pdf generation failed for $MD"
+    fi
+  else
+    echo "   WARN: pandoc not found, skipping report generation"
+  fi
+done
+
+# ── 5. Commit & push ─────────────────────────────────────────────────
 echo ""
 echo ">> Step 4: Committing and pushing ..."
 cd "$REPO_DIR"
@@ -84,7 +114,8 @@ git add data.js indicator-lookup.js sa2_kpi_wide.csv \
         public/data/trend_series.json \
         inputs/Output-Mapped-SA2-Level-Data-Pivot-All-LGAs.xlsx \
         inputs/Output-Indicator-Lookup.xlsx \
-        inputs/Output-Trends.csv 2>/dev/null || true
+        inputs/Output-Trends.csv \
+        reports/*.pdf reports/*.docx 2>/dev/null || true
 
 # Optional prior-month file
 git add inputs/Output-Mapped-SA2-Level-Data-Pivot-All-LGAs-Prior-Month.xlsx 2>/dev/null || true
