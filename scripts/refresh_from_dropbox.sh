@@ -59,7 +59,22 @@ echo ">> Step 2: Running import script ..."
 cd "$REPO_DIR"
 python3 scripts/import_dashboard_inputs.py
 
-# ── 3. Validate ───────────────────────────────────────────────────────
+# ── 3. Regenerate analytics (correlations, outliers) ─────────────────
+echo ""
+echo ">> Step 3: Recomputing correlations and outliers ..."
+python3 scripts/compute_correlations.py
+python3 scripts/compute_outliers.py
+echo "   Analytics done."
+
+# ── 4. Bump cache-buster in index.html ─────────────────────────────
+echo ""
+echo ">> Step 4: Bumping cache-buster ..."
+TS=$(date +%s)
+sed -i "s/indicator-lookup\.js?v=[0-9]*/indicator-lookup.js?v=${TS}/g" index.html
+sed -i "s/data\.js?v=[0-9]*/data.js?v=${TS}/g" index.html
+echo "   Cache-buster set to $TS"
+
+# ── 6. Validate ───────────────────────────────────────────────────────
 echo ""
 echo ">> Step 3: Validating ..."
 if [[ -f "$REPO_DIR/scripts/validate_before_push.sh" ]]; then
@@ -76,7 +91,7 @@ fi
 
 # ── 4. Regenerate report downloads (PDF + DOCX) ──────────────────────
 echo ""
-echo ">> Step 4: Regenerating report downloads ..."
+echo ">> Step 6: Regenerating report downloads ..."
 for MD in "$REPO_DIR"/reports/*.md; do
   BASE="$(basename "$MD" .md)"
   DOCX="$REPO_DIR/reports/${BASE}.docx"
@@ -104,13 +119,14 @@ for MD in "$REPO_DIR"/reports/*.md; do
   fi
 done
 
-# ── 5. Commit & push ─────────────────────────────────────────────────
+# ── 7. Commit & push ─────────────────────────────────────────────────
 echo ""
-echo ">> Step 4: Committing and pushing ..."
+echo ">> Step 7: Committing and pushing ..."
 cd "$REPO_DIR"
 
 # Stage generated files + inputs
-git add data.js indicator-lookup.js sa2_kpi_wide.csv \
+git add data.js index.html indicator-lookup.js sa2_kpi_wide.csv \
+        public/data/correlations.json public/data/outliers.json \
         public/data/trend_series.json \
         inputs/Output-Mapped-SA2-Level-Data-Pivot-All-LGAs.xlsx \
         inputs/Output-Indicator-Lookup.xlsx \

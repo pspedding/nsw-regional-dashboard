@@ -8,7 +8,7 @@
   },
   "global": {
     "row_count": 191,
-    "metric_count": 51,
+    "metric_count": 56,
     "indicators": {
       "Total Businesses": {
         "method": "pearson",
@@ -30,8 +30,8 @@
             "value": 0.743132
           },
           {
-            "indicator": "Resident Spend",
-            "value": 0.664042
+            "indicator": "Total Population",
+            "value": 0.651963
           }
         ],
         "negative": [
@@ -53,8 +53,12 @@
             "value": 0.755189
           },
           {
+            "indicator": "Drug Offences Rate (per 1,000)",
+            "value": 0.573171
+          },
+          {
             "indicator": "Visitor Spend",
-            "value": 0.534579
+            "value": 0.5623
           },
           {
             "indicator": "Tourism Businesses",
@@ -63,10 +67,6 @@
           {
             "indicator": "Labour Force",
             "value": 0.505438
-          },
-          {
-            "indicator": "Resident Spend",
-            "value": 0.504656
           }
         ],
         "negative": []
@@ -88,7 +88,7 @@
           },
           {
             "indicator": "Resident Spend",
-            "value": 0.681843
+            "value": 0.668985
           },
           {
             "indicator": "% Bachelor Degree",
@@ -118,16 +118,16 @@
             "value": 0.757356
           },
           {
-            "indicator": "Visitor Spend",
-            "value": 0.696304
-          },
-          {
             "indicator": "Population density 2024 (persons/km2)",
             "value": 0.663663
           },
           {
+            "indicator": "Labour Force",
+            "value": 0.63806
+          },
+          {
             "indicator": "Resident Spend",
-            "value": 0.644775
+            "value": 0.629066
           }
         ],
         "negative": [
@@ -172,19 +172,19 @@
         "negative": [
           {
             "indicator": "Airbnb ADR",
-            "value": -0.790219
+            "value": -0.707929
           },
           {
             "indicator": "Index of Economic Resources",
             "value": -0.61883
           },
           {
-            "indicator": "Median Age",
-            "value": -0.428332
+            "indicator": "House Rent (P/W)",
+            "value": -0.432116
           },
           {
-            "indicator": "House Rent (P/W)",
-            "value": -0.407683
+            "indicator": "Median Age",
+            "value": -0.428332
           },
           {
             "indicator": "Net internal migration",
@@ -196,6 +196,14 @@
         "method": "pearson",
         "positive": [
           {
+            "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+            "value": 0.758118
+          },
+          {
+            "indicator": "Malicious Damage to Property Rate (per 1,000)",
+            "value": 0.702154
+          },
+          {
             "indicator": "Unemployment",
             "value": 0.635763
           },
@@ -206,36 +214,28 @@
           {
             "indicator": "Disability Support Pension",
             "value": 0.566567
-          },
-          {
-            "indicator": "Youth Allowance (other)",
-            "value": 0.565156
-          },
-          {
-            "indicator": "JobSeeker Payment",
-            "value": 0.553454
           }
         ],
         "negative": [
           {
+            "indicator": "House Rent (P/W)",
+            "value": -0.692621
+          },
+          {
             "indicator": "Airbnb ADR",
-            "value": -0.735429
+            "value": -0.674767
           },
           {
             "indicator": "Index of Economic Resources",
             "value": -0.67325
           },
           {
-            "indicator": "Unit Rent (P/W)",
-            "value": -0.661782
-          },
-          {
-            "indicator": "House Rent (P/W)",
-            "value": -0.65689
-          },
-          {
             "indicator": "Index of Relative Socio-economic Disadvantage ",
             "value": -0.654527
+          },
+          {
+            "indicator": "Unit Rent (P/W)",
+            "value": -0.579589
           }
         ]
       },
@@ -265,12 +265,12 @@
         ],
         "negative": [
           {
-            "indicator": "Airbnb ADR",
-            "value": -0.734993
-          },
-          {
             "indicator": "Index of Economic Resources",
             "value": -0.72386
+          },
+          {
+            "indicator": "Airbnb ADR",
+            "value": -0.674633
           },
           {
             "indicator": "Index of Relative Socio-economic Disadvantage ",
@@ -282,7 +282,7 @@
           },
           {
             "indicator": "House Rent (P/W)",
-            "value": -0.366871
+            "value": -0.388106
           }
         ]
       },
@@ -312,12 +312,12 @@
         ],
         "negative": [
           {
-            "indicator": "Airbnb ADR",
-            "value": -0.561728
-          },
-          {
             "indicator": "Median Age",
             "value": -0.48973
+          },
+          {
+            "indicator": "Airbnb ADR",
+            "value": -0.433266
           },
           {
             "indicator": "% Indigenous",
@@ -334,29 +334,33 @@
         "positive": [
           {
             "indicator": "Number of dwellings approved",
-            "value": 0.928567
+            "value": 0.931161
           },
           {
             "indicator": "Airbnb Active Listings",
-            "value": 0.735274
+            "value": 0.770738
           },
           {
             "indicator": "Airbnb  Gross Revenue",
-            "value": 0.695428
+            "value": 0.663118
           },
           {
             "indicator": "Population Change 2023-24",
-            "value": 0.559539
+            "value": 0.568064
           },
           {
             "indicator": "Labour Force",
-            "value": 0.515977
+            "value": 0.520029
           }
         ],
         "negative": [
           {
+            "indicator": "Airbnb Occupancy Rate",
+            "value": -0.327873
+          },
+          {
             "indicator": "% Under 20",
-            "value": -0.320195
+            "value": -0.3189
           }
         ]
       },
@@ -365,29 +369,29 @@
         "positive": [
           {
             "indicator": "Value of building job(s)",
-            "value": 0.928567
+            "value": 0.931161
           },
           {
             "indicator": "Population Change 2023-24",
-            "value": 0.493719
+            "value": 0.50465
           },
           {
             "indicator": "Labour Force",
-            "value": 0.48353
+            "value": 0.48656
           },
           {
             "indicator": "Airbnb Active Listings",
-            "value": 0.471009
+            "value": 0.459565
           },
           {
             "indicator": "Net internal migration",
-            "value": 0.417343
+            "value": 0.431405
           }
         ],
         "negative": [
           {
             "indicator": "Airbnb ADR",
-            "value": -0.386707
+            "value": -0.350327
           }
         ]
       },
@@ -396,41 +400,45 @@
         "positive": [
           {
             "indicator": "Airbnb Occupancy Rate",
-            "value": 0.793515
+            "value": 0.877769
           },
           {
             "indicator": "Visitor Spend",
-            "value": 0.791683
+            "value": 0.79522
           },
           {
             "indicator": "Healthcare Businesses",
-            "value": 0.681843
+            "value": 0.668985
           },
           {
             "indicator": "Total Businesses",
-            "value": 0.664042
+            "value": 0.649153
           },
           {
             "indicator": "Tourism Businesses",
-            "value": 0.644775
+            "value": 0.629066
           }
         ],
         "negative": [
           {
             "indicator": "Airbnb ADR",
-            "value": -0.803888
+            "value": -0.847071
           },
           {
             "indicator": "Airbnb  Gross Revenue",
-            "value": -0.460794
+            "value": -0.507433
           },
           {
             "indicator": "Natural increase in ERP",
-            "value": -0.433717
+            "value": -0.443373
           },
           {
             "indicator": "Airbnb Active Listings",
-            "value": -0.353203
+            "value": -0.363091
+          },
+          {
+            "indicator": "Listing Visits per Property",
+            "value": -0.343767
           }
         ]
       },
@@ -438,34 +446,34 @@
         "method": "pearson",
         "positive": [
           {
+            "indicator": "Theft Rate (per 1,000)",
+            "value": 0.83273
+          },
+          {
             "indicator": "Resident Spend",
-            "value": 0.791683
+            "value": 0.79522
+          },
+          {
+            "indicator": "Assault Rate (per 1,000)",
+            "value": 0.657566
           },
           {
             "indicator": "Tourism Businesses",
-            "value": 0.696304
-          },
-          {
-            "indicator": "Total Businesses",
-            "value": 0.608146
+            "value": 0.620081
           },
           {
             "indicator": "% Language Other Than English",
-            "value": 0.545094
-          },
-          {
-            "indicator": "Manufacturing Businesses",
-            "value": 0.534579
+            "value": 0.583341
           }
         ],
         "negative": [
           {
             "indicator": "Airbnb ADR",
-            "value": -0.586583
+            "value": -0.642065
           },
           {
             "indicator": "Listing Visits per Property",
-            "value": -0.377679
+            "value": -0.493054
           }
         ]
       },
@@ -473,46 +481,46 @@
         "method": "pearson",
         "positive": [
           {
-            "indicator": "Airbnb  Gross Revenue",
-            "value": 0.816612
+            "indicator": "Airbnb ADR",
+            "value": 0.824864
           },
           {
-            "indicator": "House Rent (P/W)",
-            "value": 0.813926
+            "indicator": "Airbnb  Gross Revenue",
+            "value": 0.807194
           },
           {
             "indicator": "Unit Price (Current)",
-            "value": 0.787275
+            "value": 0.77228
           },
           {
-            "indicator": "Airbnb ADR",
-            "value": 0.755069
+            "indicator": "House Rent (P/W)",
+            "value": 0.771528
           },
           {
-            "indicator": "Airbnb Active Listings",
-            "value": 0.738418
+            "indicator": "Index of Education and Occupation",
+            "value": 0.715975
           }
         ],
         "negative": [
           {
             "indicator": "Airbnb Occupancy Rate",
-            "value": -0.718321
+            "value": -0.805879
           },
           {
             "indicator": "% Indigenous",
-            "value": -0.684104
+            "value": -0.674723
           },
           {
             "indicator": "Unemployment Rate (%)",
-            "value": -0.547575
+            "value": -0.542776
+          },
+          {
+            "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+            "value": -0.451035
           },
           {
             "indicator": "Youth Allowance (other)",
-            "value": -0.41565
-          },
-          {
-            "indicator": "Total Indigenous",
-            "value": -0.359539
+            "value": -0.416836
           }
         ]
       },
@@ -520,46 +528,46 @@
         "method": "pearson",
         "positive": [
           {
-            "indicator": "House Price (Current)",
-            "value": 0.813926
-          },
-          {
-            "indicator": "Airbnb ADR",
-            "value": 0.778756
-          },
-          {
             "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
-            "value": 0.75167
+            "value": 0.774632
+          },
+          {
+            "indicator": "House Price (Current)",
+            "value": 0.771528
           },
           {
             "indicator": "Index of Education and Occupation",
-            "value": 0.74247
+            "value": 0.760299
           },
           {
             "indicator": "Index of Relative Socio-economic Disadvantage ",
-            "value": 0.70724
+            "value": 0.742708
+          },
+          {
+            "indicator": "Airbnb ADR",
+            "value": 0.730157
           }
         ],
         "negative": [
           {
             "indicator": "Unemployment Rate (%)",
-            "value": -0.65689
+            "value": -0.692621
           },
           {
             "indicator": "% Indigenous",
-            "value": -0.649008
+            "value": -0.660606
           },
           {
             "indicator": "Airbnb Occupancy Rate",
-            "value": -0.531531
+            "value": -0.641911
           },
           {
-            "indicator": "Youth Allowance (other)",
-            "value": -0.440611
+            "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+            "value": -0.571814
           },
           {
-            "indicator": "Unemployment",
-            "value": -0.407683
+            "indicator": "Malicious Damage to Property Rate (per 1,000)",
+            "value": -0.487829
           }
         ]
       },
@@ -568,17 +576,33 @@
         "positive": [
           {
             "indicator": "Airbnb Occupancy Rate",
-            "value": 0.360197
+            "value": 0.394733
           },
           {
-            "indicator": "Population density 2024 (persons/km2)",
-            "value": 0.322317
+            "indicator": "Unit Rent (P/W)",
+            "value": 0.338116
+          },
+          {
+            "indicator": "% Completed Year 12",
+            "value": 0.313225
+          },
+          {
+            "indicator": "% Bachelor Degree",
+            "value": 0.310256
           }
         ],
         "negative": [
           {
             "indicator": "Visitor Spend",
-            "value": -0.377679
+            "value": -0.493054
+          },
+          {
+            "indicator": "Resident Spend",
+            "value": -0.343767
+          },
+          {
+            "indicator": "Theft Rate (per 1,000)",
+            "value": -0.320703
           }
         ]
       },
@@ -587,45 +611,45 @@
         "positive": [
           {
             "indicator": "Airbnb  Gross Revenue",
-            "value": 0.8293
-          },
-          {
-            "indicator": "Airbnb Active Listings",
-            "value": 0.808196
+            "value": 0.818471
           },
           {
             "indicator": "House Price (Current)",
-            "value": 0.787275
+            "value": 0.77228
           },
           {
-            "indicator": "House Rent (P/W)",
-            "value": 0.628999
+            "indicator": "Airbnb Active Listings",
+            "value": 0.752575
           },
           {
             "indicator": "Resident Spend",
-            "value": 0.520956
+            "value": 0.522201
+          },
+          {
+            "indicator": "House Rent (P/W)",
+            "value": 0.51011
           }
         ],
         "negative": [
           {
-            "indicator": "Natural increase in ERP",
-            "value": -0.503042
+            "indicator": "Airbnb Occupancy Rate",
+            "value": -0.509108
           },
           {
-            "indicator": "Airbnb Occupancy Rate",
-            "value": -0.500311
+            "indicator": "Natural increase in ERP",
+            "value": -0.505585
           },
           {
             "indicator": "% Indigenous",
-            "value": -0.478724
+            "value": -0.489496
           },
           {
             "indicator": "Unemployment Rate (%)",
-            "value": -0.389483
+            "value": -0.398216
           },
           {
-            "indicator": "Youth Allowance (other)",
-            "value": -0.303556
+            "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+            "value": -0.336039
           }
         ]
       },
@@ -633,38 +657,38 @@
         "method": "pearson",
         "positive": [
           {
-            "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
-            "value": 0.741469
+            "indicator": "Index of Education and Occupation",
+            "value": 0.678394
           },
           {
-            "indicator": "Index of Education and Occupation",
-            "value": 0.738747
+            "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
+            "value": 0.672361
           },
           {
             "indicator": "% Completed Year 12",
-            "value": 0.707276
-          },
-          {
-            "indicator": "Index of Relative Socio-economic Disadvantage ",
-            "value": 0.67769
+            "value": 0.650153
           },
           {
             "indicator": "% Bachelor Degree",
-            "value": 0.671206
+            "value": 0.619265
+          },
+          {
+            "indicator": "Index of Relative Socio-economic Disadvantage ",
+            "value": 0.601419
           }
         ],
         "negative": [
           {
             "indicator": "% Indigenous",
-            "value": -0.76612
+            "value": -0.720756
           },
           {
             "indicator": "Unemployment Rate (%)",
-            "value": -0.661782
+            "value": -0.579589
           },
           {
-            "indicator": "Total Indigenous",
-            "value": -0.327707
+            "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+            "value": -0.314551
           }
         ]
       },
@@ -742,7 +766,7 @@
         "negative": [
           {
             "indicator": "Airbnb ADR",
-            "value": -0.611869
+            "value": -0.508663
           }
         ]
       },
@@ -754,20 +778,20 @@
             "value": 0.645644
           },
           {
-            "indicator": "Airbnb  Gross Revenue",
-            "value": 0.596434
+            "indicator": "Airbnb Active Listings",
+            "value": 0.593659
           },
           {
             "indicator": "Net internal migration",
             "value": 0.585645
           },
           {
-            "indicator": "Airbnb Active Listings",
-            "value": 0.582399
+            "indicator": "Value of building job(s)",
+            "value": 0.568064
           },
           {
-            "indicator": "Value of building job(s)",
-            "value": 0.559539
+            "indicator": "Natural increase in ERP",
+            "value": 0.530075
           }
         ],
         "negative": [
@@ -824,12 +848,12 @@
         "method": "pearson",
         "positive": [
           {
-            "indicator": "Airbnb Occupancy Rate",
-            "value": 0.623703
-          },
-          {
             "indicator": "Population Change 2023-24",
             "value": 0.585645
+          },
+          {
+            "indicator": "Airbnb Occupancy Rate",
+            "value": 0.521014
           },
           {
             "indicator": "% Indigenous",
@@ -837,7 +861,7 @@
           },
           {
             "indicator": "Number of dwellings approved",
-            "value": 0.417343
+            "value": 0.431405
           },
           {
             "indicator": "Carer Allowance",
@@ -846,16 +870,16 @@
         ],
         "negative": [
           {
-            "indicator": "Airbnb ADR",
-            "value": -0.664229
-          },
-          {
             "indicator": "% Born Overseas",
             "value": -0.64602
           },
           {
             "indicator": "% Completed Year 12",
             "value": -0.631627
+          },
+          {
+            "indicator": "Airbnb ADR",
+            "value": -0.619276
           },
           {
             "indicator": "% Bachelor Degree",
@@ -872,11 +896,11 @@
         "positive": [
           {
             "indicator": "Airbnb ADR",
-            "value": 0.651317
+            "value": 0.63208
           },
           {
             "indicator": "Airbnb  Gross Revenue",
-            "value": 0.563449
+            "value": 0.54086
           },
           {
             "indicator": "% Under 20",
@@ -888,7 +912,7 @@
           },
           {
             "indicator": "Airbnb Active Listings",
-            "value": 0.500873
+            "value": 0.49979
           }
         ],
         "negative": [
@@ -897,20 +921,20 @@
             "value": -0.714211
           },
           {
+            "indicator": "Airbnb Occupancy Rate",
+            "value": -0.573138
+          },
+          {
             "indicator": "Median Age",
             "value": -0.535743
           },
           {
             "indicator": "Unit Price (Current)",
-            "value": -0.503042
-          },
-          {
-            "indicator": "Airbnb Occupancy Rate",
-            "value": -0.484797
+            "value": -0.505585
           },
           {
             "indicator": "Resident Spend",
-            "value": -0.433717
+            "value": -0.443373
           }
         ]
       },
@@ -922,12 +946,12 @@
             "value": 0.882606
           },
           {
-            "indicator": "Unit Price (Current)",
-            "value": 0.41839
+            "indicator": "House Price (Current)",
+            "value": 0.414572
           },
           {
-            "indicator": "House Price (Current)",
-            "value": 0.410738
+            "indicator": "Unit Price (Current)",
+            "value": 0.408365
           },
           {
             "indicator": "Net internal migration",
@@ -975,6 +999,10 @@
           {
             "indicator": "Index of Economic Resources",
             "value": 0.483831
+          },
+          {
+            "indicator": "Airbnb ADR",
+            "value": 0.404066
           }
         ],
         "negative": [
@@ -992,7 +1020,7 @@
           },
           {
             "indicator": "Value of building job(s)",
-            "value": -0.320195
+            "value": -0.3189
           },
           {
             "indicator": "Age Pension",
@@ -1013,11 +1041,11 @@
           },
           {
             "indicator": "Unit Price (Current)",
-            "value": 0.404389
+            "value": 0.386833
           },
           {
             "indicator": "House Price (Current)",
-            "value": 0.352541
+            "value": 0.356996
           },
           {
             "indicator": "Pension Concession Card",
@@ -1039,11 +1067,11 @@
           },
           {
             "indicator": "Airbnb  Gross Revenue",
-            "value": -0.510382
+            "value": -0.617436
           },
           {
             "indicator": "Airbnb Active Listings",
-            "value": -0.506931
+            "value": -0.510603
           }
         ]
       },
@@ -1085,12 +1113,12 @@
             "value": -0.538582
           },
           {
-            "indicator": "Airbnb Occupancy Rate",
-            "value": -0.498454
-          },
-          {
             "indicator": "Median Age",
             "value": -0.489825
+          },
+          {
+            "indicator": "Parenting Payment Single",
+            "value": -0.47745
           }
         ]
       },
@@ -1100,6 +1128,10 @@
           {
             "indicator": "% Born Overseas",
             "value": 0.932787
+          },
+          {
+            "indicator": "Assault Rate (per 1,000)",
+            "value": 0.684883
           },
           {
             "indicator": "% Completed Year 12",
@@ -1112,10 +1144,6 @@
           {
             "indicator": "Index of Education and Occupation",
             "value": 0.648865
-          },
-          {
-            "indicator": "Net overseas migration",
-            "value": 0.644725
           }
         ],
         "negative": [
@@ -1153,22 +1181,22 @@
             "value": 0.709555
           },
           {
-            "indicator": "Airbnb Occupancy Rate",
-            "value": 0.693584
-          },
-          {
             "indicator": "% Completed Year 12",
             "value": 0.675031
           },
           {
             "indicator": "Tourism Businesses",
             "value": 0.663663
+          },
+          {
+            "indicator": "Index of Education and Occupation",
+            "value": 0.646415
           }
         ],
         "negative": [
           {
             "indicator": "Airbnb ADR",
-            "value": -0.701256
+            "value": -0.581077
           },
           {
             "indicator": "Net internal migration",
@@ -1226,12 +1254,12 @@
             "value": -0.562585
           },
           {
-            "indicator": "Airbnb Occupancy Rate",
-            "value": -0.555526
-          },
-          {
             "indicator": "Total Indigenous",
             "value": -0.550642
+          },
+          {
+            "indicator": "Parenting Payment Single",
+            "value": -0.531802
           }
         ]
       },
@@ -1273,12 +1301,12 @@
             "value": -0.552227
           },
           {
-            "indicator": "Airbnb Occupancy Rate",
-            "value": -0.548441
-          },
-          {
             "indicator": "Parenting Payment Single",
             "value": -0.54747
+          },
+          {
+            "indicator": "Carer Allowance",
+            "value": -0.534183
           }
         ]
       },
@@ -1320,12 +1348,12 @@
             "value": -0.891375
           },
           {
-            "indicator": "Unit Rent (P/W)",
-            "value": -0.76612
-          },
-          {
             "indicator": "% Completed Year 12",
             "value": -0.753281
+          },
+          {
+            "indicator": "% Bachelor Degree",
+            "value": -0.752221
           }
         ]
       },
@@ -1355,16 +1383,16 @@
         ],
         "negative": [
           {
-            "indicator": "Airbnb ADR",
-            "value": -0.82171
-          },
-          {
             "indicator": "Index of Relative Socio-economic Disadvantage ",
             "value": -0.756639
           },
           {
             "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
             "value": -0.749867
+          },
+          {
+            "indicator": "Airbnb ADR",
+            "value": -0.740219
           },
           {
             "indicator": "Index of Education and Occupation",
@@ -1380,24 +1408,24 @@
         "method": "pearson",
         "positive": [
           {
+            "indicator": "Malicious Damage to Property Rate (per 1,000)",
+            "value": 0.814045
+          },
+          {
+            "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+            "value": 0.779091
+          },
+          {
+            "indicator": "Drug Offences Rate (per 1,000)",
+            "value": 0.707815
+          },
+          {
             "indicator": "JobSeeker Payment",
             "value": 0.667636
           },
           {
             "indicator": "Disability Support Pension",
             "value": 0.633524
-          },
-          {
-            "indicator": "Total Indigenous",
-            "value": 0.59158
-          },
-          {
-            "indicator": "Unemployment",
-            "value": 0.583785
-          },
-          {
-            "indicator": "Unemployment Rate (%)",
-            "value": 0.56907
           }
         ],
         "negative": [
@@ -1407,7 +1435,7 @@
           },
           {
             "indicator": "Airbnb ADR",
-            "value": -0.543553
+            "value": -0.47357
           },
           {
             "indicator": "Index of Relative Socio-economic Disadvantage ",
@@ -1415,7 +1443,7 @@
           },
           {
             "indicator": "House Rent (P/W)",
-            "value": -0.31859
+            "value": -0.372858
           },
           {
             "indicator": "% Under 20",
@@ -1450,7 +1478,7 @@
         "negative": [
           {
             "indicator": "Airbnb ADR",
-            "value": -0.676975
+            "value": -0.645057
           },
           {
             "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
@@ -1497,7 +1525,7 @@
         "negative": [
           {
             "indicator": "Airbnb ADR",
-            "value": -0.748276
+            "value": -0.701859
           },
           {
             "indicator": "Index of Relative Socio-economic Disadvantage ",
@@ -1543,12 +1571,12 @@
         ],
         "negative": [
           {
-            "indicator": "Airbnb ADR",
-            "value": -0.709764
-          },
-          {
             "indicator": "Index of Relative Socio-economic Disadvantage ",
             "value": -0.697664
+          },
+          {
+            "indicator": "Airbnb ADR",
+            "value": -0.629028
           },
           {
             "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
@@ -1591,7 +1619,7 @@
         "negative": [
           {
             "indicator": "Airbnb ADR",
-            "value": -0.83593
+            "value": -0.743983
           },
           {
             "indicator": "Index of Relative Socio-economic Disadvantage ",
@@ -1637,12 +1665,12 @@
         ],
         "negative": [
           {
-            "indicator": "Airbnb ADR",
-            "value": -0.877287
-          },
-          {
             "indicator": "Index of Relative Socio-economic Disadvantage ",
             "value": -0.774467
+          },
+          {
+            "indicator": "Airbnb ADR",
+            "value": -0.750441
           },
           {
             "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
@@ -1684,12 +1712,12 @@
         ],
         "negative": [
           {
-            "indicator": "Airbnb ADR",
-            "value": -0.852277
-          },
-          {
             "indicator": "Index of Relative Socio-economic Disadvantage ",
             "value": -0.754059
+          },
+          {
+            "indicator": "Airbnb ADR",
+            "value": -0.746945
           },
           {
             "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
@@ -1732,7 +1760,7 @@
         "negative": [
           {
             "indicator": "Airbnb ADR",
-            "value": -0.789212
+            "value": -0.693992
           },
           {
             "indicator": "Index of Relative Socio-economic Disadvantage ",
@@ -1779,7 +1807,7 @@
         "negative": [
           {
             "indicator": "Airbnb ADR",
-            "value": -0.775958
+            "value": -0.717303
           },
           {
             "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
@@ -1826,7 +1854,7 @@
         "negative": [
           {
             "indicator": "Airbnb ADR",
-            "value": -0.829912
+            "value": -0.78296
           },
           {
             "indicator": "Index of Relative Socio-economic Disadvantage ",
@@ -1850,46 +1878,46 @@
         "method": "pearson",
         "positive": [
           {
-            "indicator": "Youth Allowance (other)",
-            "value": 0.840141
+            "indicator": "Resident Spend",
+            "value": 0.877769
           },
           {
-            "indicator": "Resident Spend",
-            "value": 0.793515
+            "indicator": "Youth Allowance (other)",
+            "value": 0.677137
           },
           {
             "indicator": "Family Tax Benefit A",
-            "value": 0.762723
+            "value": 0.615743
+          },
+          {
+            "indicator": "Malicious Damage to Property Rate (per 1,000)",
+            "value": 0.599844
           },
           {
             "indicator": "Total Indigenous",
-            "value": 0.752905
-          },
-          {
-            "indicator": "Carer Allowance",
-            "value": 0.712328
+            "value": 0.599446
           }
         ],
         "negative": [
           {
-            "indicator": "Airbnb ADR",
-            "value": -0.838257
-          },
-          {
             "indicator": "House Price (Current)",
-            "value": -0.718321
+            "value": -0.805879
           },
           {
-            "indicator": "Index of Education and Occupation",
-            "value": -0.591281
+            "indicator": "Airbnb ADR",
+            "value": -0.771286
           },
           {
-            "indicator": "% Completed Year 12",
-            "value": -0.555526
+            "indicator": "Airbnb  Gross Revenue",
+            "value": -0.690669
           },
           {
-            "indicator": "% Bachelor Degree",
-            "value": -0.548441
+            "indicator": "House Rent (P/W)",
+            "value": -0.641911
+          },
+          {
+            "indicator": "Airbnb Active Listings",
+            "value": -0.604339
           }
         ]
       },
@@ -1897,46 +1925,46 @@
         "method": "pearson",
         "positive": [
           {
-            "indicator": "Index of Education and Occupation",
-            "value": 0.778878
-          },
-          {
-            "indicator": "House Rent (P/W)",
-            "value": 0.778756
-          },
-          {
-            "indicator": "% Completed Year 12",
-            "value": 0.765882
-          },
-          {
             "indicator": "House Price (Current)",
-            "value": 0.755069
+            "value": 0.824864
+          },
+          {
+            "indicator": "Index of Relative Socio-economic Disadvantage ",
+            "value": 0.746933
           },
           {
             "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
-            "value": 0.747523
+            "value": 0.744791
+          },
+          {
+            "indicator": "Index of Education and Occupation",
+            "value": 0.740824
+          },
+          {
+            "indicator": "House Rent (P/W)",
+            "value": 0.730157
           }
         ],
         "negative": [
           {
-            "indicator": "Youth Allowance (other)",
-            "value": -0.877287
+            "indicator": "Resident Spend",
+            "value": -0.847071
           },
           {
-            "indicator": "Parenting Payment Single",
-            "value": -0.852277
-          },
-          {
-            "indicator": "Airbnb Occupancy Rate",
-            "value": -0.838257
-          },
-          {
-            "indicator": "Family Tax Benefit A",
-            "value": -0.83593
+            "indicator": "Malicious Damage to Property Rate (per 1,000)",
+            "value": -0.792383
           },
           {
             "indicator": "Disability Support Pension",
-            "value": -0.829912
+            "value": -0.78296
+          },
+          {
+            "indicator": "Airbnb Occupancy Rate",
+            "value": -0.771286
+          },
+          {
+            "indicator": "Youth Allowance (other)",
+            "value": -0.750441
           }
         ]
       },
@@ -1945,45 +1973,45 @@
         "positive": [
           {
             "indicator": "Airbnb Active Listings",
-            "value": 0.968011
+            "value": 0.965706
           },
           {
             "indicator": "Unit Price (Current)",
-            "value": 0.8293
+            "value": 0.818471
           },
           {
             "indicator": "House Price (Current)",
-            "value": 0.816612
+            "value": 0.807194
           },
           {
             "indicator": "Value of building job(s)",
-            "value": 0.695428
+            "value": 0.663118
           },
           {
-            "indicator": "Net overseas migration",
-            "value": 0.611282
+            "indicator": "Index of Education and Occupation",
+            "value": 0.598321
           }
         ],
         "negative": [
           {
-            "indicator": "Net internal migration",
-            "value": -0.536648
-          },
-          {
             "indicator": "Airbnb Occupancy Rate",
-            "value": -0.513294
+            "value": -0.690669
           },
           {
             "indicator": "% Over 69",
-            "value": -0.510382
+            "value": -0.617436
+          },
+          {
+            "indicator": "Net internal migration",
+            "value": -0.558015
           },
           {
             "indicator": "% Indigenous",
-            "value": -0.47913
+            "value": -0.538203
           },
           {
             "indicator": "Resident Spend",
-            "value": -0.460794
+            "value": -0.507433
           }
         ]
       },
@@ -1992,45 +2020,45 @@
         "positive": [
           {
             "indicator": "Airbnb  Gross Revenue",
-            "value": 0.968011
-          },
-          {
-            "indicator": "Unit Price (Current)",
-            "value": 0.808196
-          },
-          {
-            "indicator": "House Price (Current)",
-            "value": 0.738418
+            "value": 0.965706
           },
           {
             "indicator": "Value of building job(s)",
-            "value": 0.735274
+            "value": 0.770738
+          },
+          {
+            "indicator": "Unit Price (Current)",
+            "value": 0.752575
+          },
+          {
+            "indicator": "House Price (Current)",
+            "value": 0.714109
           },
           {
             "indicator": "Net overseas migration",
-            "value": 0.599894
+            "value": 0.612498
           }
         ],
         "negative": [
           {
+            "indicator": "Airbnb Occupancy Rate",
+            "value": -0.604339
+          },
+          {
             "indicator": "% Over 69",
-            "value": -0.506931
+            "value": -0.510603
           },
           {
             "indicator": "Net internal migration",
-            "value": -0.469898
-          },
-          {
-            "indicator": "Airbnb Occupancy Rate",
-            "value": -0.461857
+            "value": -0.467579
           },
           {
             "indicator": "% Indigenous",
-            "value": -0.412889
+            "value": -0.407686
           },
           {
             "indicator": "Resident Spend",
-            "value": -0.353203
+            "value": -0.363091
           }
         ]
       },
@@ -2145,11 +2173,11 @@
           },
           {
             "indicator": "Airbnb ADR",
-            "value": 0.743583
+            "value": 0.746933
           },
           {
-            "indicator": "Index of Economic Resources",
-            "value": 0.722113
+            "indicator": "House Rent (P/W)",
+            "value": 0.742708
           }
         ],
         "negative": [
@@ -2179,24 +2207,24 @@
         "method": "pearson",
         "positive": [
           {
+            "indicator": "Airbnb ADR",
+            "value": 0.722813
+          },
+          {
             "indicator": "Index of Relative Socio-economic Disadvantage ",
             "value": 0.722113
           },
           {
-            "indicator": "Airbnb ADR",
-            "value": 0.696967
-          },
-          {
             "indicator": "House Rent (P/W)",
-            "value": 0.651641
+            "value": 0.683536
           },
           {
             "indicator": "Median Household Income",
             "value": 0.599056
           },
           {
-            "indicator": "Unit Rent (P/W)",
-            "value": 0.567694
+            "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
+            "value": 0.49519
           }
         ],
         "negative": [
@@ -2213,12 +2241,239 @@
             "value": -0.67325
           },
           {
-            "indicator": "Homelessness",
-            "value": -0.627925
+            "indicator": "Malicious Damage to Property Rate (per 1,000)",
+            "value": -0.655705
           },
           {
-            "indicator": "Unemployment",
-            "value": -0.61883
+            "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+            "value": -0.642099
+          }
+        ]
+      },
+      "Assault Rate (per 1,000)": {
+        "method": "pearson",
+        "positive": [
+          {
+            "indicator": "Drug Offences Rate (per 1,000)",
+            "value": 0.895138
+          },
+          {
+            "indicator": "Malicious Damage to Property Rate (per 1,000)",
+            "value": 0.874582
+          },
+          {
+            "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+            "value": 0.81884
+          },
+          {
+            "indicator": "Theft Rate (per 1,000)",
+            "value": 0.776929
+          },
+          {
+            "indicator": "% Language Other Than English",
+            "value": 0.684883
+          }
+        ],
+        "negative": [
+          {
+            "indicator": "Airbnb ADR",
+            "value": -0.735058
+          },
+          {
+            "indicator": "Index of Economic Resources",
+            "value": -0.504684
+          },
+          {
+            "indicator": "House Rent (P/W)",
+            "value": -0.423588
+          },
+          {
+            "indicator": "Index of Relative Socio-economic Disadvantage ",
+            "value": -0.420951
+          },
+          {
+            "indicator": "House Price (Current)",
+            "value": -0.37596
+          }
+        ]
+      },
+      "Theft Rate (per 1,000)": {
+        "method": "pearson",
+        "positive": [
+          {
+            "indicator": "Visitor Spend",
+            "value": 0.83273
+          },
+          {
+            "indicator": "Assault Rate (per 1,000)",
+            "value": 0.776929
+          },
+          {
+            "indicator": "Drug Offences Rate (per 1,000)",
+            "value": 0.634875
+          },
+          {
+            "indicator": "% Language Other Than English",
+            "value": 0.579549
+          },
+          {
+            "indicator": "Malicious Damage to Property Rate (per 1,000)",
+            "value": 0.552763
+          }
+        ],
+        "negative": [
+          {
+            "indicator": "Airbnb ADR",
+            "value": -0.709954
+          },
+          {
+            "indicator": "House Rent (P/W)",
+            "value": -0.328987
+          },
+          {
+            "indicator": "Listing Visits per Property",
+            "value": -0.320703
+          }
+        ]
+      },
+      "Intimidation, Stalking & Harassment Rate (per 1,000)": {
+        "method": "pearson",
+        "positive": [
+          {
+            "indicator": "Malicious Damage to Property Rate (per 1,000)",
+            "value": 0.953913
+          },
+          {
+            "indicator": "Drug Offences Rate (per 1,000)",
+            "value": 0.84539
+          },
+          {
+            "indicator": "Assault Rate (per 1,000)",
+            "value": 0.81884
+          },
+          {
+            "indicator": "Homelessness",
+            "value": 0.779091
+          },
+          {
+            "indicator": "Unemployment Rate (%)",
+            "value": 0.758118
+          }
+        ],
+        "negative": [
+          {
+            "indicator": "Airbnb ADR",
+            "value": -0.742334
+          },
+          {
+            "indicator": "Index of Relative Socio-economic Disadvantage ",
+            "value": -0.647749
+          },
+          {
+            "indicator": "Index of Economic Resources",
+            "value": -0.642099
+          },
+          {
+            "indicator": "House Rent (P/W)",
+            "value": -0.571814
+          },
+          {
+            "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
+            "value": -0.550866
+          }
+        ]
+      },
+      "Malicious Damage to Property Rate (per 1,000)": {
+        "method": "pearson",
+        "positive": [
+          {
+            "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+            "value": 0.953913
+          },
+          {
+            "indicator": "Drug Offences Rate (per 1,000)",
+            "value": 0.913509
+          },
+          {
+            "indicator": "Assault Rate (per 1,000)",
+            "value": 0.874582
+          },
+          {
+            "indicator": "Homelessness",
+            "value": 0.814045
+          },
+          {
+            "indicator": "Unemployment Rate (%)",
+            "value": 0.702154
+          }
+        ],
+        "negative": [
+          {
+            "indicator": "Airbnb ADR",
+            "value": -0.792383
+          },
+          {
+            "indicator": "Index of Economic Resources",
+            "value": -0.655705
+          },
+          {
+            "indicator": "Index of Relative Socio-economic Disadvantage ",
+            "value": -0.592589
+          },
+          {
+            "indicator": "House Rent (P/W)",
+            "value": -0.487829
+          },
+          {
+            "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
+            "value": -0.461073
+          }
+        ]
+      },
+      "Drug Offences Rate (per 1,000)": {
+        "method": "pearson",
+        "positive": [
+          {
+            "indicator": "Malicious Damage to Property Rate (per 1,000)",
+            "value": 0.913509
+          },
+          {
+            "indicator": "Assault Rate (per 1,000)",
+            "value": 0.895138
+          },
+          {
+            "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+            "value": 0.84539
+          },
+          {
+            "indicator": "Homelessness",
+            "value": 0.707815
+          },
+          {
+            "indicator": "Theft Rate (per 1,000)",
+            "value": 0.634875
+          }
+        ],
+        "negative": [
+          {
+            "indicator": "Index of Economic Resources",
+            "value": -0.568241
+          },
+          {
+            "indicator": "Index of Relative Socio-economic Disadvantage ",
+            "value": -0.478298
+          },
+          {
+            "indicator": "Airbnb ADR",
+            "value": -0.433945
+          },
+          {
+            "indicator": "Airbnb  Gross Revenue",
+            "value": -0.41313
+          },
+          {
+            "indicator": "House Rent (P/W)",
+            "value": -0.379642
           }
         ]
       }
@@ -2227,7 +2482,7 @@
   "by_lga": {
     "11650": {
       "row_count": 30,
-      "metric_count": 51,
+      "metric_count": 56,
       "indicators": {
         "Total Businesses": {
           "method": "pearson",
@@ -2250,7 +2505,7 @@
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.716107
+              "value": 0.748682
             }
           ],
           "negative": []
@@ -2263,12 +2518,12 @@
               "value": 0.796694
             },
             {
-              "indicator": "Healthcare Businesses",
-              "value": 0.671692
+              "indicator": "Value of building job(s)",
+              "value": 0.672741
             },
             {
-              "indicator": "Value of building job(s)",
-              "value": 0.617284
+              "indicator": "Healthcare Businesses",
+              "value": 0.671692
             },
             {
               "indicator": "% Language Other Than English",
@@ -2297,8 +2552,8 @@
               "value": 0.806058
             },
             {
-              "indicator": "Resident Spend",
-              "value": 0.681843
+              "indicator": "Value of building job(s)",
+              "value": 0.68051
             },
             {
               "indicator": "Manufacturing Businesses",
@@ -2329,11 +2584,11 @@
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.697751
+              "value": 0.681566
             },
             {
-              "indicator": "Visitor Spend",
-              "value": 0.696304
+              "indicator": "Resident Spend",
+              "value": 0.629066
             }
           ],
           "negative": [
@@ -2373,16 +2628,16 @@
           ],
           "negative": [
             {
-              "indicator": "Airbnb ADR",
-              "value": -0.790219
-            },
-            {
               "indicator": "Index of Economic Resources",
               "value": -0.772554
             },
             {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
               "value": -0.751769
+            },
+            {
+              "indicator": "Airbnb ADR",
+              "value": -0.707929
             },
             {
               "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
@@ -2406,16 +2661,16 @@
               "value": 0.765239
             },
             {
+              "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+              "value": 0.758118
+            },
+            {
               "indicator": "Unemployment",
               "value": 0.730171
             },
             {
               "indicator": "Youth Allowance (other)",
               "value": 0.721423
-            },
-            {
-              "indicator": "Total Indigenous",
-              "value": 0.692594
             }
           ],
           "negative": [
@@ -2471,12 +2726,12 @@
               "value": -0.786155
             },
             {
-              "indicator": "Airbnb ADR",
-              "value": -0.734993
-            },
-            {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
               "value": -0.717011
+            },
+            {
+              "indicator": "Airbnb ADR",
+              "value": -0.674633
             },
             {
               "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
@@ -2515,7 +2770,7 @@
           "negative": [
             {
               "indicator": "Airbnb ADR",
-              "value": -0.561728
+              "value": -0.433266
             },
             {
               "indicator": "Index of Economic Resources",
@@ -2528,63 +2783,68 @@
           "positive": [
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.801292
+              "value": 0.798099
             },
             {
               "indicator": "Population Change 2023-24",
-              "value": 0.75434
+              "value": 0.770921
             },
             {
               "indicator": "Airbnb Active Listings",
-              "value": 0.735274
+              "value": 0.770738
             },
             {
               "indicator": "Net overseas migration",
-              "value": 0.721669
+              "value": 0.759922
             },
             {
               "indicator": "Total Businesses",
-              "value": 0.716107
+              "value": 0.748682
             }
           ],
-          "negative": []
+          "negative": [
+            {
+              "indicator": "Airbnb Occupancy Rate",
+              "value": -0.327873
+            }
+          ]
         },
         "Number of dwellings approved": {
           "method": "pearson",
           "positive": [
             {
               "indicator": "Population Change 2023-24",
-              "value": 0.819016
+              "value": 0.844467
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.801292
+              "value": 0.798099
             },
             {
               "indicator": "Net internal migration",
-              "value": 0.713512
+              "value": 0.735493
             },
             {
               "indicator": "Labour Force",
-              "value": 0.653217
+              "value": 0.685105
             },
             {
-              "indicator": "Commonwealth Rent Assistance",
-              "value": 0.634898
+              "indicator": "Total Population",
+              "value": 0.66245
             }
           ],
           "negative": [
             {
-              "indicator": "Airbnb ADR",
-              "value": -0.386707
+              "indicator": "Index of Economic Resources",
+              "value": -0.362136
             },
             {
-              "indicator": "Index of Economic Resources",
-              "value": -0.365806
+              "indicator": "Airbnb ADR",
+              "value": -0.350327
             },
             {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
-              "value": -0.332884
+              "value": -0.325707
             }
           ]
         },
@@ -2593,41 +2853,45 @@
           "positive": [
             {
               "indicator": "Airbnb Occupancy Rate",
-              "value": 0.793515
+              "value": 0.877769
             },
             {
               "indicator": "Visitor Spend",
-              "value": 0.791683
+              "value": 0.79522
             },
             {
               "indicator": "Healthcare Businesses",
-              "value": 0.681843
+              "value": 0.668985
             },
             {
               "indicator": "Total Businesses",
-              "value": 0.664042
+              "value": 0.649153
             },
             {
               "indicator": "Tourism Businesses",
-              "value": 0.644775
+              "value": 0.629066
             }
           ],
           "negative": [
             {
               "indicator": "Airbnb ADR",
-              "value": -0.803888
+              "value": -0.847071
             },
             {
               "indicator": "Airbnb  Gross Revenue",
-              "value": -0.460794
+              "value": -0.507433
             },
             {
               "indicator": "Natural increase in ERP",
-              "value": -0.433717
+              "value": -0.443373
             },
             {
               "indicator": "Airbnb Active Listings",
-              "value": -0.353203
+              "value": -0.363091
+            },
+            {
+              "indicator": "Listing Visits per Property",
+              "value": -0.343767
             }
           ]
         },
@@ -2635,34 +2899,34 @@
           "method": "pearson",
           "positive": [
             {
+              "indicator": "Theft Rate (per 1,000)",
+              "value": 0.83273
+            },
+            {
               "indicator": "Resident Spend",
-              "value": 0.791683
+              "value": 0.79522
+            },
+            {
+              "indicator": "Assault Rate (per 1,000)",
+              "value": 0.657566
             },
             {
               "indicator": "Tourism Businesses",
-              "value": 0.696304
-            },
-            {
-              "indicator": "Total Businesses",
-              "value": 0.608146
+              "value": 0.620081
             },
             {
               "indicator": "% Language Other Than English",
-              "value": 0.545094
-            },
-            {
-              "indicator": "Manufacturing Businesses",
-              "value": 0.534579
+              "value": 0.583341
             }
           ],
           "negative": [
             {
               "indicator": "Airbnb ADR",
-              "value": -0.586583
+              "value": -0.642065
             },
             {
               "indicator": "Listing Visits per Property",
-              "value": -0.377679
+              "value": -0.493054
             }
           ]
         },
@@ -2670,46 +2934,46 @@
           "method": "pearson",
           "positive": [
             {
-              "indicator": "Airbnb  Gross Revenue",
-              "value": 0.816612
+              "indicator": "Airbnb ADR",
+              "value": 0.824864
             },
             {
-              "indicator": "House Rent (P/W)",
-              "value": 0.813926
+              "indicator": "Airbnb  Gross Revenue",
+              "value": 0.807194
             },
             {
               "indicator": "Unit Price (Current)",
-              "value": 0.787275
+              "value": 0.77228
             },
             {
-              "indicator": "Airbnb ADR",
-              "value": 0.755069
+              "indicator": "House Rent (P/W)",
+              "value": 0.771528
             },
             {
-              "indicator": "Airbnb Active Listings",
-              "value": 0.738418
+              "indicator": "Index of Education and Occupation",
+              "value": 0.715975
             }
           ],
           "negative": [
             {
               "indicator": "Airbnb Occupancy Rate",
-              "value": -0.718321
+              "value": -0.805879
             },
             {
               "indicator": "% Indigenous",
-              "value": -0.684104
+              "value": -0.674723
             },
             {
               "indicator": "Unemployment Rate (%)",
-              "value": -0.547575
+              "value": -0.542776
+            },
+            {
+              "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+              "value": -0.451035
             },
             {
               "indicator": "Youth Allowance (other)",
-              "value": -0.41565
-            },
-            {
-              "indicator": "Total Indigenous",
-              "value": -0.359539
+              "value": -0.416836
             }
           ]
         },
@@ -2717,46 +2981,46 @@
           "method": "pearson",
           "positive": [
             {
-              "indicator": "House Price (Current)",
-              "value": 0.813926
-            },
-            {
-              "indicator": "Airbnb ADR",
-              "value": 0.778756
-            },
-            {
               "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
-              "value": 0.75167
+              "value": 0.774632
+            },
+            {
+              "indicator": "House Price (Current)",
+              "value": 0.771528
             },
             {
               "indicator": "Index of Education and Occupation",
-              "value": 0.74247
+              "value": 0.760299
             },
             {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
-              "value": 0.70724
+              "value": 0.742708
+            },
+            {
+              "indicator": "Airbnb ADR",
+              "value": 0.730157
             }
           ],
           "negative": [
             {
               "indicator": "Unemployment Rate (%)",
-              "value": -0.65689
+              "value": -0.692621
             },
             {
               "indicator": "% Indigenous",
-              "value": -0.649008
+              "value": -0.660606
             },
             {
               "indicator": "Airbnb Occupancy Rate",
-              "value": -0.531531
+              "value": -0.641911
             },
             {
-              "indicator": "Youth Allowance (other)",
-              "value": -0.440611
+              "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+              "value": -0.571814
             },
             {
-              "indicator": "Unemployment",
-              "value": -0.407683
+              "indicator": "Malicious Damage to Property Rate (per 1,000)",
+              "value": -0.487829
             }
           ]
         },
@@ -2765,17 +3029,33 @@
           "positive": [
             {
               "indicator": "Airbnb Occupancy Rate",
-              "value": 0.360197
+              "value": 0.394733
             },
             {
-              "indicator": "Population density 2024 (persons/km2)",
-              "value": 0.322317
+              "indicator": "Unit Rent (P/W)",
+              "value": 0.338116
+            },
+            {
+              "indicator": "% Completed Year 12",
+              "value": 0.313225
+            },
+            {
+              "indicator": "% Bachelor Degree",
+              "value": 0.310256
             }
           ],
           "negative": [
             {
               "indicator": "Visitor Spend",
-              "value": -0.377679
+              "value": -0.493054
+            },
+            {
+              "indicator": "Resident Spend",
+              "value": -0.343767
+            },
+            {
+              "indicator": "Theft Rate (per 1,000)",
+              "value": -0.320703
             }
           ]
         },
@@ -2784,45 +3064,45 @@
           "positive": [
             {
               "indicator": "Airbnb  Gross Revenue",
-              "value": 0.8293
-            },
-            {
-              "indicator": "Airbnb Active Listings",
-              "value": 0.808196
+              "value": 0.818471
             },
             {
               "indicator": "House Price (Current)",
-              "value": 0.787275
+              "value": 0.77228
             },
             {
-              "indicator": "House Rent (P/W)",
-              "value": 0.628999
+              "indicator": "Airbnb Active Listings",
+              "value": 0.752575
             },
             {
               "indicator": "Resident Spend",
-              "value": 0.520956
+              "value": 0.522201
+            },
+            {
+              "indicator": "House Rent (P/W)",
+              "value": 0.51011
             }
           ],
           "negative": [
             {
-              "indicator": "Natural increase in ERP",
-              "value": -0.503042
+              "indicator": "Airbnb Occupancy Rate",
+              "value": -0.509108
             },
             {
-              "indicator": "Airbnb Occupancy Rate",
-              "value": -0.500311
+              "indicator": "Natural increase in ERP",
+              "value": -0.505585
             },
             {
               "indicator": "% Indigenous",
-              "value": -0.478724
+              "value": -0.489496
             },
             {
               "indicator": "Unemployment Rate (%)",
-              "value": -0.389483
+              "value": -0.398216
             },
             {
-              "indicator": "Youth Allowance (other)",
-              "value": -0.303556
+              "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+              "value": -0.336039
             }
           ]
         },
@@ -2830,38 +3110,38 @@
           "method": "pearson",
           "positive": [
             {
-              "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
-              "value": 0.741469
+              "indicator": "Index of Education and Occupation",
+              "value": 0.678394
             },
             {
-              "indicator": "Index of Education and Occupation",
-              "value": 0.738747
+              "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
+              "value": 0.672361
             },
             {
               "indicator": "% Completed Year 12",
-              "value": 0.707276
-            },
-            {
-              "indicator": "Index of Relative Socio-economic Disadvantage ",
-              "value": 0.67769
+              "value": 0.650153
             },
             {
               "indicator": "% Bachelor Degree",
-              "value": 0.671206
+              "value": 0.619265
+            },
+            {
+              "indicator": "Index of Relative Socio-economic Disadvantage ",
+              "value": 0.601419
             }
           ],
           "negative": [
             {
               "indicator": "% Indigenous",
-              "value": -0.76612
+              "value": -0.720756
             },
             {
               "indicator": "Unemployment Rate (%)",
-              "value": -0.661782
+              "value": -0.579589
             },
             {
-              "indicator": "Total Indigenous",
-              "value": -0.327707
+              "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+              "value": -0.314551
             }
           ]
         },
@@ -2939,7 +3219,7 @@
           "negative": [
             {
               "indicator": "Airbnb ADR",
-              "value": -0.611869
+              "value": -0.508663
             },
             {
               "indicator": "Index of Economic Resources",
@@ -2960,15 +3240,15 @@
           "positive": [
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.819016
+              "value": 0.844467
+            },
+            {
+              "indicator": "Value of building job(s)",
+              "value": 0.770921
             },
             {
               "indicator": "Net internal migration",
               "value": 0.76674
-            },
-            {
-              "indicator": "Value of building job(s)",
-              "value": 0.75434
             },
             {
               "indicator": "Labour Force",
@@ -3006,8 +3286,8 @@
               "value": 0.800168
             },
             {
-              "indicator": "Total Population",
-              "value": 0.752457
+              "indicator": "Value of building job(s)",
+              "value": 0.759922
             }
           ],
           "negative": []
@@ -3021,15 +3301,15 @@
             },
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.713512
+              "value": 0.735493
             },
             {
               "indicator": "Airbnb Occupancy Rate",
-              "value": 0.623703
+              "value": 0.521014
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.531252
+              "value": 0.506946
             },
             {
               "indicator": "Labour Force",
@@ -3039,15 +3319,15 @@
           "negative": [
             {
               "indicator": "Airbnb ADR",
-              "value": -0.664229
+              "value": -0.619276
             },
             {
               "indicator": "Airbnb  Gross Revenue",
-              "value": -0.536648
+              "value": -0.558015
             },
             {
               "indicator": "Airbnb Active Listings",
-              "value": -0.469898
+              "value": -0.467579
             }
           ]
         },
@@ -3056,15 +3336,15 @@
           "positive": [
             {
               "indicator": "Airbnb ADR",
-              "value": 0.651317
+              "value": 0.63208
             },
             {
               "indicator": "Airbnb  Gross Revenue",
-              "value": 0.563449
+              "value": 0.54086
             },
             {
               "indicator": "Airbnb Active Listings",
-              "value": 0.500873
+              "value": 0.49979
             },
             {
               "indicator": "% Under 20",
@@ -3085,16 +3365,16 @@
               "value": -0.695247
             },
             {
+              "indicator": "Airbnb Occupancy Rate",
+              "value": -0.573138
+            },
+            {
               "indicator": "Age Pension",
               "value": -0.543041
             },
             {
               "indicator": "Unit Price (Current)",
-              "value": -0.503042
-            },
-            {
-              "indicator": "Airbnb Occupancy Rate",
-              "value": -0.484797
+              "value": -0.505585
             }
           ]
         },
@@ -3106,12 +3386,12 @@
               "value": 0.882446
             },
             {
-              "indicator": "Unit Price (Current)",
-              "value": 0.41839
+              "indicator": "House Price (Current)",
+              "value": 0.414572
             },
             {
-              "indicator": "House Price (Current)",
-              "value": 0.410738
+              "indicator": "Unit Price (Current)",
+              "value": 0.408365
             },
             {
               "indicator": "Age Pension",
@@ -3132,12 +3412,12 @@
               "value": -0.538825
             },
             {
-              "indicator": "Population Change 2023-24",
-              "value": -0.328972
+              "indicator": "Airbnb  Gross Revenue",
+              "value": -0.362362
             },
             {
-              "indicator": "% Language Other Than English",
-              "value": -0.318399
+              "indicator": "Population Change 2023-24",
+              "value": -0.328972
             }
           ]
         },
@@ -3155,6 +3435,10 @@
             {
               "indicator": "Natural increase in ERP",
               "value": 0.471388
+            },
+            {
+              "indicator": "Airbnb ADR",
+              "value": 0.404066
             },
             {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
@@ -3200,12 +3484,12 @@
               "value": 0.44342
             },
             {
-              "indicator": "Unit Price (Current)",
-              "value": 0.404389
-            },
-            {
               "indicator": "Commonwealth Rent Assistance",
               "value": 0.399422
+            },
+            {
+              "indicator": "Unit Price (Current)",
+              "value": 0.386833
             }
           ],
           "negative": [
@@ -3223,11 +3507,11 @@
             },
             {
               "indicator": "Airbnb  Gross Revenue",
-              "value": -0.510382
+              "value": -0.617436
             },
             {
               "indicator": "Airbnb Active Listings",
-              "value": -0.506931
+              "value": -0.510603
             }
           ]
         },
@@ -3251,18 +3535,14 @@
               "value": 0.619003
             },
             {
-              "indicator": "Airbnb ADR",
-              "value": 0.59302
+              "indicator": "Unit Rent (P/W)",
+              "value": 0.531632
             }
           ],
           "negative": [
             {
               "indicator": "% Indigenous",
               "value": -0.567466
-            },
-            {
-              "indicator": "Airbnb Occupancy Rate",
-              "value": -0.498454
             },
             {
               "indicator": "Total Indigenous",
@@ -3286,20 +3566,20 @@
               "value": 0.80162
             },
             {
+              "indicator": "Assault Rate (per 1,000)",
+              "value": 0.684883
+            },
+            {
               "indicator": "Manufacturing Businesses",
               "value": 0.588965
             },
             {
               "indicator": "Visitor Spend",
-              "value": 0.545094
+              "value": 0.583341
             },
             {
-              "indicator": "Tourism Businesses",
-              "value": 0.493525
-            },
-            {
-              "indicator": "Net overseas migration",
-              "value": 0.456006
+              "indicator": "Theft Rate (per 1,000)",
+              "value": 0.579549
             }
           ],
           "negative": [
@@ -3318,7 +3598,7 @@
           "positive": [
             {
               "indicator": "Airbnb Occupancy Rate",
-              "value": 0.693584
+              "value": 0.552097
             },
             {
               "indicator": "Total Population",
@@ -3340,7 +3620,7 @@
           "negative": [
             {
               "indicator": "Airbnb ADR",
-              "value": -0.701256
+              "value": -0.581077
             },
             {
               "indicator": "Index of Economic Resources",
@@ -3368,8 +3648,8 @@
               "value": 0.845094
             },
             {
-              "indicator": "Airbnb ADR",
-              "value": 0.765882
+              "indicator": "% Born Overseas",
+              "value": 0.729102
             }
           ],
           "negative": [
@@ -3416,7 +3696,7 @@
             },
             {
               "indicator": "Airbnb ADR",
-              "value": 0.732408
+              "value": 0.715885
             }
           ],
           "negative": [
@@ -3462,8 +3742,8 @@
               "value": 0.642485
             },
             {
-              "indicator": "Airbnb Occupancy Rate",
-              "value": 0.607107
+              "indicator": "Unemployment",
+              "value": 0.593157
             }
           ],
           "negative": [
@@ -3515,12 +3795,12 @@
           ],
           "negative": [
             {
-              "indicator": "Airbnb ADR",
-              "value": -0.82171
-            },
-            {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
               "value": -0.75401
+            },
+            {
+              "indicator": "Airbnb ADR",
+              "value": -0.740219
             },
             {
               "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
@@ -3540,6 +3820,14 @@
           "method": "pearson",
           "positive": [
             {
+              "indicator": "Malicious Damage to Property Rate (per 1,000)",
+              "value": 0.814045
+            },
+            {
+              "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+              "value": 0.779091
+            },
+            {
               "indicator": "Unemployment Rate (%)",
               "value": 0.765239
             },
@@ -3548,16 +3836,8 @@
               "value": 0.715948
             },
             {
-              "indicator": "Disability Support Pension",
-              "value": 0.705951
-            },
-            {
-              "indicator": "JobSeeker Payment",
-              "value": 0.702088
-            },
-            {
-              "indicator": "Youth Allowance (other)",
-              "value": 0.664376
+              "indicator": "Drug Offences Rate (per 1,000)",
+              "value": 0.707815
             }
           ],
           "negative": [
@@ -3574,12 +3854,12 @@
               "value": -0.5441
             },
             {
-              "indicator": "Airbnb ADR",
-              "value": -0.543553
-            },
-            {
               "indicator": "Median Household Income",
               "value": -0.489893
+            },
+            {
+              "indicator": "Airbnb ADR",
+              "value": -0.47357
             }
           ]
         },
@@ -3610,7 +3890,7 @@
           "negative": [
             {
               "indicator": "Airbnb ADR",
-              "value": -0.676975
+              "value": -0.645057
             },
             {
               "indicator": "Median Household Income",
@@ -3657,7 +3937,7 @@
           "negative": [
             {
               "indicator": "Airbnb ADR",
-              "value": -0.748276
+              "value": -0.701859
             },
             {
               "indicator": "Index of Economic Resources",
@@ -3707,10 +3987,6 @@
               "value": -0.744275
             },
             {
-              "indicator": "Airbnb ADR",
-              "value": -0.709764
-            },
-            {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
               "value": -0.696589
             },
@@ -3721,6 +3997,10 @@
             {
               "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
               "value": -0.634097
+            },
+            {
+              "indicator": "Airbnb ADR",
+              "value": -0.629028
             }
           ]
         },
@@ -3751,7 +4031,7 @@
           "negative": [
             {
               "indicator": "Airbnb ADR",
-              "value": -0.83593
+              "value": -0.743983
             },
             {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
@@ -3798,7 +4078,7 @@
           "negative": [
             {
               "indicator": "Airbnb ADR",
-              "value": -0.877287
+              "value": -0.750441
             },
             {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
@@ -3845,7 +4125,7 @@
           "negative": [
             {
               "indicator": "Airbnb ADR",
-              "value": -0.852277
+              "value": -0.746945
             },
             {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
@@ -3892,7 +4172,7 @@
           "negative": [
             {
               "indicator": "Airbnb ADR",
-              "value": -0.789212
+              "value": -0.693992
             },
             {
               "indicator": "Index of Economic Resources",
@@ -3939,7 +4219,7 @@
           "negative": [
             {
               "indicator": "Airbnb ADR",
-              "value": -0.775958
+              "value": -0.717303
             },
             {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
@@ -3985,12 +4265,12 @@
           ],
           "negative": [
             {
-              "indicator": "Airbnb ADR",
-              "value": -0.829912
-            },
-            {
               "indicator": "Index of Economic Resources",
               "value": -0.784768
+            },
+            {
+              "indicator": "Airbnb ADR",
+              "value": -0.78296
             },
             {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
@@ -4010,46 +4290,46 @@
           "method": "pearson",
           "positive": [
             {
-              "indicator": "Youth Allowance (other)",
-              "value": 0.840141
+              "indicator": "Resident Spend",
+              "value": 0.877769
             },
             {
-              "indicator": "Resident Spend",
-              "value": 0.793515
+              "indicator": "Youth Allowance (other)",
+              "value": 0.677137
             },
             {
               "indicator": "Family Tax Benefit A",
-              "value": 0.762723
+              "value": 0.615743
+            },
+            {
+              "indicator": "Malicious Damage to Property Rate (per 1,000)",
+              "value": 0.599844
             },
             {
               "indicator": "Total Indigenous",
-              "value": 0.752905
-            },
-            {
-              "indicator": "Carer Allowance",
-              "value": 0.712328
+              "value": 0.599446
             }
           ],
           "negative": [
             {
-              "indicator": "Airbnb ADR",
-              "value": -0.838257
-            },
-            {
               "indicator": "House Price (Current)",
-              "value": -0.718321
+              "value": -0.805879
             },
             {
-              "indicator": "Index of Education and Occupation",
-              "value": -0.591281
+              "indicator": "Airbnb ADR",
+              "value": -0.771286
             },
             {
-              "indicator": "% Completed Year 12",
-              "value": -0.555526
+              "indicator": "Airbnb  Gross Revenue",
+              "value": -0.690669
             },
             {
-              "indicator": "% Bachelor Degree",
-              "value": -0.548441
+              "indicator": "House Rent (P/W)",
+              "value": -0.641911
+            },
+            {
+              "indicator": "Airbnb Active Listings",
+              "value": -0.604339
             }
           ]
         },
@@ -4057,46 +4337,46 @@
           "method": "pearson",
           "positive": [
             {
-              "indicator": "Index of Education and Occupation",
-              "value": 0.778878
-            },
-            {
-              "indicator": "House Rent (P/W)",
-              "value": 0.778756
-            },
-            {
-              "indicator": "% Completed Year 12",
-              "value": 0.765882
-            },
-            {
               "indicator": "House Price (Current)",
-              "value": 0.755069
+              "value": 0.824864
+            },
+            {
+              "indicator": "Index of Relative Socio-economic Disadvantage ",
+              "value": 0.746933
             },
             {
               "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
-              "value": 0.747523
+              "value": 0.744791
+            },
+            {
+              "indicator": "Index of Education and Occupation",
+              "value": 0.740824
+            },
+            {
+              "indicator": "House Rent (P/W)",
+              "value": 0.730157
             }
           ],
           "negative": [
             {
-              "indicator": "Youth Allowance (other)",
-              "value": -0.877287
+              "indicator": "Resident Spend",
+              "value": -0.847071
             },
             {
-              "indicator": "Parenting Payment Single",
-              "value": -0.852277
-            },
-            {
-              "indicator": "Airbnb Occupancy Rate",
-              "value": -0.838257
-            },
-            {
-              "indicator": "Family Tax Benefit A",
-              "value": -0.83593
+              "indicator": "Malicious Damage to Property Rate (per 1,000)",
+              "value": -0.792383
             },
             {
               "indicator": "Disability Support Pension",
-              "value": -0.829912
+              "value": -0.78296
+            },
+            {
+              "indicator": "Airbnb Occupancy Rate",
+              "value": -0.771286
+            },
+            {
+              "indicator": "Youth Allowance (other)",
+              "value": -0.750441
             }
           ]
         },
@@ -4105,45 +4385,45 @@
           "positive": [
             {
               "indicator": "Airbnb Active Listings",
-              "value": 0.968011
+              "value": 0.965706
             },
             {
               "indicator": "Unit Price (Current)",
-              "value": 0.8293
+              "value": 0.818471
             },
             {
               "indicator": "House Price (Current)",
-              "value": 0.816612
+              "value": 0.807194
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.695428
+              "value": 0.663118
             },
             {
-              "indicator": "Net overseas migration",
-              "value": 0.611282
+              "indicator": "Index of Education and Occupation",
+              "value": 0.598321
             }
           ],
           "negative": [
             {
-              "indicator": "Net internal migration",
-              "value": -0.536648
-            },
-            {
               "indicator": "Airbnb Occupancy Rate",
-              "value": -0.513294
+              "value": -0.690669
             },
             {
               "indicator": "% Over 69",
-              "value": -0.510382
+              "value": -0.617436
+            },
+            {
+              "indicator": "Net internal migration",
+              "value": -0.558015
             },
             {
               "indicator": "% Indigenous",
-              "value": -0.47913
+              "value": -0.538203
             },
             {
               "indicator": "Resident Spend",
-              "value": -0.460794
+              "value": -0.507433
             }
           ]
         },
@@ -4152,45 +4432,45 @@
           "positive": [
             {
               "indicator": "Airbnb  Gross Revenue",
-              "value": 0.968011
-            },
-            {
-              "indicator": "Unit Price (Current)",
-              "value": 0.808196
-            },
-            {
-              "indicator": "House Price (Current)",
-              "value": 0.738418
+              "value": 0.965706
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.735274
+              "value": 0.770738
+            },
+            {
+              "indicator": "Unit Price (Current)",
+              "value": 0.752575
+            },
+            {
+              "indicator": "House Price (Current)",
+              "value": 0.714109
             },
             {
               "indicator": "Net overseas migration",
-              "value": 0.599894
+              "value": 0.612498
             }
           ],
           "negative": [
             {
+              "indicator": "Airbnb Occupancy Rate",
+              "value": -0.604339
+            },
+            {
               "indicator": "% Over 69",
-              "value": -0.506931
+              "value": -0.510603
             },
             {
               "indicator": "Net internal migration",
-              "value": -0.469898
-            },
-            {
-              "indicator": "Airbnb Occupancy Rate",
-              "value": -0.461857
+              "value": -0.467579
             },
             {
               "indicator": "% Indigenous",
-              "value": -0.412889
+              "value": -0.407686
             },
             {
               "indicator": "Resident Spend",
-              "value": -0.353203
+              "value": -0.363091
             }
           ]
         },
@@ -4261,8 +4541,8 @@
               "value": 0.901019
             },
             {
-              "indicator": "Airbnb ADR",
-              "value": 0.778878
+              "indicator": "House Rent (P/W)",
+              "value": 0.760299
             }
           ],
           "negative": [
@@ -4351,12 +4631,12 @@
               "value": 0.869629
             },
             {
-              "indicator": "Index of Education and Occupation",
-              "value": 0.716969
+              "indicator": "Airbnb ADR",
+              "value": 0.722813
             },
             {
-              "indicator": "Airbnb ADR",
-              "value": 0.696967
+              "indicator": "Index of Education and Occupation",
+              "value": 0.716969
             }
           ],
           "negative": [
@@ -4381,13 +4661,240 @@
               "value": -0.744275
             }
           ]
+        },
+        "Assault Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [
+            {
+              "indicator": "Drug Offences Rate (per 1,000)",
+              "value": 0.895138
+            },
+            {
+              "indicator": "Malicious Damage to Property Rate (per 1,000)",
+              "value": 0.874582
+            },
+            {
+              "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+              "value": 0.81884
+            },
+            {
+              "indicator": "Theft Rate (per 1,000)",
+              "value": 0.776929
+            },
+            {
+              "indicator": "% Language Other Than English",
+              "value": 0.684883
+            }
+          ],
+          "negative": [
+            {
+              "indicator": "Airbnb ADR",
+              "value": -0.735058
+            },
+            {
+              "indicator": "Index of Economic Resources",
+              "value": -0.504684
+            },
+            {
+              "indicator": "House Rent (P/W)",
+              "value": -0.423588
+            },
+            {
+              "indicator": "Index of Relative Socio-economic Disadvantage ",
+              "value": -0.420951
+            },
+            {
+              "indicator": "House Price (Current)",
+              "value": -0.37596
+            }
+          ]
+        },
+        "Theft Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [
+            {
+              "indicator": "Visitor Spend",
+              "value": 0.83273
+            },
+            {
+              "indicator": "Assault Rate (per 1,000)",
+              "value": 0.776929
+            },
+            {
+              "indicator": "Drug Offences Rate (per 1,000)",
+              "value": 0.634875
+            },
+            {
+              "indicator": "% Language Other Than English",
+              "value": 0.579549
+            },
+            {
+              "indicator": "Malicious Damage to Property Rate (per 1,000)",
+              "value": 0.552763
+            }
+          ],
+          "negative": [
+            {
+              "indicator": "Airbnb ADR",
+              "value": -0.709954
+            },
+            {
+              "indicator": "House Rent (P/W)",
+              "value": -0.328987
+            },
+            {
+              "indicator": "Listing Visits per Property",
+              "value": -0.320703
+            }
+          ]
+        },
+        "Intimidation, Stalking & Harassment Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [
+            {
+              "indicator": "Malicious Damage to Property Rate (per 1,000)",
+              "value": 0.953913
+            },
+            {
+              "indicator": "Drug Offences Rate (per 1,000)",
+              "value": 0.84539
+            },
+            {
+              "indicator": "Assault Rate (per 1,000)",
+              "value": 0.81884
+            },
+            {
+              "indicator": "Homelessness",
+              "value": 0.779091
+            },
+            {
+              "indicator": "Unemployment Rate (%)",
+              "value": 0.758118
+            }
+          ],
+          "negative": [
+            {
+              "indicator": "Airbnb ADR",
+              "value": -0.742334
+            },
+            {
+              "indicator": "Index of Relative Socio-economic Disadvantage ",
+              "value": -0.647749
+            },
+            {
+              "indicator": "Index of Economic Resources",
+              "value": -0.642099
+            },
+            {
+              "indicator": "House Rent (P/W)",
+              "value": -0.571814
+            },
+            {
+              "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
+              "value": -0.550866
+            }
+          ]
+        },
+        "Malicious Damage to Property Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [
+            {
+              "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+              "value": 0.953913
+            },
+            {
+              "indicator": "Drug Offences Rate (per 1,000)",
+              "value": 0.913509
+            },
+            {
+              "indicator": "Assault Rate (per 1,000)",
+              "value": 0.874582
+            },
+            {
+              "indicator": "Homelessness",
+              "value": 0.814045
+            },
+            {
+              "indicator": "Unemployment Rate (%)",
+              "value": 0.702154
+            }
+          ],
+          "negative": [
+            {
+              "indicator": "Airbnb ADR",
+              "value": -0.792383
+            },
+            {
+              "indicator": "Index of Economic Resources",
+              "value": -0.655705
+            },
+            {
+              "indicator": "Index of Relative Socio-economic Disadvantage ",
+              "value": -0.592589
+            },
+            {
+              "indicator": "House Rent (P/W)",
+              "value": -0.487829
+            },
+            {
+              "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
+              "value": -0.461073
+            }
+          ]
+        },
+        "Drug Offences Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [
+            {
+              "indicator": "Malicious Damage to Property Rate (per 1,000)",
+              "value": 0.913509
+            },
+            {
+              "indicator": "Assault Rate (per 1,000)",
+              "value": 0.895138
+            },
+            {
+              "indicator": "Intimidation, Stalking & Harassment Rate (per 1,000)",
+              "value": 0.84539
+            },
+            {
+              "indicator": "Homelessness",
+              "value": 0.707815
+            },
+            {
+              "indicator": "Theft Rate (per 1,000)",
+              "value": 0.634875
+            }
+          ],
+          "negative": [
+            {
+              "indicator": "Index of Economic Resources",
+              "value": -0.568241
+            },
+            {
+              "indicator": "Index of Relative Socio-economic Disadvantage ",
+              "value": -0.478298
+            },
+            {
+              "indicator": "Airbnb ADR",
+              "value": -0.433945
+            },
+            {
+              "indicator": "Airbnb  Gross Revenue",
+              "value": -0.41313
+            },
+            {
+              "indicator": "House Rent (P/W)",
+              "value": -0.379642
+            }
+          ]
         }
       },
       "lga_name": "Central Coast (NSW)"
     },
     "14000": {
       "row_count": 10,
-      "metric_count": 51,
+      "metric_count": 56,
       "indicators": {
         "Total Businesses": {
           "method": "pearson",
@@ -4405,12 +4912,12 @@
               "value": 0.999581
             },
             {
-              "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
-              "value": 0.996505
+              "indicator": "Number of dwellings approved",
+              "value": 0.998289
             },
             {
-              "indicator": "Number of dwellings approved",
-              "value": 0.996144
+              "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
+              "value": 0.996505
             }
           ],
           "negative": [
@@ -4571,16 +5078,16 @@
               "value": 0.999799
             },
             {
+              "indicator": "Number of dwellings approved",
+              "value": 0.99926
+            },
+            {
               "indicator": "Median Household Income",
               "value": 0.998801
             },
             {
               "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
               "value": 0.997978
-            },
-            {
-              "indicator": "Number of dwellings approved",
-              "value": 0.997701
             }
           ],
           "negative": [
@@ -4604,29 +5111,33 @@
           "positive": [
             {
               "indicator": "Parenting Payment Single",
-              "value": 0.99402
+              "value": 0.997576
             },
             {
               "indicator": "Total Businesses",
-              "value": 0.99361
+              "value": 0.988335
             },
             {
               "indicator": "JobSeeker Payment",
-              "value": 0.991149
-            },
-            {
-              "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
-              "value": 0.980708
+              "value": 0.985086
             },
             {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
-              "value": 0.972344
+              "value": 0.980863
+            },
+            {
+              "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
+              "value": 0.972158
             }
           ],
           "negative": [
             {
               "indicator": "Median Age",
-              "value": -0.465531
+              "value": -0.433854
+            },
+            {
+              "indicator": "Population density 2024 (persons/km2)",
+              "value": -0.359796
             }
           ]
         },
@@ -4635,33 +5146,37 @@
           "positive": [
             {
               "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
-              "value": 0.999991
+              "value": 0.999684
             },
             {
               "indicator": "JobSeeker Payment",
-              "value": 0.997701
-            },
-            {
-              "indicator": "Carer Allowance",
-              "value": 0.996337
+              "value": 0.99926
             },
             {
               "indicator": "Total Businesses",
-              "value": 0.996144
+              "value": 0.998289
+            },
+            {
+              "indicator": "Carer Allowance",
+              "value": 0.993399
             },
             {
               "indicator": "Disability Support Pension",
-              "value": 0.99253
+              "value": 0.988522
             }
           ],
           "negative": [
             {
               "indicator": "Median Age",
-              "value": -0.383898
+              "value": -0.37461
             },
             {
               "indicator": "% Indigenous",
-              "value": -0.36019
+              "value": -0.351789
+            },
+            {
+              "indicator": "Population density 2024 (persons/km2)",
+              "value": -0.343478
             }
           ]
         },
@@ -5509,7 +6024,7 @@
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.99402
+              "value": 0.997576
             },
             {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
@@ -5598,8 +6113,8 @@
               "value": 0.996477
             },
             {
-              "indicator": "Number of dwellings approved",
-              "value": 0.996337
+              "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
+              "value": 0.995968
             }
           ],
           "negative": [
@@ -5689,7 +6204,7 @@
             },
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.999991
+              "value": 0.999684
             },
             {
               "indicator": "JobSeeker Payment",
@@ -5770,12 +6285,12 @@
               "value": 0.992034
             },
             {
-              "indicator": "Index of Economic Resources",
-              "value": 0.974831
+              "indicator": "Value of building job(s)",
+              "value": 0.980863
             },
             {
-              "indicator": "Value of building job(s)",
-              "value": 0.972344
+              "indicator": "Index of Economic Resources",
+              "value": 0.974831
             },
             {
               "indicator": "Natural increase in ERP",
@@ -5831,13 +6346,38 @@
               "value": -0.442982
             }
           ]
+        },
+        "Assault Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Theft Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Intimidation, Stalking & Harassment Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Malicious Damage to Property Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Drug Offences Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
         }
       },
       "lga_name": "Hornsby"
     },
     "14170": {
       "row_count": 13,
-      "metric_count": 51,
+      "metric_count": 56,
       "indicators": {
         "Total Businesses": {
           "method": "pearson",
@@ -7533,13 +8073,38 @@
               "value": -0.742241
             }
           ]
+        },
+        "Assault Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Theft Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Intimidation, Stalking & Harassment Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Malicious Damage to Property Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Drug Offences Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
         }
       },
       "lga_name": "Inner West"
     },
     "14650": {
       "row_count": 16,
-      "metric_count": 51,
+      "metric_count": 56,
       "indicators": {
         "Total Businesses": {
           "method": "pearson",
@@ -7866,29 +8431,29 @@
           "positive": [
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.974849
-            },
-            {
-              "indicator": "Commonwealth Rent Assistance",
-              "value": 0.860995
+              "value": 0.981683
             },
             {
               "indicator": "Net internal migration",
-              "value": 0.853488
+              "value": 0.85447
+            },
+            {
+              "indicator": "Commonwealth Rent Assistance",
+              "value": 0.853107
             },
             {
               "indicator": "Population Change 2023-24",
-              "value": 0.84791
+              "value": 0.845392
             },
             {
               "indicator": "Age Pension",
-              "value": 0.780127
+              "value": 0.776629
             }
           ],
           "negative": [
             {
               "indicator": "Population density 2024 (persons/km2)",
-              "value": -0.521268
+              "value": -0.507115
             }
           ]
         },
@@ -7897,29 +8462,29 @@
           "positive": [
             {
               "indicator": "Value of building job(s)",
-              "value": 0.974849
+              "value": 0.981683
             },
             {
               "indicator": "Net internal migration",
-              "value": 0.920413
+              "value": 0.920362
             },
             {
               "indicator": "Population Change 2023-24",
-              "value": 0.914515
+              "value": 0.910111
             },
             {
               "indicator": "Commonwealth Rent Assistance",
-              "value": 0.85044
+              "value": 0.85451
             },
             {
               "indicator": "Age Pension",
-              "value": 0.747808
+              "value": 0.74485
             }
           ],
           "negative": [
             {
               "indicator": "Population density 2024 (persons/km2)",
-              "value": -0.472827
+              "value": -0.47655
             }
           ]
         },
@@ -8049,11 +8614,11 @@
             },
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.914515
+              "value": 0.910111
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.84791
+              "value": 0.845392
             },
             {
               "indicator": "Commonwealth Rent Assistance",
@@ -8123,11 +8688,11 @@
             },
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.920413
+              "value": 0.920362
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.853488
+              "value": 0.85447
             },
             {
               "indicator": "Commonwealth Rent Assistance",
@@ -8282,11 +8847,11 @@
           "positive": [
             {
               "indicator": "Value of building job(s)",
-              "value": 0.602748
+              "value": 0.610666
             },
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.585405
+              "value": 0.584813
             },
             {
               "indicator": "Index of Economic Resources",
@@ -8386,15 +8951,15 @@
             },
             {
               "indicator": "Value of building job(s)",
-              "value": -0.521268
+              "value": -0.507115
+            },
+            {
+              "indicator": "Number of dwellings approved",
+              "value": -0.47655
             },
             {
               "indicator": "Commonwealth Rent Assistance",
               "value": -0.474357
-            },
-            {
-              "indicator": "Number of dwellings approved",
-              "value": -0.472827
             }
           ]
         },
@@ -9171,13 +9736,38 @@
               "value": -0.456811
             }
           ]
+        },
+        "Assault Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Theft Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Intimidation, Stalking & Harassment Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Malicious Damage to Property Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Drug Offences Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
         }
       },
       "lga_name": "Lake Macquarie"
     },
     "15240": {
       "row_count": 10,
-      "metric_count": 51,
+      "metric_count": 56,
       "indicators": {
         "Total Businesses": {
           "method": "pearson",
@@ -9964,13 +10554,38 @@
           "method": "pearson",
           "positive": [],
           "negative": []
+        },
+        "Assault Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Theft Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Intimidation, Stalking & Harassment Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Malicious Damage to Property Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Drug Offences Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
         }
       },
       "lga_name": "Mid-Coast"
     },
     "15900": {
       "row_count": 13,
-      "metric_count": 51,
+      "metric_count": 56,
       "indicators": {
         "Total Businesses": {
           "method": "pearson",
@@ -9992,8 +10607,8 @@
               "value": 0.79063
             },
             {
-              "indicator": "Population density 2024 (persons/km2)",
-              "value": 0.773736
+              "indicator": "Value of building job(s)",
+              "value": 0.779232
             }
           ],
           "negative": [
@@ -10020,7 +10635,7 @@
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.61339
+              "value": 0.615475
             },
             {
               "indicator": "Healthcare Businesses",
@@ -10093,12 +10708,12 @@
               "value": 0.967824
             },
             {
-              "indicator": "% Bachelor Degree",
-              "value": 0.844759
+              "indicator": "Value of building job(s)",
+              "value": 0.855326
             },
             {
-              "indicator": "Value of building job(s)",
-              "value": 0.84305
+              "indicator": "% Bachelor Degree",
+              "value": 0.844759
             },
             {
               "indicator": "Healthcare Businesses",
@@ -10301,29 +10916,29 @@
           "positive": [
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.906077
+              "value": 0.901749
             },
             {
               "indicator": "Tourism Businesses",
-              "value": 0.84305
+              "value": 0.855326
             },
             {
               "indicator": "Total Businesses",
-              "value": 0.766169
+              "value": 0.779232
             },
             {
               "indicator": "Homelessness",
-              "value": 0.683497
+              "value": 0.688942
             },
             {
               "indicator": "Population Change 2023-24",
-              "value": 0.667604
+              "value": 0.668265
             }
           ],
           "negative": [
             {
               "indicator": "% Under 20",
-              "value": -0.507006
+              "value": -0.518408
             }
           ]
         },
@@ -10332,29 +10947,29 @@
           "positive": [
             {
               "indicator": "Value of building job(s)",
-              "value": 0.906077
+              "value": 0.901749
             },
             {
               "indicator": "Population Change 2023-24",
-              "value": 0.713203
+              "value": 0.714751
             },
             {
               "indicator": "Tourism Businesses",
-              "value": 0.685673
+              "value": 0.691924
             },
             {
               "indicator": "Total Businesses",
-              "value": 0.639097
+              "value": 0.645291
             },
             {
               "indicator": "Population density 2024 (persons/km2)",
-              "value": 0.618971
+              "value": 0.637449
             }
           ],
           "negative": [
             {
               "indicator": "Unemployment Rate (%)",
-              "value": -0.366219
+              "value": -0.390149
             }
           ]
         },
@@ -10488,7 +11103,7 @@
             },
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.713203
+              "value": 0.714751
             },
             {
               "indicator": "Net overseas migration",
@@ -10496,7 +11111,7 @@
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.667604
+              "value": 0.668265
             }
           ],
           "negative": [
@@ -10554,7 +11169,7 @@
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.500838
+              "value": 0.506151
             },
             {
               "indicator": "Total Businesses",
@@ -10562,7 +11177,7 @@
             },
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.444946
+              "value": 0.442204
             },
             {
               "indicator": "Manufacturing Businesses",
@@ -10593,7 +11208,7 @@
             },
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.522351
+              "value": 0.518197
             },
             {
               "indicator": "Index of Economic Resources",
@@ -11058,7 +11673,7 @@
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.683497
+              "value": 0.688942
             },
             {
               "indicator": "JobSeeker Payment",
@@ -11677,13 +12292,38 @@
               "value": -0.592638
             }
           ]
+        },
+        "Assault Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Theft Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Intimidation, Stalking & Harassment Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Malicious Damage to Property Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Drug Offences Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
         }
       },
       "lga_name": "Newcastle"
     },
     "15990": {
       "row_count": 19,
-      "metric_count": 51,
+      "metric_count": 56,
       "indicators": {
         "Total Businesses": {
           "method": "pearson",
@@ -11697,16 +12337,16 @@
               "value": 0.929006
             },
             {
-              "indicator": "Number of dwellings approved",
-              "value": 0.925109
-            },
-            {
               "indicator": "Healthcare Businesses",
               "value": 0.921462
             },
             {
+              "indicator": "Labour Force",
+              "value": 0.906239
+            },
+            {
               "indicator": "Value of building job(s)",
-              "value": 0.920442
+              "value": 0.897316
             }
           ],
           "negative": [
@@ -11745,7 +12385,7 @@
             },
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.751581
+              "value": 0.70311
             },
             {
               "indicator": "Population Change 2023-24",
@@ -11753,7 +12393,7 @@
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.646386
+              "value": 0.624149
             }
           ],
           "negative": [
@@ -12046,45 +12686,45 @@
           "positive": [
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.938379
+              "value": 0.942402
             },
             {
               "indicator": "Total Businesses",
-              "value": 0.920442
+              "value": 0.897316
             },
             {
               "indicator": "Tourism Businesses",
-              "value": 0.870761
+              "value": 0.852775
             },
             {
               "indicator": "Healthcare Businesses",
-              "value": 0.853341
+              "value": 0.832438
             },
             {
-              "indicator": "Labour Force",
-              "value": 0.797546
+              "indicator": "Total Population",
+              "value": 0.779112
             }
           ],
           "negative": [
             {
               "indicator": "Unemployment Rate (%)",
-              "value": -0.512314
+              "value": -0.514819
             },
             {
               "indicator": "Index of Economic Resources",
-              "value": -0.475896
-            },
-            {
-              "indicator": "Median Age",
-              "value": -0.474437
+              "value": -0.46448
             },
             {
               "indicator": "Net internal migration",
-              "value": -0.465238
+              "value": -0.462329
+            },
+            {
+              "indicator": "Median Age",
+              "value": -0.452929
             },
             {
               "indicator": "% Indigenous",
-              "value": -0.45302
+              "value": -0.440646
             }
           ]
         },
@@ -12093,45 +12733,45 @@
           "positive": [
             {
               "indicator": "Value of building job(s)",
-              "value": 0.938379
+              "value": 0.942402
             },
             {
               "indicator": "Total Businesses",
-              "value": 0.925109
-            },
-            {
-              "indicator": "Natural increase in ERP",
-              "value": 0.841848
-            },
-            {
-              "indicator": "Healthcare Businesses",
-              "value": 0.838466
+              "value": 0.886318
             },
             {
               "indicator": "Total Population",
-              "value": 0.837072
+              "value": 0.8142
+            },
+            {
+              "indicator": "Healthcare Businesses",
+              "value": 0.810196
+            },
+            {
+              "indicator": "Tourism Businesses",
+              "value": 0.799806
             }
           ],
           "negative": [
             {
               "indicator": "Median Age",
-              "value": -0.651289
+              "value": -0.601124
             },
             {
               "indicator": "Index of Economic Resources",
-              "value": -0.498615
+              "value": -0.479053
             },
             {
               "indicator": "Net internal migration",
-              "value": -0.463797
-            },
-            {
-              "indicator": "% Indigenous",
-              "value": -0.355787
+              "value": -0.455365
             },
             {
               "indicator": "Unemployment Rate (%)",
-              "value": -0.343671
+              "value": -0.36619
+            },
+            {
+              "indicator": "% Indigenous",
+              "value": -0.361334
             }
           ]
         },
@@ -12409,12 +13049,12 @@
               "value": 0.865941
             },
             {
-              "indicator": "Number of dwellings approved",
-              "value": 0.841848
-            },
-            {
               "indicator": "Healthcare Businesses",
               "value": 0.841675
+            },
+            {
+              "indicator": "JobSeeker Payment",
+              "value": 0.810532
             }
           ],
           "negative": [
@@ -13383,13 +14023,38 @@
               "value": -0.796379
             }
           ]
+        },
+        "Assault Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Theft Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Intimidation, Stalking & Harassment Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Malicious Damage to Property Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Drug Offences Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
         }
       },
       "lga_name": "Northern Beaches"
     },
     "16550": {
       "row_count": 13,
-      "metric_count": 51,
+      "metric_count": 56,
       "indicators": {
         "Total Businesses": {
           "method": "pearson",
@@ -15037,13 +15702,38 @@
               "value": -0.680374
             }
           ]
+        },
+        "Assault Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Theft Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Intimidation, Stalking & Harassment Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Malicious Damage to Property Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Drug Offences Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
         }
       },
       "lga_name": "Randwick"
     },
     "17200": {
       "row_count": 15,
-      "metric_count": 51,
+      "metric_count": 56,
       "indicators": {
         "Total Businesses": {
           "method": "pearson",
@@ -16811,13 +17501,38 @@
               "value": -0.63016
             }
           ]
+        },
+        "Assault Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Theft Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Intimidation, Stalking & Harassment Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Malicious Damage to Property Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Drug Offences Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
         }
       },
       "lga_name": "Sydney"
     },
     "17420": {
       "row_count": 14,
-      "metric_count": 51,
+      "metric_count": 56,
       "indicators": {
         "Total Businesses": {
           "method": "pearson",
@@ -17070,45 +17785,45 @@
           "positive": [
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.970475
+              "value": 0.973007
             },
             {
               "indicator": "Homelessness",
-              "value": 0.899053
+              "value": 0.899896
             },
             {
               "indicator": "Population Change 2023-24",
-              "value": 0.811629
+              "value": 0.824318
             },
             {
               "indicator": "Net internal migration",
-              "value": 0.694026
+              "value": 0.712176
             },
             {
               "indicator": "Manufacturing Businesses",
-              "value": 0.451402
+              "value": 0.452294
             }
           ],
           "negative": [
             {
               "indicator": "Index of Economic Resources",
-              "value": -0.669625
+              "value": -0.672962
             },
             {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
-              "value": -0.645559
+              "value": -0.642816
             },
             {
               "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
-              "value": -0.639935
+              "value": -0.639317
             },
             {
               "indicator": "Median Household Income",
-              "value": -0.439536
+              "value": -0.440874
             },
             {
               "indicator": "Index of Education and Occupation",
-              "value": -0.425301
+              "value": -0.428273
             }
           ]
         },
@@ -17117,45 +17832,45 @@
           "positive": [
             {
               "indicator": "Value of building job(s)",
-              "value": 0.970475
+              "value": 0.973007
             },
             {
               "indicator": "Population Change 2023-24",
-              "value": 0.902028
+              "value": 0.906295
             },
             {
               "indicator": "Homelessness",
-              "value": 0.875423
+              "value": 0.870854
             },
             {
               "indicator": "Net internal migration",
-              "value": 0.827066
+              "value": 0.834306
             },
             {
               "indicator": "Manufacturing Businesses",
-              "value": 0.418758
+              "value": 0.416736
             }
           ],
           "negative": [
             {
               "indicator": "Index of Economic Resources",
-              "value": -0.704785
+              "value": -0.704549
             },
             {
               "indicator": "Index of Relative Socio-economic Advantage and Disadvantage",
-              "value": -0.639297
+              "value": -0.636393
             },
             {
               "indicator": "Index of Relative Socio-economic Disadvantage ",
-              "value": -0.632723
+              "value": -0.629054
             },
             {
               "indicator": "Index of Education and Occupation",
-              "value": -0.454525
+              "value": -0.453502
             },
             {
               "indicator": "Median Household Income",
-              "value": -0.445114
+              "value": -0.443571
             }
           ]
         },
@@ -17297,7 +18012,7 @@
             },
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.902028
+              "value": 0.906295
             },
             {
               "indicator": "Natural increase in ERP",
@@ -17305,7 +18020,7 @@
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.811629
+              "value": 0.824318
             },
             {
               "indicator": "Manufacturing Businesses",
@@ -17395,11 +18110,11 @@
             },
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.827066
+              "value": 0.834306
             },
             {
               "indicator": "Value of building job(s)",
-              "value": 0.694026
+              "value": 0.712176
             }
           ],
           "negative": [
@@ -17859,11 +18574,11 @@
           "positive": [
             {
               "indicator": "Value of building job(s)",
-              "value": 0.899053
+              "value": 0.899896
             },
             {
               "indicator": "Number of dwellings approved",
-              "value": 0.875423
+              "value": 0.870854
             },
             {
               "indicator": "Parenting Payment Single",
@@ -18524,13 +19239,38 @@
             },
             {
               "indicator": "Number of dwellings approved",
-              "value": -0.704785
+              "value": -0.704549
             },
             {
               "indicator": "Family Tax Benefit A",
               "value": -0.691022
             }
           ]
+        },
+        "Assault Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Theft Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Intimidation, Stalking & Harassment Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Malicious Damage to Property Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
+        },
+        "Drug Offences Rate (per 1,000)": {
+          "method": "pearson",
+          "positive": [],
+          "negative": []
         }
       },
       "lga_name": "The Hills"
