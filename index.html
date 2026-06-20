@@ -959,7 +959,10 @@ async function sendQA() {
     'Population Change 2023-24','Airbnb  Gross Revenue','Airbnb Occupancy Rate','Airbnb ADR',
     'Age Pension','Disability Support Pension','Commonwealth Rent Assistance',
     'Visitor Spend','Resident Spend','Number of dwellings approved','Value of building job(s)',
-    'Homelessness','% Bachelor Degree','% Completed Year 12','% Over 69','% Under 20','% Indigenous'];
+    'Homelessness','% Bachelor Degree','% Completed Year 12','% Over 69','% Under 20','% Indigenous',
+    'Assault Rate (per 1,000)','Theft Rate (per 1,000)',
+    'Intimidation, Stalking & Harassment Rate (per 1,000)',
+    'Malicious Damage to Property Rate (per 1,000)','Drug Offences Rate (per 1,000)'];
   const rows = scopedRows.map(r => {
     const out = {};
     KEY_COLS.forEach(k => { if (r[k] != null) out[k] = r[k]; });
