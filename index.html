@@ -448,7 +448,7 @@ const INDICATOR_LABELS = {
   'Unit Rent (P/W)':                                             { label: 'Unit Rent (p/w)',               fmt: v => '$'+v.toFixed(0),                     cat: 'Housing' },
   'Listing Visits per Property':                                 { label: 'Listing Visits/Property',       fmt: v => v.toFixed(0),                         cat: 'Housing' },
   'Number of dwellings approved':                                { label: 'Dwelling Approvals',            fmt: v => v.toFixed(0),                         cat: 'Housing' },
-  'Value of building job(s)':                                    { label: 'Building Value',                fmt: v => '$'+Math.round(v/1e6).toFixed(1)+'M', cat: 'Housing' },
+  'Value of building job(s)':                                    { label: 'Building Value',                fmt: v => '$'+Math.round(v/1e3).toFixed(1)+'M', cat: 'Housing' },
   // Tourism
   'Airbnb Active Listings':                                      { label: 'Airbnb Active Listings',        fmt: v => v.toLocaleString(),                   cat: 'Tourism' },
   'Airbnb Occupancy Rate':                                       { label: 'Airbnb Occupancy Rate',         fmt: v => v.toFixed(1)+'%',                     cat: 'Tourism' },
