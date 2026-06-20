@@ -103,16 +103,8 @@
     .intel-report-loading { text-align:center; padding:60px 20px; color:#667085; font-size:0.9rem; }
     .intel-download-bar { max-width:900px; margin:0 auto 10px; display:flex; gap:8px; justify-content:flex-end; }
     .intel-dl-btn { padding:6px 14px; font-size:0.78rem; border-radius:5px; border:1px solid #2166ac; cursor:pointer; font-weight:500; }
-    .intel-dl-btn.pdf  { background:#2166ac; color:#fff; }
-    .intel-dl-btn.pdf:hover  { background:#003366; }
     .intel-dl-btn.word { background:#fff; color:#2166ac; }
     .intel-dl-btn.word:hover { background:#f0f4fa; }
-    @media print {
-      body > *:not(#intelligence-wrap) { display:none !important; }
-      #intelligence-wrap { position:static !important; overflow:visible !important; }
-      .intel-download-bar { display:none !important; }
-      .intel-report { box-shadow:none !important; border:none !important; }
-    }
     /* Fallback deterministic card styles */
     .intel-card { background:white; border:1px solid #dde5ef; border-radius:10px; box-shadow:0 1px 3px rgba(0,0,0,0.06); margin:0 auto 12px; max-width:980px; overflow:hidden; }
     .intel-header { background:#003366; color:white; padding:14px 18px; }
@@ -1268,26 +1260,12 @@ const INTEL_REPORTS = {
 
 let _intelReportCache = {};
 
-const INTEL_PDF_REPORTS  = { '11650': 'reports/central-coast.pdf' };
 const INTEL_DOCX_REPORTS = { '11650': 'reports/central-coast.docx' };
 
 function _intelDownloadBar(lgaCode) {
-  const pdf  = INTEL_PDF_REPORTS[lgaCode];
   const docx = INTEL_DOCX_REPORTS[lgaCode];
-  if (!pdf && !docx) return '';
-  const pdfBtn  = pdf  ? `<button class="intel-dl-btn pdf"  onclick="_intelPrint()">⬇ Download PDF</button>` : '';
-  const docxBtn = docx ? `<a class="intel-dl-btn word" href="${docx}" download>⬇ Download Word</a>` : '';
-  return `<div class="intel-download-bar">${pdfBtn}${docxBtn}</div>`;
-}
-
-function _intelPrint() {
-  // Temporarily force intelligence panel visible for print, then restore
-  const wrap = document.getElementById('intelligence-wrap');
-  const wasVisible = wrap.classList.contains('visible');
-  wrap.classList.add('visible');
-  wrap.style.display = 'block';
-  window.print();
-  if (!wasVisible) { wrap.classList.remove('visible'); wrap.style.display = 'none'; }
+  if (!docx) return '';
+  return `<div class="intel-download-bar"><a class="intel-dl-btn word" href="${docx}" download>⬇ Download Word</a></div>`;
 }
 
 async function renderIntelligence() {
