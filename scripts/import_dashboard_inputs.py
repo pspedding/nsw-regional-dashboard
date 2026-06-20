@@ -80,7 +80,17 @@ def normalize_main_table(df: pd.DataFrame) -> pd.DataFrame:
     df["SA2 Code"] = df["SA2 Code"].astype(int).astype(str)
     if "LGA Code" in df.columns:
         df["LGA Code"] = df["LGA Code"].astype("Int64").astype(str)
-    df = df.drop_duplicates(subset=["SA2 Code"], keep="last")
+    # Where an SA2 appears multiple times, merge rows by taking the first non-null
+    # value per column so no data is lost across duplicate rows.
+    id_cols = ["SA2 Code", "SA2 Name", "Region (SA3)", "LGA Code", "LGA Name"]
+    id_cols_present = [c for c in id_cols if c in df.columns]
+    metric_cols = [c for c in df.columns if c not in id_cols_present]
+    id_part = df[id_cols_present].drop_duplicates(subset=["SA2 Code"], keep="first")
+    if metric_cols:
+        metric_part = df.groupby("SA2 Code", sort=False)[metric_cols].first().reset_index()
+        df = id_part.merge(metric_part, on="SA2 Code", how="left")
+    else:
+        df = id_part
     return df
 
 
