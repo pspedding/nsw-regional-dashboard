@@ -1,10 +1,4 @@
 const INDICATOR_LOOKUP = {
-  "Unit Price (Current)": {
-    "contentArea": "Economy",
-    "frequency": "Monthly",
-    "dataset": "Property Market",
-    "latestPeriod": "2026-04-01"
-  },
   "% Bachelor Degree": {
     "contentArea": "Demographics",
     "frequency": "4 Yearly",
@@ -35,10 +29,28 @@ const INDICATOR_LOOKUP = {
     "dataset": "DSS",
     "latestPeriod": "2026-03-01"
   },
-  "Airbnb  Gross Revenue": {
+  "Airbnb ADR": {
     "contentArea": "Tourism",
     "frequency": "Monthly",
     "dataset": "STRA",
+    "latestPeriod": "2026-05-01"
+  },
+  "Assault Rate (per 1,000)": {
+    "contentArea": "Crime",
+    "frequency": "Annual",
+    "dataset": "BOCSAR",
+    "latestPeriod": "2025-12-31"
+  },
+  "Airbnb Occupancy Rate": {
+    "contentArea": "Tourism",
+    "frequency": "Monthly",
+    "dataset": "STRA",
+    "latestPeriod": "2026-05-01"
+  },
+  "Number of dwellings approved": {
+    "contentArea": "Housing",
+    "frequency": "Monthly",
+    "dataset": "Building Approvals",
     "latestPeriod": "2026-04-01"
   },
   "Natural increase in ERP": {
@@ -59,23 +71,11 @@ const INDICATOR_LOOKUP = {
     "dataset": "DSS",
     "latestPeriod": "2026-03-01"
   },
-  "House Rent (P/W)": {
-    "contentArea": "Economy",
-    "frequency": "Monthly",
-    "dataset": "Property Market",
-    "latestPeriod": "2026-04-01"
-  },
   "Total Businesses": {
     "contentArea": "Economy",
     "frequency": "Annual",
     "dataset": "Count of Business",
     "latestPeriod": "2025-01-01"
-  },
-  "Resident Spend": {
-    "contentArea": "Economy",
-    "frequency": "Monthly",
-    "dataset": "Retail Spend",
-    "latestPeriod": "2026-04-01"
   },
   "JobSeeker Payment": {
     "contentArea": "Economy",
@@ -88,6 +88,12 @@ const INDICATOR_LOOKUP = {
     "frequency": "4 Yearly",
     "dataset": "ABS Census",
     "latestPeriod": "2021-06-30"
+  },
+  "Unit Price (Current)": {
+    "contentArea": "Economy",
+    "frequency": "Monthly",
+    "dataset": "Property Market",
+    "latestPeriod": "2026-05-01"
   },
   "Parenting Payment Single": {
     "contentArea": "Socio-Economic",
@@ -137,23 +143,41 @@ const INDICATOR_LOOKUP = {
     "dataset": "ABS Census",
     "latestPeriod": "2021-06-30"
   },
-  "Airbnb Occupancy Rate": {
-    "contentArea": "Tourism",
+  "Value of building job(s)": {
+    "contentArea": "Housing",
     "frequency": "Monthly",
-    "dataset": "STRA",
+    "dataset": "Building Approvals",
     "latestPeriod": "2026-04-01"
   },
-  "Airbnb ADR": {
-    "contentArea": "Tourism",
+  "Resident Spend": {
+    "contentArea": "Economy",
     "frequency": "Monthly",
-    "dataset": "STRA",
-    "latestPeriod": "2026-04-01"
+    "dataset": "Retail Spend",
+    "latestPeriod": "2026-05-01"
+  },
+  "House Rent (P/W)": {
+    "contentArea": "Economy",
+    "frequency": "Monthly",
+    "dataset": "Property Market",
+    "latestPeriod": "2026-05-01"
   },
   "% Over 69": {
     "contentArea": "Demographics",
     "frequency": "Annual",
     "dataset": "ABS Population",
     "latestPeriod": "2021-12-31"
+  },
+  "Listing Visits per Property": {
+    "contentArea": "Economy",
+    "frequency": "Monthly",
+    "dataset": "Property Market",
+    "latestPeriod": "2026-05-01"
+  },
+  "Visitor Spend": {
+    "contentArea": "Economy",
+    "frequency": "Monthly",
+    "dataset": "Retail Spend",
+    "latestPeriod": "2026-05-01"
   },
   "Net internal migration": {
     "contentArea": "Demographics",
@@ -167,17 +191,29 @@ const INDICATOR_LOOKUP = {
     "dataset": "ABS Census",
     "latestPeriod": "2021-06-30"
   },
+  "Airbnb Active Listings": {
+    "contentArea": "Tourism",
+    "frequency": "Monthly",
+    "dataset": "STRA",
+    "latestPeriod": "2026-05-01"
+  },
+  "Airbnb  Gross Revenue": {
+    "contentArea": "Tourism",
+    "frequency": "Monthly",
+    "dataset": "STRA",
+    "latestPeriod": "2026-05-01"
+  },
   "Unemployment Rate (%)": {
     "contentArea": "Economy",
-    "frequency": "Monthly",
-    "dataset": "ABS Labour Force",
-    "latestPeriod": "2026-04-01"
+    "frequency": "Quarterly",
+    "dataset": "SALM",
+    "latestPeriod": "2025-12-01"
   },
   "Labour Force": {
     "contentArea": "Economy",
-    "frequency": "Monthly",
-    "dataset": "ABS Labour Force",
-    "latestPeriod": "2026-04-01"
+    "frequency": "Quarterly",
+    "dataset": "SALM",
+    "latestPeriod": "2025-12-01"
   },
   "% Completed Year 12": {
     "contentArea": "Demographics",
@@ -185,29 +221,23 @@ const INDICATOR_LOOKUP = {
     "dataset": "ABS Census",
     "latestPeriod": "2021-06-30"
   },
-  "Airbnb Active Listings": {
-    "contentArea": "Tourism",
-    "frequency": "Monthly",
-    "dataset": "STRA",
-    "latestPeriod": "2026-04-01"
-  },
   "Pension Concession Card": {
     "contentArea": "Socio-Economic",
     "frequency": "Quarterly",
     "dataset": "DSS",
     "latestPeriod": "2026-03-01"
   },
-  "Number of dwellings approved": {
-    "contentArea": "Housing",
-    "frequency": "Monthly",
-    "dataset": "Building Approvals",
-    "latestPeriod": "2026-03-01"
+  "Malicious Damage to Property Rate (per 1,000)": {
+    "contentArea": "Crime",
+    "frequency": "Annual",
+    "dataset": "BOCSAR",
+    "latestPeriod": "2025-12-31"
   },
-  "Value of building job(s)": {
-    "contentArea": "Housing",
+  "House Price (Current)": {
+    "contentArea": "Economy",
     "frequency": "Monthly",
-    "dataset": "Building Approvals",
-    "latestPeriod": "2026-03-01"
+    "dataset": "Property Market",
+    "latestPeriod": "2026-05-01"
   },
   "Age Pension": {
     "contentArea": "Socio-Economic",
@@ -227,11 +257,11 @@ const INDICATOR_LOOKUP = {
     "dataset": "Regional Population",
     "latestPeriod": "2024-06-30"
   },
-  "Listing Visits per Property": {
-    "contentArea": "Economy",
-    "frequency": "Monthly",
-    "dataset": "Property Market",
-    "latestPeriod": "2026-04-01"
+  "Drug Offences Rate (per 1,000)": {
+    "contentArea": "Crime",
+    "frequency": "Annual",
+    "dataset": "BOCSAR",
+    "latestPeriod": "2025-12-31"
   },
   "Index of Relative Socio-economic Advantage and Disadvantage": {
     "contentArea": "Demographics",
@@ -275,17 +305,17 @@ const INDICATOR_LOOKUP = {
     "dataset": "ABS Census",
     "latestPeriod": "2021-06-30"
   },
-  "Unemployment": {
-    "contentArea": "Economy",
-    "frequency": "Monthly",
-    "dataset": "ABS Labour Force",
-    "latestPeriod": "2026-04-01"
-  },
-  "House Price (Current)": {
+  "Unit Rent (P/W)": {
     "contentArea": "Economy",
     "frequency": "Monthly",
     "dataset": "Property Market",
-    "latestPeriod": "2026-04-01"
+    "latestPeriod": "2026-05-01"
+  },
+  "Unemployment": {
+    "contentArea": "Economy",
+    "frequency": "Quarterly",
+    "dataset": "SALM",
+    "latestPeriod": "2025-12-01"
   },
   "Homelessness": {
     "contentArea": "Socio-Economic",
@@ -293,17 +323,23 @@ const INDICATOR_LOOKUP = {
     "dataset": "Homelessness (AIHW)",
     "latestPeriod": "2025-06-30"
   },
-  "Visitor Spend": {
-    "contentArea": "Economy",
-    "frequency": "Monthly",
-    "dataset": "Retail Spend",
-    "latestPeriod": "2026-04-01"
-  },
   "Healthcare Businesses": {
     "contentArea": "Economy",
     "frequency": "Annual",
     "dataset": "Count of Business",
     "latestPeriod": "2025-01-01"
+  },
+  "Theft Rate (per 1,000)": {
+    "contentArea": "Crime",
+    "frequency": "Annual",
+    "dataset": "BOCSAR",
+    "latestPeriod": "2025-12-31"
+  },
+  "Intimidation, Stalking & Harassment Rate (per 1,000)": {
+    "contentArea": "Crime",
+    "frequency": "Annual",
+    "dataset": "BOCSAR",
+    "latestPeriod": "2025-12-31"
   },
   "ERP at 30 June 2024": {
     "contentArea": "Demographics",
@@ -316,11 +352,5 @@ const INDICATOR_LOOKUP = {
     "frequency": "Quarterly",
     "dataset": "DSS",
     "latestPeriod": "2026-03-01"
-  },
-  "Unit Rent (P/W)": {
-    "contentArea": "Economy",
-    "frequency": "Monthly",
-    "dataset": "Property Market",
-    "latestPeriod": "2026-04-01"
   }
 };

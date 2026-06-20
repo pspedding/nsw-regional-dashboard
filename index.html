@@ -418,11 +418,11 @@
       <input type="text" id="qa-input" placeholder="e.g. Which SA2 has the highest unemployment?" onkeydown="if(event.key==='Enter')sendQA()" />
       <button id="qa-send" onclick="sendQA()">Ask</button>
     </div>
-    <div class="qa-key-row" id="qa-key-row" style="display:none">
-      <input type="password" id="qa-api-key" placeholder="Optional: OpenAI (sk-…) or OpenRouter (sk-or-…) key" />
+    <div class="qa-key-row" id="qa-key-row">
+      <input type="password" id="qa-api-key" placeholder="Enter API key (OpenRouter recommended)" />
       <button class="qa-key-save" onclick="saveKey()">Save key</button>
     </div>
-    <p class="qa-hint" id="qa-key-hint">✨ No API key needed — using free AI</p>
+    <p class="qa-hint" id="qa-key-hint">Requires a working OpenAI or OpenRouter API key.</p>
   </div>
 </div>
 
@@ -488,6 +488,12 @@ const INDICATOR_LABELS = {
   'Index of Relative Socio-economic Advantage and Disadvantage': { label: 'SEIFA Adv/Disadvantage',       fmt: v => v.toFixed(0),                         cat: 'SEIFA' },
   'Index of Education and Occupation':                           { label: 'SEIFA Edu & Occupation',        fmt: v => v.toFixed(0),                         cat: 'SEIFA' },
   'Index of Economic Resources':                                 { label: 'SEIFA Econ Resources',          fmt: v => v.toFixed(0),                         cat: 'SEIFA' },
+  // Crime
+  'Assault Rate (per 1,000)':                                    { label: 'Assault Rate (per 1k)',          fmt: v => v.toFixed(2),                         cat: 'Crime' },
+  'Theft Rate (per 1,000)':                                      { label: 'Theft Rate (per 1k)',            fmt: v => v.toFixed(2),                         cat: 'Crime' },
+  'Intimidation, Stalking & Harassment Rate (per 1,000)':        { label: 'Intimidation Rate (per 1k)',     fmt: v => v.toFixed(2),                         cat: 'Crime' },
+  'Malicious Damage to Property Rate (per 1,000)':               { label: 'Malicious Damage Rate (per 1k)', fmt: v => v.toFixed(2),                        cat: 'Crime' },
+  'Drug Offences Rate (per 1,000)':                              { label: 'Drug Offences Rate (per 1k)',    fmt: v => v.toFixed(2),                         cat: 'Crime' },
 };
 
 const RADAR_KEYS = [
@@ -872,13 +878,16 @@ function updateRadar(row) {
 }
 
 // ── AI Q&A ────────────────────────────────────────────────────────────
-// Load saved key from localStorage
+// Load saved key from localStorage. Show input field if no key is saved.
 window.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('cc_openai_key');
+  const keyRow = document.getElementById('qa-key-row');
   if (saved) {
     document.getElementById('qa-api-key').value = saved;
-    document.getElementById('qa-key-row').style.display = 'flex';
-    document.getElementById('qa-key-hint').textContent = '✅ Using saved API key. Clear to use free AI.';
+    document.getElementById('qa-key-hint').textContent = '✅ Using saved OpenRouter/OpenAI key.';
+    keyRow.style.display = 'none'; // Hide if key is already saved and valid
+  } else {
+    keyRow.style.display = 'flex'; // Show if no key is saved
   }
 });
 
@@ -901,25 +910,23 @@ async function sendQA() {
   const q = input.value.trim();
   if (!q) return;
 
-  // Use saved API key if present, otherwise fall back to free Pollinations endpoint
+  // API key is required. Recommend OpenRouter if OpenAI key is failing.
   const apiKey = localStorage.getItem('cc_openai_key') || '';
-  const hasKey = apiKey.startsWith('sk-');
-
-  let qaEndpoint, qaModel, qaHeaders;
-  if (hasKey) {
-    const isOpenRouter = apiKey.startsWith('sk-or-');
-    qaEndpoint = isOpenRouter
-      ? 'https://openrouter.ai/api/v1/chat/completions'
-      : 'https://api.openai.com/v1/chat/completions';
-    qaModel = isOpenRouter ? 'openai/gpt-4o-mini' : 'gpt-4o-mini';
-    qaHeaders = { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + apiKey };
-    if (isOpenRouter) qaHeaders['HTTP-Referer'] = 'https://pspedding.github.io/nsw-regional-dashboard-dev/';
-  } else {
-    // Free, no-key endpoint via Pollinations.ai
-    qaEndpoint = 'https://text.pollinations.ai/openai';
-    qaModel = 'openai';
-    qaHeaders = { 'Content-Type': 'application/json' };
+  if (!apiKey.startsWith('sk-')) {
+    document.getElementById('qa-key-hint').textContent = '⚠️ Please enter an OpenRouter key (sk-or-...) or OpenAI key below.';
+    document.getElementById('qa-api-key').style.display = 'block';
+    document.querySelector('.qa-key-save').style.display = 'inline-block';
+    return;
   }
+
+  const isOpenRouter = apiKey.startsWith('sk-or-');
+  const qaEndpoint = isOpenRouter
+    ? 'https://openrouter.ai/api/v1/chat/completions'
+    : 'https://api.openai.com/v1/chat/completions';
+  const qaModel = isOpenRouter ? 'openai/gpt-4o-mini' : 'gpt-4o-mini';
+  const qaHeaders = { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + apiKey };
+  if (isOpenRouter) qaHeaders['HTTP-Referer'] = 'https://pspedding.github.io/nsw-regional-dashboard-dev/';
+
 
   // Inject a stronger instruction for models that tend to hallucinate
   const forceDatasetInstruction = 'You MUST answer using ONLY the dataset provided below. Do NOT use any outside knowledge. Do NOT guess. If the answer is not in the dataset, say so explicitly.';
