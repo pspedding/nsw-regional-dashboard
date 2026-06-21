@@ -454,7 +454,7 @@ const INDICATOR_LABELS = {
   'Number of dwellings approved':                                { label: 'Dwelling Approvals',            fmt: v => v.toFixed(0),                         cat: 'Housing' },
   'Value of building job(s)':                                    { label: 'Building Value',                fmt: v => '$'+Math.round(v/1e3).toFixed(1)+'M', cat: 'Housing' },
   // Tourism
-  'Airbnb Active Listings':                                      { label: 'Airbnb Active Listings',        fmt: v => v.toLocaleString(),                   cat: 'Tourism' },
+  'Airbnb Active Listings':                                      { label: 'Airbnb Active Listings',        fmt: v => Math.round(v).toLocaleString(),        cat: 'Tourism' },
   'Airbnb Occupancy Rate':                                       { label: 'Airbnb Occupancy Rate',         fmt: v => v.toFixed(1)+'%',                     cat: 'Tourism' },
   'Airbnb ADR':                                                  { label: 'Airbnb Avg Daily Rate',         fmt: v => '$'+v.toFixed(0),                     cat: 'Tourism' },
   'Airbnb  Gross Revenue':                                       { label: 'Airbnb Gross Revenue',          fmt: v => '$'+Math.round(v/1000)+'k',            cat: 'Tourism' },
@@ -700,8 +700,13 @@ function getColor(v, min, max) {
 }
 
 function updateChoropleth(lgaFilter) {
-  const vals = SA2_DATA.map(r=>r[selectedIndicator]).filter(v=>v!=null&&!isNaN(v));
-  const min=Math.min(...vals), max=Math.max(...vals);
+  // Scope colour scale + legend to the selected LGA (if any) so the map legend
+  // matches the SA2 ranking and isn't skewed by outliers in other LGAs.
+  const scopedVals = (lgaFilter
+    ? SA2_DATA.filter(r => String(r['LGA Code']) === lgaFilter)
+    : SA2_DATA
+  ).map(r => r[selectedIndicator]).filter(v => v != null && !isNaN(v));
+  const min = Math.min(...scopedVals), max = Math.max(...scopedVals);
   const meta = INDICATOR_LABELS[selectedIndicator] || { label: selectedIndicator, fmt: v=>v };
 
   if (geojsonLayer) geojsonLayer.remove();
@@ -709,8 +714,7 @@ function updateChoropleth(lgaFilter) {
     style: feature => {
       const row = sa2Map[feature.properties.SA2_CODE21];
       const v = row ? row[selectedIndicator] : null;
-      const row2 = sa2Map[feature.properties.SA2_CODE21];
-      const dimmed = lgaFilter && row2 && String(row2['LGA Code']) !== lgaFilter;
+      const dimmed = lgaFilter && row && String(row['LGA Code']) !== lgaFilter;
       return { fillColor: dimmed ? '#e0e0e0' : getColor(v,min,max), weight:1.5, color:'#fff', fillOpacity: dimmed ? 0.3 : 0.8 };
     },
     onEachFeature: (feature, layer) => {
@@ -1185,7 +1189,7 @@ const GLANCE_CHECKS = [
   { key: 'House Price (Current)',                               label: 'median house price',              fmt: v => '$'+Math.round(v/1000)+'k',           lowIsBad: false },
   { key: 'Index of Relative Socio-economic Disadvantage ',      label: 'socioeconomic disadvantage index', fmt: v => v.toFixed(0),                       lowIsBad: true  },
   { key: 'Median Household Income',                            label: 'median household income',         fmt: v => '$'+v.toLocaleString()+'/wk',         lowIsBad: true  },
-  { key: 'Airbnb Active Listings',                             label: 'Airbnb active listings',          fmt: v => v.toLocaleString(),                   lowIsBad: false },
+  { key: 'Airbnb Active Listings',                             label: 'Airbnb active listings',          fmt: v => Math.round(v).toLocaleString(),        lowIsBad: false },
   { key: 'Total Businesses',                                   label: 'business count',                  fmt: v => v.toLocaleString(),                   lowIsBad: false },
   { key: '% Under 20',                                         label: 'share of population under 20',    fmt: v => v.toFixed(1)+'%',                    lowIsBad: false },
   { key: 'Disability Support Pension',                         label: 'disability support recipients',   fmt: v => v.toLocaleString(),                   lowIsBad: false },
