@@ -460,7 +460,7 @@
 </div>
 
 <script src="indicator-lookup.js?v=1786145759"></script>
-<script src="data.js?v=1786145759"></script>
+<script src="data.js?v=1786146255"></script>
 <script>
 // ── CONFIG ──────────────────────────────────────────────────────────
 const INDICATOR_LABELS = {
@@ -1483,16 +1483,15 @@ function _quintileColor(row, key, allRows, highIsBad) {
   if (vals.length < 5) return '#ccc';
   const v = row[key];
   if (v == null || isNaN(v)) return '#ccc';
-  const pct = vals.filter(x => x <= v).length / vals.length; // 0–1, low→high
-  const q = Math.min(4, Math.floor(pct * 5)); // 0–4
-  // if highIsBad: q0=best(blue) q4=worst(red); else reverse
+  const pct = vals.filter(x => x <= v).length / vals.length;
+  const q = Math.min(4, Math.floor(pct * 5));
   return highIsBad ? QUINTILE_COLORS[q] : QUINTILE_COLORS[4-q];
 }
 
 function _rankLabel(row, key, allRows, highIsBad) {
   const sorted = [...allRows].filter(r => r[key] != null && !isNaN(r[key]))
     .sort((a,b) => highIsBad ? a[key]-b[key] : b[key]-a[key]);
-  const idx = sorted.findIndex(r => r.sa2_code === row.sa2_code);
+  const idx = sorted.findIndex(r => r['SA2 Code'] === row['SA2 Code']);
   if (idx < 0) return '';
   return `${idx+1} of ${sorted.length}`;
 }
@@ -1505,10 +1504,10 @@ function renderIndicatorsPanel() {
   const lgaCode = document.getElementById('lga-select')?.value || '';
   const sa2Code = document.getElementById('sa2-select')?.value || '';
   // Get all rows for the selected LGA (for rank/quintile)
-  const allRows = SA2_DATA.filter(r => !lgaCode || String(r.lga_code) === String(lgaCode));
-  const row = allRows.find(r => String(r.sa2_code) === String(sa2Code));
-  const sa2Name = row ? (row.sa2_name || sa2Code) : (sa2Code ? sa2Code : 'No SA2 selected');
-  const lgaName = row ? (row.lga_name || lgaCode) : lgaCode;
+  const allRows = SA2_DATA.filter(r => !lgaCode || String(r['LGA Code']) === String(lgaCode));
+  const row = allRows.find(r => String(r['SA2 Code']) === String(sa2Code));
+  const sa2Name = row ? (row['SA2 Name'] || sa2Code) : (sa2Code ? sa2Code : 'No SA2 selected');
+  const lgaName = row ? (row['LGA Name'] || lgaCode) : lgaCode;
   const nSA2 = allRows.length;
 
   // Source list: curated or all indicators
@@ -1577,21 +1576,16 @@ function renderIndicatorsPanel() {
       // Rank
       rankStr = row ? _rankLabel(row, key, allRows, highIsBad) : '';
       // Trend arrow (prior period)
-      const priorKey = 'Prior.' + key;
-      const priorVal = row ? row[priorKey] : null;
-      if (priorVal != null && rawVal != null) {
-        const delta = rawVal - priorVal;
-        const pct = Math.abs(priorVal) > 0 ? (Math.abs(delta) / Math.abs(priorVal) * 100).toFixed(1) : null;
-        const tooltip = pct ? `${delta>0?'+':''}${pct}% vs prior` : '';
-        if (Math.abs(delta) < 0.0001) {
-          trendHtml = `<span class="ic-trend flat" title="No change">→</span>`;
-        } else {
-          const isUp = delta > 0;
-          const good = highIsBad ? !isUp : isUp;
-          const arrow = isUp ? '▲' : '▼';
-          const cls = good ? 'up' : 'down';
-          trendHtml = `<span class="ic-trend ${cls}" title="${tooltip}">${arrow}</span>`;
-        }
+      const trendKey = 'trend_' + key;
+      const trendVal = row ? row[trendKey] : null; // 'Up', 'Down', 'Flat' or null
+      if (trendVal && trendVal !== 'Flat') {
+        const isUp = trendVal === 'Up';
+        const good = highIsBad ? !isUp : isUp;
+        const arrow = isUp ? '▲' : '▼';
+        const cls = good ? 'up' : 'down';
+        trendHtml = `<span class="ic-trend ${cls}" title="Trend: ${trendVal}">${arrow}</span>`;
+      } else if (trendVal === 'Flat') {
+        trendHtml = `<span class="ic-trend flat" title="Trend: Flat">→</span>`;
       } else {
         trendHtml = '';
       }
@@ -1629,7 +1623,7 @@ function renderIndicatorsPanel() {
     <div class="ind-panel-hdr">
       <div>
         <h2>${sa2Name}</h2>
-        <span class="ind-sa2-label">${lgaName ? lgaName + ' — ' : ''}${nSA2} SA2s in LGA${rankStr||''}</span>
+        <span class="ind-sa2-label">${lgaName ? lgaName + ' — ' : ''}${nSA2} SA2s in LGA</span>
       </div>
       <button class="ind-show-all-btn" onclick="_indShowAll=!_indShowAll;renderIndicatorsPanel()">${btnLabel}</button>
     </div>
