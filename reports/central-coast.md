@@ -4,114 +4,106 @@
 
 ## Executive Summary
 
-The Central Coast LGA displays a stark regional divide between the more affluent **Gosford** SA3 region and the socioeconomically challenged **Wyong** SA3 region. The region hosts **385,806 residents** across 30 Statistical Area Level 2 (SA2) localities, with mixed population dynamics including strong growth in family-oriented **Warnervale-Wadalba** (+650 persons) and decline in aging coastal suburbs. Housing affordability pressures are acute, particularly in premium coastal areas where median house prices exceed **$1.7 million** (**Wamberal-Forresters Beach**, **Avoca Beach-Copacabana**), contrasting sharply with sub-$900,000 medians in disadvantaged western suburbs.
+The Central Coast LGA encompasses a diverse region of **389,551 residents** across 30 SA2 areas, split between the **Gosford** and **Wyong** SA3 regions. The region experiences moderate population growth (+2,947 or 0.76% in 2023-24), driven primarily by overseas migration, while facing significant socioeconomic challenges alongside pockets of affluence.
 
-**Key Headline Findings:**
+**Key Findings:**
 
-1. **Wyong** has nearly **double the unemployment rate** of **Gosford** (4.5% vs 2.4% average), with crime and welfare dependency significantly elevated
-2. Coastal premium areas (**Terrigal-North Avoca**, **Avoca Beach-Copacabana**, **Wamberal-Forresters Beach**) command house prices **60-80% above** inland suburbs, with SEIFA indices consistently above 1,070
-3. **Gorokan-Kanwal-Charmhaven** and **Wyong** exhibit severe socioeconomic stress: assault rates of 5.8-12.4 per 1,000, welfare card holders exceeding 30% of population
-4. The region approved **1,086 dwellings** valued at **$1.07 billion**, with growth concentrated in **Warnervale-Wadalba** (224 approvals) and **Gosford-Springfield** (184 approvals)
-5. Tourism remains underdeveloped: visitor spend (**$58.3 million**) represents just 13% of resident spend across the LGA, though **Tuggerah-Kangy Angy** retail hub attracts significant visitor traffic
-
----
+1. **Stark socioeconomic divide**: Coastal suburbs like **Avoca Beach-Copacabana** (SEIFA Advantage 1084.48, median income $1,869/week) contrast sharply with inland areas like **Blue Haven-San Remo** (SEIFA 886.3, income $1,250/week)
+2. **Housing affordability crisis**: Median house prices range from **$800,000** (**Tuggerah-Kangy Angy**) to **$1,964,000** (**Erina-Green Point**), creating severe price-to-income pressure
+3. **Employment challenges**: Regional unemployment rate averages 3.2%, but reaches **8.1%** in **Wyong** and **5.8%** in **Gorokan-Kanwal-Charmhaven**, with 15,500+ JobSeeker recipients
+4. **Growing communities**: **Warnervale-Wadalba** leads growth (+650 residents), attracting families with younger demographics (31.45% under 20)
+5. **Crime concentration**: Assault rates vary dramatically from **0.09 per 1,000** (**Lake Munmorah-Mannering Park**) to **12.36** (**Wyong**), with theft peaking at **83.09** in retail hub **Tuggerah-Kangy Angy**
 
 ## 1. Population & Demographics
 
-The Central Coast's total population of **385,806** recorded modest growth of **+3,193 persons** (2023-24), driven primarily by overseas migration (+2,778) while internal migration remained marginally negative (-119). Growth patterns diverge sharply: **Warnervale-Wadalba** led with +650 residents fueled by internal migration (+469), while **Gosford-Springfield** added +516 through strong overseas arrivals (+305). Conversely, aging areas experienced decline—**Toukley-Norah Head** lost 19 residents due to natural population decrease (-111).
+The Central Coast's population reached **389,551** in 2024, increasing by **2,947 residents** (0.76%) from 2023. Growth is unevenly distributed: **Warnervale-Wadalba** (+650), **Gosford-Springfield** (+516), and **Terrigal-North Avoca** (+207) dominate gains, while **Toukley-Norah Head** (-19) and **Lake Munmorah-Mannering Park** (-27) declined.
 
-**Age structure** reveals regional disparities. The median age across all SA2s ranges from **34-35** in growth suburbs (**Blue Haven-San Remo**, **Warnervale-Wadalba**) to **48-49** in retirement destinations (**Toukley-Norah Head**, **Lake Munmorah-Mannering Park**, **Erina-Green Point**). Youth representation (under 20) peaks at **31.45%** in **Warnervale-Wadalba**, while seniors (over 69) concentrate in **Lake Munmorah-Mannering Park** (25.7%) and **Erina-Green Point** (26.04%).
+**Overseas migration** (+2,829) drives growth, offsetting **net internal migration losses** (-277) as residents leave for other Australian regions. Natural increase contributes modestly (+395), though several SA2s experience natural decline, notably **Erina-Green Point** (-186) and **Toukley-Norah Head** (-111), reflecting aging populations.
 
-**Cultural diversity** remains limited: only **14.8%** born overseas (range: 10.38% in **Budgewoi** to 21.21% in **Gosford-Springfield**), with language diversity equally low (4.8% speak languages other than English). **Indigenous populations** total approximately **10,500**, comprising 2.7% of residents—notably concentrated in **Blue Haven-San Remo** (7.78%), **Wyong** (6.61%), and **Gorokan-Kanwal-Charmhaven** (5.64%).
+The regional **median age** is 42 years, ranging from 34 (**Blue Haven-San Remo**) to 49 (**Lake Munmorah-Mannering Park**, **Erina-Green Point**). Youth populations (under 20) are highest in **Warnervale-Wadalba** (31.45%) and **Blue Haven-San Remo** (29.24%), while seniors (over 69) concentrate in **Erina-Green Point** (26.04%) and **Lake Munmorah-Mannering Park** (25.7%).
 
-Population density varies from **10.3 persons/km²** in rural **Jilliby-Yarramalong** to **2,117 persons/km²** in coastal **Bateau Bay-Killarney Vale**, reflecting the region's mix of bushland hinterland and dense coastal settlement.
+**Cultural diversity** varies significantly. Born overseas percentages peak in **Gosford-Springfield** (21.21%) and **Erina-Green Point** (19.64%), compared to just 10.38% in **Budgewoi-Buff Point-Halekulani**. Language diversity follows similar patterns: **Gosford-Springfield** (13.21%) versus **Lake Munmorah-Mannering Park** (2.63%).
 
----
+**Indigenous populations** total approximately **13,300** (3.4% regionally), with highest concentrations in **Blue Haven-San Remo** (7.78%, 859 people), **Wyong** (6.61%, 583), and **Gorokan-Kanwal-Charmhaven** (5.64%, 1,247). Coastal affluent areas show lowest rates: **Avoca Beach-Copacabana** (1.67%), **Terrigal-North Avoca** (1.59%).
+
+**Population density** ranges from sparse rural **Jilliby-Yarramalong** (10.3 persons/km²) and **Calga-Kulnura** (6.1/km²) to densely settled **Bateau Bay-Killarney Vale** (2,117/km²) and **Gorokan-Kanwal-Charmhaven** (2,021/km²).
 
 ## 2. Economic Activity & Business
 
-The region supports **29,982 total businesses**, with concentrations in **Gosford-Springfield** (2,629), **Erina-Green Point** (1,807), and **Terrigal-North Avoca** (1,577). Manufacturing remains modest (1,007 businesses total), while healthcare businesses (2,453) and tourism enterprises (1,060) reflect service-oriented economies.
+The region supports **28,800+ businesses**, concentrated in **Gosford-Springfield** (2,629), **Erina-Green Point** (1,807), and **Terrigal-North Avoca** (1,577). Manufacturing remains significant with **950 businesses**, led by **Gosford-Springfield** (150) and **Calga-Kulnura** (98, likely rural/industrial). **Healthcare businesses** (2,300+) cluster in service hubs: **Gosford-Springfield** (335), **Erina-Green Point** (232), **Terrigal-North Avoca** (202).
 
-**Labour force participation** totals **194,417** across the LGA, but unemployment patterns expose the Gosford-Wyong divide. **Wyong SA3** averages **4.5% unemployment** with hotspots including **Wyong** (8.1%, 357 unemployed), **Gorokan-Kanwal-Charmhaven** (5.8%, 628 unemployed), and **Blue Haven-San Remo** (5.8%, 341 unemployed). In contrast, **Gosford SA3** averages **2.4% unemployment**, with premium suburbs recording sub-2% rates: **Avoca Beach-Copacabana** (1.1%), **Wamberal-Forresters Beach** (1.4%), **Terrigal-North Avoca** (1.3%).
+The **labour force** totals approximately **197,000**, with unemployment averaging **3.2%** but varying dramatically. Critical hotspots include **Wyong** (8.1%, 357 unemployed), **Gorokan-Kanwal-Charmhaven** (5.8%, 628), and **Blue Haven-San Remo** (5.8%, 341). Coastal affluent areas show minimal unemployment: **Avoca Beach-Copacabana** (1.1%, 47), **Wamberal-Forresters Beach** (1.4%, 82).
 
-**JobSeeker Payment** recipients number **14,270 LGA-wide**, disproportionately concentrated in disadvantaged Wyong suburbs: **Gorokan-Kanwal-Charmhaven** (1,165), **Umina-Booker Bay-Patonga** (1,030), **Gosford-Springfield** (1,020). This represents **7.3%** of the labour force claiming unemployment support.
+**JobSeeker payments** reach **15,500+ recipients**, highest in **Gorokan-Kanwal-Charmhaven** (1,165), **Gosford-Springfield** (1,020), and **Umina-Booker Bay-Patonga** (1,030). Rates per labour force participant reveal deeper disadvantage: **Wyong** (13.6%), **Gorokan** (10.7%) versus **Avoca Beach** (3.2%).
 
-**Median household income** varies dramatically—from **$1,869/week** in **Avoca Beach-Copacabana** and **$1,942/week** in **Jilliby-Yarramalong** down to **$971/week** in **Toukley-Norah Head** and **$977/week** in **Lake Munmorah-Mannering Park**. The wealthiest quartile earns 80-90% more than the bottom quartile.
+**Median household income** demonstrates extreme inequality. Affluent coastal suburbs command **$1,869/week** (**Avoca Beach-Copacabana**), **$1,852** (**Wamberal-Forresters Beach**), **$1,760** (**Terrigal-North Avoca**), while struggling areas earn **$971** (**Toukley-Norah Head**), **$977** (**Lake Munmorah**), **$984** (**The Entrance**) — barely above 50% of wealthy neighbors.
 
----
+**Building activity** totals **$910 million**, dominated by **Gosford-Springfield** ($157M, 184 dwellings), **Warnervale-Wadalba** ($94M, 224 dwellings), and **The Entrance** ($86.7M, 133 dwellings). This represents **1,310 dwelling approvals** regionwide, insufficient for population growth needs.
 
 ## 3. Housing & Affordability
 
-**House prices** exhibit extreme stratification. Premium coastal markets command **$1.7-1.96 million**: **Wamberal-Forresters Beach** ($1,737,500), **Avoca Beach-Copacabana** ($1,700,000), **Erina-Green Point** ($1,964,000). Mid-tier suburbs (**Terrigal**, **The Entrance**, **Umina**) range **$1.1-1.46 million**. Affordable entry points exist in western Wyong: **Blue Haven-San Remo** ($828,750), **Tuggerah-Kangy Angy** ($800,000), **Wyong** ($885,000).
+**House prices** create severe affordability challenges. Median prices range from **$800,000** (**Tuggerah-Kangy Angy**) to **$1,964,000** (**Erina-Green Point**), with coastal premium suburbs commanding **$1,700,000+** (**Avoca Beach**, **Wamberal**, **Box Head-MacMasters Beach**).
 
-**Unit prices** follow similar gradients, from **$2.64 million** in **Erina-Green Point** and **$1.59 million** in **Avoca Beach-Copacabana** down to **$500,000** in **Blue Haven-San Remo** and **$510,000** in **Budgewoi-Buff Point-Halekulani**.
+**Unit prices** follow similar patterns: **$2,637,500** (**Erina-Green Point**) down to **$500,000** (**Blue Haven-San Remo**). Middle-ring suburbs cluster around **$700,000-$850,000**.
 
-**Rental markets** show median house rents of **$630-900/week** (units: **$460-675/week**). Premium areas charge **$850-1,088/week** for houses, while affordable Wyong suburbs offer **$596-650/week**.
+**Weekly rents** for houses span **$596** (**Toukley-Norah Head**) to **$1,088** (**Box Head-MacMasters Beach**), with units ranging **$460** (**Blue Haven**) to **$675** (**Terrigal**). Coastal tourist areas show inflated rents relative to incomes.
 
-**Price-to-income ratios** highlight severe stress: in **Avoca Beach-Copacabana**, the median house costs **18.2x annual household income**; in **Wamberal-Forresters Beach**, **18.8x**. Even modest **Wyong** shows a ratio of **16.8x**, indicating widespread unaffordability.
+**Price-to-income ratios** reveal crisis levels. In **Wyong**, median house price ($885,000) equals 16.2× median annual income; in **The Entrance**, 28.7×. Even "affordable" **Blue Haven-San Remo** shows 12.8× ratio. Only high-income areas like **Jilliby-Yarramalong** (9.1×) approach manageable levels.
 
-**Building approvals** totalled **1,086 dwellings** valued at **$1.07 billion** across the dataset. Growth corridors dominate: **Warnervale-Wadalba** (224 dwellings, $94M), **Gosford-Springfield** (184 dwellings, $157M), **The Entrance** (133 dwellings, $86.7M). Rural **Calga-Kulnura** and **Jilliby-Yarramalong** recorded minimal approvals (8 and 7 respectively).
+**Rental stress** affects thousands. In **Wyong**, median rent ($630/week) consumes 58% of median income; in **The Entrance**, 71%. **Commonwealth Rent Assistance** supports **28,800+ households**, concentrated in **Gorokan-Kanwal-Charmhaven** (2,565), **Umina** (2,425), **The Entrance** (2,030).
 
----
+**Listing visits per property** indicate market demand: **Wamberal** (2,198), **Wyoming** (2,274), **Terrigal** (2,258) attract intense interest, while retail-focused **Tuggerah** receives minimal residential attention (157).
 
 ## 4. Socioeconomic Wellbeing
 
-**SEIFA indices** (Index of Relative Socio-economic Advantage and Disadvantage) reveal sharp inequality. Top-performing areas include **Terrigal-North Avoca** (1,085.45), **Avoca Beach-Copacabana** (1,084.48), **Wamberal-Forresters Beach** (1,076.85)—all exceeding the national mean by 8+ percentage points. Bottom performers cluster in Wyong: **Blue Haven-San Remo** (886.3), **Gorokan-Kanwal-Charmhaven** (891.37), **Wyong** (891.52).
+**SEIFA indices** reveal profound inequality. The **Index of Relative Socio-economic Advantage and Disadvantage** ranges from **1,085.45** (**Terrigal-North Avoca**) and **1,084.48** (**Avoca Beach-Copacabana**) to **886.3** (**Blue Haven-San Remo**) and **891.37** (**Gorokan-Kanwal-Charmhaven**) — a 200-point chasm representing vastly different life opportunities.
 
-**Welfare dependency** is pronounced. **Pension Concession Card** holders total **91,245** (approximately 24% of population), peaking in disadvantaged suburbs: **Gorokan-Kanwal-Charmhaven** (6,925), **Umina** (6,650), **Bateau Bay-Killarney Vale** (5,465). **Commonwealth Rent Assistance** supports **27,850 households**, with concentrations in **Gorokan** (2,565), **Umina** (2,425), **The Entrance** (2,030).
+**Education attainment** mirrors this divide. Year 12 completion peaks at **45.48%** (**Terrigal**) and **44.53%** (**Avoca Beach**) but falls to **22.92%** (**Lake Munmorah**) and **22.99%** (**Blue Haven**). Bachelor degrees reach **15.02%** (**Terrigal**), **14.74%** (**Avoca Beach**) versus **3.3%** (**Blue Haven**) and **4.4%** (**Gorokan**).
 
-**Disability Support Pension** recipients number **16,875**, with **Gorokan-Kanwal-Charmhaven** (1,520) and **Gosford-Springfield** (1,150) showing highest counts. **Parenting Payment Single** (6,095 total) highlights single-parent stress in **Blue Haven-San Remo** (405), **Gorokan** (640), **Warnervale-Wadalba** (470).
+**Welfare dependency** is widespread. **Age Pension** supports **52,000+ recipients**, concentrated in aging coastal communities: **Erina-Green Point** (2,835), **Lake Munmorah** (2,750), **Umina** (4,260). **Disability Support Pension** reaches **16,200+**, highest in **Gorokan-Kanwal-Charmhaven** (1,520), **Gosford-Springfield** (1,150).
 
-**Homelessness** affects **1,734 persons**, concentrated in **Wyong** (236), **The Entrance** (273), **Gosford-Springfield** (160), and **Gorokan-Kanwal-Charmhaven** (138).
+**Pension Concession Cards** (110,000+) and **Health Care Cards** (19,500+) indicate extensive cost-of-living support needs. **Family Tax Benefit A** assists **19,400+ families**, concentrated where young families struggle: **Gorokan** (1,705), **Bateau Bay** (1,235), **Warnervale** (1,370).
 
-**Educational attainment** varies widely. **Year 12 completion** ranges from **44-45%** in affluent areas (**Avoca Beach**, **Terrigal**, **Wamberal**) to **22-24%** in disadvantaged zones (**Lake Munmorah**, **Wyong**, **Toukley**). **Bachelor degrees** are held by only **5.5%** in low-SES suburbs versus **13-15%** in premium areas.
+**Parenting Payment Single** supports **6,600+ single parents**, notably in **Gorokan-Kanwal-Charmhaven** (640), **Warnervale-Wadalba** (470), **Blue Haven-San Remo** (405), signaling family stress and vulnerability.
 
----
+**Homelessness** affects **1,650+ people** regionwide (likely undercounted). Highest numbers in **Wyong** (236), **The Entrance** (273), **Gosford-Springfield** (160), **Gorokan-Kanwal-Charmhaven** (138), and **Woy Woy-Blackwall** (115).
 
 ## 5. Crime & Safety
 
-Crime data reveals significant variation, though some SA2s show sparse reporting (particularly **Lake Munmorah-Mannering Park** with near-zero rates, suggesting data quality issues).
+**Crime rates vary dramatically**, though data appears sparse or suppressed in some SA2s. **Assault rates** (per 1,000 population) range from minimal **0.09** (**Lake Munmorah-Mannering Park**) and **0.42** (**Saratoga-Davistown**) to concerning levels: **12.36** (**Wyong**), **9.76** (**Gosford-Springfield**), **9.38** (**Tuggerah-Kangy Angy**).
 
-**Assault rates** (per 1,000 population) range from **0.09-12.36**. Highest rates occur in **Wyong** (12.36), **Gosford-Springfield** (9.76), **Tuggerah-Kangy Angy** (9.38), and **Gorokan-Kanwal-Charmhaven** (5.82). Safest suburbs include **Avoca Beach-Copacabana** (1.06), **Wamberal-Forresters Beach** (0.94), and **Saratoga-Davistown** (0.42).
+**Theft rates** peak dramatically at **83.09** in retail hub **Tuggerah-Kangy Angy** (commercial center), **42.12** (**Wyong**), **39.66** (**Gosford-Springfield**) — town centers experience concentrated property crime. Lowest rates: **1.28** (**Lake Munmorah**), **3.35** (**Saratoga**).
 
-**Theft rates** peak dramatically in retail hub **Tuggerah-Kangy Angy** (83.09 per 1,000), followed by **Wyong** (42.12), **Gosford-Springfield** (39.66), and **Ourimbah-Fountaindale** (33.5). Low-theft areas include **Lake Munmorah** (1.28), **Saratoga-Davistown** (3.35), **Box Head-MacMasters Beach** (4.98).
+**Drug offences** concentrate in disadvantaged areas: **16.41** (**Wyong**), **12.87** (**Gosford-Springfield**), **6.32** (**Tuggerah**), versus **0.14** (**Saratoga**), **0.27** (**Avoca Beach**), **0.46** (**Lake Munmorah**).
 
-**Drug offences** concentrate in **Wyong** (16.41), **Gosford-Springfield** (12.87), **Tuggerah-Kangy Angy** (6.32), and **Toukley-Norah Head** (4.54). Coastal premium suburbs report minimal drug crime: **Avoca Beach** (0.27), **Saratoga-Davistown** (0.14).
+**Intimidation/stalking** rates: **23.19** (**Wyong**), **12.0** (**Gorokan**), **10.89** (**Gosford**), compared to **0.09** (**Lake Munmorah**), **1.27** (**Box Head-MacMasters Beach**).
 
-**Intimidation/stalking** and **malicious damage** follow similar patterns, with Wyong SA3 suburbs recording 2-3x the rates of Gosford premium areas.
+**Malicious damage**: **19.58** (**Wyong**), **11.69** (**Gosford**), minimal in **Lake Munmorah** (0.09), **Saratoga** (1.54).
 
----
+**Crime geography** shows clear correlation with socioeconomic disadvantage and commercial activity. Town centers (**Wyong**, **Gosford**, **Tuggerah**) experience concentrated incidents, while affluent coastal residential areas (**Avoca Beach**, **Saratoga**, **Box Head**) remain relatively safe.
 
 ## 6. Tourism & Visitor Economy
 
-The Central Coast's tourism sector remains underdeveloped relative to its coastal assets. **Total visitor spend** across the dataset is **$58.3 million** versus **resident spend** of **$444.7 million**—visitors contribute just **13%** of economic activity. 
+**Visitor spending** totals **$60+ million** annually, concentrated in **Tuggerah-Kangy Angy** ($10.3M — retail/commercial), **Gosford-Springfield** ($7.0M), **The Entrance** ($2.7M — beachfront attractions).
 
-**Tuggerah-Kangy Angy** (Westfield shopping precinct) dominates visitor spend at **$10.3 million**, followed by **Gosford-Springfield** ($7.0M) and **The Entrance** ($2.7M). Tourism businesses total **1,060**, concentrated in **The Entrance** (94), **Terrigal-North Avoca** (93), **Gosford-Springfield** (120).
+**Resident spending** dominates at **$360+ million**, led by retail hubs **Erina-Green Point** ($67M), **Tuggerah** ($39.8M), **Gosford** ($41.3M), **Gorokan** ($25.5M), reflecting their role as regional shopping centers.
 
-**Airbnb activity** (proxied by listing visits per property) shows high demand in **Wamberal-Forresters Beach** (2,198 visits/property), **Terrigal-North Avoca** (2,258), and **Wyoming** (2,274). Properties in **The Entrance** (719), **Toukley-Norah Head** (712.5), and **Box Head-MacMasters Beach** (580) see moderate activity.
+**Tourism businesses** (1,200+) cluster predictably: **The Entrance** (94), **Terrigal-North Avoca** (93), **Erina-Green Point** (85), **Gosford-Springfield** (120) combining beachfront appeal with service infrastructure.
 
-The visitor economy underperforms expectations given the region's beaches, national parks, and proximity to Sydney. Most SA2s show visitor:resident spend ratios of 10-25%, suggesting untapped potential in accommodation, dining, and attractions development.
+**Airbnb/listing dynamics** show intense interest in premium coastal areas: **Wamberal-Forresters Beach** (2,198 visits/property), **Terrigal** (2,258), **Wyoming** (2,274) attract tourist rental demand. **The Entrance** (719), **Woy Woy** (1,846) show strong visitor accommodation markets.
 
----
+The **visitor-to-resident spend ratio** reveals tourism dependency. **Jilliby-Yarramalong** shows 4:1 visitor-to-resident ratio (rural tourism), while residential suburbs like **Wyoming** (0.06:1) see minimal visitor economy.
 
 ## 7. Regional Divide: Gosford vs Wyong
 
-The Central Coast exhibits a profound socioeconomic divide between its two SA3 regions:
+The Central Coast's two SA3 sub-regions show marked contrasts:
 
-| Indicator | Gosford SA3 | Wyong SA3 | Differential |
-|-----------|-------------|-----------|--------------|
-| **Avg. Unemployment Rate** | 2.4% | 4.5% | +88% in Wyong |
-| **Avg. Median Income** | $1,350/week | $1,220/week | -10% in Wyong |
-| **Avg. House Price** | $1,305,000 | $945,000 | -28% in Wyong |
-| **Avg. SEIFA Advantage Index** | 1,011 | 942 | -7% in Wyong |
-| **Avg. Year 12 Completion** | 37.2% | 27.8% | -25% in Wyong |
-| **Avg. Bachelor Degree** | 10.2% | 6.5% | -36% in Wyong |
-| **Avg. Assault Rate** | 3.1 per 1,000 | 5.3 per 1,000 | +71% in Wyong |
-| **Avg. Theft Rate** | 16.2 per 1,000 | 24.8 per 1,000 | +53% in Wyong |
-| **Indigenous Population %** | 2.8% | 5.0% | +79% in Wyong |
-
-**Gosford** comprises affluent coastal suburbs (**Terrigal**, **Avoca Beach**, **Wamberal**), established middle-class areas (**Erina**, **Narara**, **Kariong**), and the regional CBD. Its economy centres on professional services, healthcare, retail, and tourism infrastructure. Educational attainment and income levels substantially exceed Wyong.
-
-**Wyong** encompasses socioeconomically disadvantaged communities, particularly western lake suburbs (**Gorokan**, **Blue Haven**, **Budgewoi**). It faces elevated unemployment, welfare dependency, crime, and indigenous disadvantage. However, growth suburbs like **Warnervale-Wadalba** show emerging middle-class characteristics, and lakeside retirement areas (**Lake Munmorah**, **Toukley**) differ from distressed western suburbs.
-
-This divide manifests spatially: coastal east (Gosford-dominated) versus inland west/north (Wyong-dominated), with
+| Indicator | Gosford SA3 | Wyong SA3 |
+|-----------|-------------|-----------|
+| **Median Income** | $1,200-$1,900/week | $970-$1,680/week |
+| **House Prices** | $960k-$1,964k | $800k-$1,457k |
+| **Unemployment** | 1.1%-5.1% (avg 2.5%) | 2.1%-8.1% (avg 4.2%) |
+| **SEIFA Advantage** | 946-1,085 (higher) | 886-1,059 (lower) |
+| **Year 12 Completion** | 31-45% | 23-40% |
+| **Bachelor Degrees** | 7-15% | 4-11% |
+| **Indigenous %** | 1.6-4.
