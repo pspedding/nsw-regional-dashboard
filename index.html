@@ -430,8 +430,8 @@
   </div>
 </div>
 
-<script src="indicator-lookup.js?v=1781927917"></script>
-<script src="data.js?v=1781927917"></script>
+<script src="indicator-lookup.js?v=1786087433"></script>
+<script src="data.js?v=1786087433"></script>
 <script>
 // ── CONFIG ──────────────────────────────────────────────────────────
 const INDICATOR_LABELS = {
@@ -443,8 +443,7 @@ const INDICATOR_LABELS = {
   'Manufacturing Businesses':                                    { label: 'Manufacturing Businesses',      fmt: v => v.toLocaleString(),                   cat: 'Economy' },
   'Healthcare Businesses':                                       { label: 'Healthcare Businesses',         fmt: v => v.toLocaleString(),                   cat: 'Economy' },
   'Tourism Businesses':                                          { label: 'Tourism Businesses',            fmt: v => v.toLocaleString(),                   cat: 'Economy' },
-  'Resident Spend':                                              { label: 'Resident Retail Spend',         fmt: v => '$'+Math.round(v/1e6).toFixed(1)+'M', cat: 'Economy' },
-  'Visitor Spend':                                               { label: 'Visitor Retail Spend',          fmt: v => '$'+Math.round(v/1e6).toFixed(1)+'M', cat: 'Economy' },
+  'Total Spend':                                                { label: 'Total Retail Spend',            fmt: v => '$'+Math.round(v/1e6).toFixed(1)+'M', cat: 'Economy' },
   // Housing
   'House Price (Current)':                                       { label: 'Median House Price',            fmt: v => '$'+Math.round(v/1000)+'k',            cat: 'Housing' },
   'Unit Price (Current)':                                        { label: 'Median Unit Price',             fmt: v => '$'+Math.round(v/1000)+'k',            cat: 'Housing' },
@@ -504,7 +503,7 @@ const RADAR_KEYS = [
   'Unemployment Rate (%)',
   'JobSeeker Payment',
   'House Price (Current)',
-  'Visitor Spend',
+  'Total Spend',
   'Airbnb Active Listings',
   'Index of Relative Socio-economic Disadvantage ',
   'Total Businesses',
@@ -954,7 +953,7 @@ async function sendQA() {
     'Index of Relative Socio-economic Disadvantage ',
     'Population Change 2023-24','Airbnb  Gross Revenue','Airbnb Occupancy Rate','Airbnb ADR',
     'Age Pension','Disability Support Pension','Commonwealth Rent Assistance',
-    'Visitor Spend','Resident Spend','Number of dwellings approved','Value of building job(s)',
+    'Total Spend','Number of dwellings approved','Value of building job(s)',
     'Homelessness','% Bachelor Degree','% Completed Year 12','% Over 69','% Under 20','% Indigenous',
     'Assault Rate (per 1,000)','Theft Rate (per 1,000)',
     'Intimidation, Stalking & Harassment Rate (per 1,000)',
@@ -966,12 +965,12 @@ async function sendQA() {
   });
 
   const systemMsg = `You are a regional economics analyst for Central Coast Council (NSW). ` +
-    `The dataset below contains CURRENT data for ${scopeName} SA2 suburbs, with indicators as at April 2026. ` +
+    `The dataset below contains CURRENT data for ${scopeName} SA2 suburbs, with indicators as at May 2026. ` +
     `This is real, live data — do NOT say it is outdated or refer to any other time period. ` +
     `You MUST answer using ONLY the numbers in the dataset below. Do NOT use any outside knowledge. ` +
     `Do NOT guess. If the answer is not in the dataset, say "The dataset does not contain that information." ` +
     `Be concise (2–4 sentences). Use specific suburb names and exact numbers from the data. ` +
-    `Dataset (April 2026):\n${JSON.stringify(rows)}`;
+    `Dataset (May 2026):\n${JSON.stringify(rows)}`;
 
   try {
     const resp = await fetch(qaEndpoint, {
@@ -1194,7 +1193,7 @@ const GLANCE_CHECKS = [
   { key: '% Under 20',                                         label: 'share of population under 20',    fmt: v => v.toFixed(1)+'%',                    lowIsBad: false },
   { key: 'Disability Support Pension',                         label: 'disability support recipients',   fmt: v => v.toLocaleString(),                   lowIsBad: false },
   { key: 'JobSeeker Payment',                                  label: 'jobseeker recipients',            fmt: v => v.toLocaleString(),                   lowIsBad: false },
-  { key: 'Visitor Spend',                                      label: 'visitor retail spend',            fmt: v => '$'+Math.round(v/1e6).toFixed(1)+'M', lowIsBad: false },
+  { key: 'Total Spend',                                        label: 'total retail spend',              fmt: v => '$'+Math.round(v/1e6).toFixed(1)+'M', lowIsBad: false },
   // Crime — high values are the notable/concerning signal
   { key: 'Assault Rate (per 1,000)',                            label: 'assault rate (per 1k)',           fmt: v => v.toFixed(2)+' per 1k',              highIsBad: true },
   { key: 'Theft Rate (per 1,000)',                              label: 'theft rate (per 1k)',             fmt: v => v.toFixed(2)+' per 1k',              highIsBad: true },
@@ -1351,8 +1350,7 @@ function renderIntelligenceDeterministic(panel, rows, lgaCode) {
   const unempRows = sortedBy(rows, 'Unemployment Rate (%)', 'desc');
   const supplyRows = sortedBy(rows, 'Number of dwellings approved', 'desc');
   const tourismRows = sortedBy(rows, 'Airbnb  Gross Revenue', 'desc');
-  const visitorSpend = sumKey(rows, 'Visitor Spend');
-  const residentSpend = sumKey(rows, 'Resident Spend');
+  const totalSpend = sumKey(rows, 'Total Spend');
   const airbnbRev = sumKey(rows, 'Airbnb  Gross Revenue');
 
   let divideHtml = '';
@@ -1372,7 +1370,7 @@ function renderIntelligenceDeterministic(panel, rows, lgaCode) {
     `<div class="intel-finding"><h3>3. Disadvantage hotspots</h3><p>Lowest SEIFA and highest unemployment SA2s for place-based planning.</p><ul class="intel-list">${liTop(poor, 'Index of Relative Socio-economic Disadvantage ', v=>Number(v).toFixed(0), 3)}${liTop(unempRows, 'Unemployment Rate (%)', pct1, 3)}</ul></div>`,
     `<div class="intel-finding"><h3>4. Growth and supply</h3><ul class="intel-list">${liTop(growthRows, 'Population Change 2023-24', v=>(v>0?'+':'')+Number(v).toLocaleString(), 3)}${liTop(supplyRows, 'Number of dwellings approved', v=>Number(v).toFixed(0)+' approvals', 3)}</ul></div>`,
     `<div class="intel-finding"><h3>5. Ageing</h3><ul class="intel-list">${liTop(oldRows, '% Over 69', pct1, 4)}</ul></div>`,
-    `<div class="intel-finding"><h3>6. Visitor economy</h3><p>Visitor spend <strong>${moneyM(visitorSpend)}</strong> vs resident spend <strong>${moneyM(residentSpend)}</strong>.</p><ul class="intel-list">${liTop(tourismRows, 'Airbnb  Gross Revenue', moneyK, 4)}</ul></div>`
+    `<div class="intel-finding"><h3>6. Visitor economy</h3><p>Total retail spend <strong>${moneyM(totalSpend)}</strong>.</p><ul class="intel-list">${liTop(tourismRows, 'Airbnb  Gross Revenue', moneyK, 4)}</ul></div>`
   ].join('');
 
   panel.innerHTML = `
