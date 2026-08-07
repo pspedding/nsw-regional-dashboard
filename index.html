@@ -82,9 +82,36 @@
     .glance-item span strong { color:#003366; }
     #glance-panel { min-height:20px; }
 
-    /* Intelligence report */
+    /* Insights report */
     #intelligence-wrap { display:none; position:absolute; inset:0; background:#f7f9fc; overflow:auto; padding:24px 28px; z-index:9; }
     #intelligence-wrap.visible { display:block; }
+    /* Indicators panel */
+    #indicators-wrap { display:none; position:absolute; inset:0; background:#f7f9fc; overflow:auto; padding:20px 24px; z-index:11; }
+    #indicators-wrap.visible { display:block; }
+    .ind-panel-hdr { display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; flex-wrap:wrap; gap:8px; }
+    .ind-panel-hdr h2 { font-size:1rem; color:#003366; font-weight:700; margin:0; }
+    .ind-panel-hdr .ind-sa2-label { font-size:0.82rem; color:#667085; }
+    .ind-show-all-btn { padding:4px 12px; font-size:0.75rem; border:1px solid #2166ac; border-radius:4px; background:#fff; color:#2166ac; cursor:pointer; }
+    .ind-show-all-btn:hover { background:#f0f4fa; }
+    .ind-section-label { grid-column:1/-1; font-size:0.68rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#8899aa; margin:6px 0 2px; border-bottom:1px solid #e2e8f0; padding-bottom:4px; }
+    .ind-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+    @media(max-width:1100px){ .ind-grid { grid-template-columns:repeat(3,1fr); } }
+    @media(max-width:780px){ .ind-grid { grid-template-columns:repeat(2,1fr); } }
+    .ind-card { background:white; border:1px solid #dde5ef; border-radius:9px; padding:11px 13px; cursor:pointer; transition:box-shadow 0.15s,border-color 0.15s; display:flex; flex-direction:column; gap:3px; }
+    .ind-card:hover { box-shadow:0 3px 10px rgba(0,51,102,0.12); border-color:#2166ac; }
+    .ind-card .ic-icon { font-size:1.2rem; line-height:1; }
+    .ind-card .ic-label { font-size:0.7rem; color:#667085; line-height:1.3; margin-top:1px; }
+    .ind-card .ic-value { font-size:1.05rem; font-weight:700; color:#003366; margin-top:2px; }
+    .ind-card .ic-value.ic-na { color:#bbb; font-size:0.85rem; }
+    .ind-card .ic-meta { display:flex; align-items:center; gap:6px; margin-top:4px; }
+    .ind-card .ic-period { font-size:0.65rem; color:#99aabb; }
+    .ind-card .ic-trend { font-size:0.75rem; font-weight:600; }
+    .ind-card .ic-trend.up { color:#16a34a; }
+    .ind-card .ic-trend.down { color:#dc2626; }
+    .ind-card .ic-trend.flat { color:#888; }
+    .ind-card .ic-rank { font-size:0.65rem; color:#667085; margin-left:auto; }
+    .ind-card .ic-qdot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-left:2px; vertical-align:middle; }
+    .ind-card.ic-derived { border-style:dashed; }
     /* LLM report prose styles */
     .intel-report { max-width:900px; margin:0 auto; background:white; border:1px solid #dde5ef; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.07); padding:28px 36px; font-size:0.9rem; line-height:1.7; color:#222; }
     .intel-report h1 { font-size:1.4rem; color:#003366; border-bottom:2px solid #003366; padding-bottom:10px; margin-bottom:6px; }
@@ -323,7 +350,8 @@
   <div style="grid-column:2;grid-row:1;display:flex;justify-content:center;align-items:center;gap:8px;background:#f0f4f8;border-bottom:2px solid #dde;padding:7px;">
     <button class="view-btn active" id="map-tab-btn" onclick="showView('map')">🗺 Map View</button>
     <button class="view-btn" id="scatter-tab-btn" onclick="showView('scatter')">⬤ Scatter Plot</button>
-    <button class="view-btn" id="intelligence-tab-btn" onclick="showView('intelligence')">🧠 Intelligence</button>
+    <button class="view-btn" id="indicators-tab-btn" onclick="showView('indicators')">📊 Indicators</button>
+    <button class="view-btn" id="intelligence-tab-btn" onclick="showView('intelligence')">💡 Insights</button>
   </div>
 
   <!-- ── Map ── -->
@@ -342,6 +370,7 @@
         <canvas id="scatterCanvas" style="width:100%;height:100%;display:block;"></canvas>
       </div>
     </div>
+    <div id="indicators-wrap"></div>
     <div id="intelligence-wrap"></div>
   </div>
 
@@ -430,8 +459,8 @@
   </div>
 </div>
 
-<script src="indicator-lookup.js?v=1786087979"></script>
-<script src="data.js?v=1786087979"></script>
+<script src="indicator-lookup.js?v=1786145759"></script>
+<script src="data.js?v=1786145759"></script>
 <script>
 // ── CONFIG ──────────────────────────────────────────────────────────
 const INDICATOR_LABELS = {
@@ -667,6 +696,7 @@ lgaSel.addEventListener('change', () => {
   updateChoropleth(lgaCode);
   updateBarChart(lgaCode);
   if (document.getElementById('intelligence-wrap')?.style.display === 'block') renderIntelligence();
+  if (document.getElementById('indicators-wrap')?.style.display === 'block') renderIndicatorsPanel();
   zoomToLga(lgaCode);
 });
 
@@ -1407,17 +1437,232 @@ function updateLegendForIndicator(indicator) {
   if (el) el.innerHTML = html;
 }
 
+// ── INDICATORS PANEL ─────────────────────────────────────────────────────
+const CURATED_INDICATORS = [
+  // Demographics
+  { section: 'Demographics' },
+  { key: 'Total Population',            icon: '👥', label: 'Total Population',          highIsBad: false },
+  { key: '% Under 20',                  icon: '🧒', label: '% Under 20',                highIsBad: false },
+  { key: '% Over 69',                   icon: '🧓', label: '% Over 69',                 highIsBad: false },
+  { key: '% Bachelor Degree',           icon: '🎓', label: '% Bachelor Degree',         highIsBad: false },
+  // Economy
+  { section: 'Economy' },
+  { key: 'Labour Force',                icon: '💼', label: 'Labour Force',              highIsBad: false },
+  { key: 'Unemployment Rate (%)',       icon: '📉', label: 'Unemployment Rate',         highIsBad: true  },
+  { key: 'Unemployment',               icon: '👤', label: 'Unemployed Persons',        highIsBad: true  },
+  { key: 'Total Spend',                 icon: '🛒', label: 'Total Retail Spend',        highIsBad: false },
+  // Housing
+  { section: 'Housing' },
+  { key: 'House Price (Current)',       icon: '🏠', label: 'Median House Price',        highIsBad: false },
+  { key: 'Unit Price (Current)',        icon: '🏢', label: 'Median Unit Price',         highIsBad: false },
+  { key: 'House Rent (P/W)',            icon: '🏡', label: 'House Rent (p/w)',          highIsBad: false },
+  { key: 'Unit Rent (P/W)',             icon: '🏬', label: 'Unit Rent (p/w)',           highIsBad: false },
+  { key: 'Number of dwellings approved',icon: '🔨', label: 'Dwelling Approvals',        highIsBad: false },
+  { key: 'Value of building job(s)',    icon: '🏗️', label: 'Building Value',            highIsBad: false },
+  // Tourism
+  { section: 'Tourism' },
+  { key: 'Airbnb Active Listings',      icon: '🛏️', label: 'Airbnb Active Listings',    highIsBad: false },
+  { key: 'Airbnb Occupancy Rate',       icon: '📅', label: 'Airbnb Occupancy Rate',     highIsBad: false },
+  { key: 'Airbnb  Gross Revenue',       icon: '💰', label: 'Airbnb Gross Revenue',      highIsBad: false },
+  // Socio-Economic
+  { section: 'Socio-Economic' },
+  { key: 'JobSeeker Payment',           icon: '📋', label: 'Jobseekers',               highIsBad: true  },
+  { key: 'Age Pension',                 icon: '👴', label: 'Age Pension Recipients',    highIsBad: false },
+  { key: '_pct_age_pension',            icon: '📊', label: '% Age Pension',             highIsBad: false, derived: true },
+  { key: 'Homelessness',               icon: '🏚️', label: 'Homelessness',              highIsBad: true  },
+  // Crime
+  { section: 'Crime' },
+  { key: 'Theft Rate (per 1,000)',      icon: '🔒', label: 'Theft Rate (per 1k)',       highIsBad: true  },
+];
+
+// Quintile colour scale (1=best blue, 5=worst red) — direction-aware
+const QUINTILE_COLORS = ['#2166ac','#74add1','#fee090','#f46d43','#d73027'];
+
+function _quintileColor(row, key, allRows, highIsBad) {
+  const vals = allRows.map(r => r[key]).filter(v => v != null && !isNaN(v)).sort((a,b)=>a-b);
+  if (vals.length < 5) return '#ccc';
+  const v = row[key];
+  if (v == null || isNaN(v)) return '#ccc';
+  const pct = vals.filter(x => x <= v).length / vals.length; // 0–1, low→high
+  const q = Math.min(4, Math.floor(pct * 5)); // 0–4
+  // if highIsBad: q0=best(blue) q4=worst(red); else reverse
+  return highIsBad ? QUINTILE_COLORS[q] : QUINTILE_COLORS[4-q];
+}
+
+function _rankLabel(row, key, allRows, highIsBad) {
+  const sorted = [...allRows].filter(r => r[key] != null && !isNaN(r[key]))
+    .sort((a,b) => highIsBad ? a[key]-b[key] : b[key]-a[key]);
+  const idx = sorted.findIndex(r => r.sa2_code === row.sa2_code);
+  if (idx < 0) return '';
+  return `${idx+1} of ${sorted.length}`;
+}
+
+let _indShowAll = false;
+
+function renderIndicatorsPanel() {
+  const wrap = document.getElementById('indicators-wrap');
+  if (!wrap) return;
+  const lgaCode = document.getElementById('lga-select')?.value || '';
+  const sa2Code = document.getElementById('sa2-select')?.value || '';
+  // Get all rows for the selected LGA (for rank/quintile)
+  const allRows = SA2_DATA.filter(r => !lgaCode || String(r.lga_code) === String(lgaCode));
+  const row = allRows.find(r => String(r.sa2_code) === String(sa2Code));
+  const sa2Name = row ? (row.sa2_name || sa2Code) : (sa2Code ? sa2Code : 'No SA2 selected');
+  const lgaName = row ? (row.lga_name || lgaCode) : lgaCode;
+  const nSA2 = allRows.length;
+
+  // Source list: curated or all indicators
+  let items;
+  if (_indShowAll) {
+    // Build from INDICATOR_LABELS, grouped by cat
+    const cats = {};
+    Object.entries(INDICATOR_LABELS).forEach(([key, meta]) => {
+      const cat = meta.cat || 'Other';
+      if (!cats[cat]) cats[cat] = [];
+      cats[cat].push({ key, icon: '📌', label: meta.label, highIsBad: false });
+    });
+    items = [];
+    Object.entries(cats).forEach(([cat, inds]) => {
+      items.push({ section: cat });
+      items.push(...inds);
+    });
+  } else {
+    items = CURATED_INDICATORS;
+  }
+
+  // Derive % Age Pension from row data
+  function getDerivedValue(key, r) {
+    if (key === '_pct_age_pension') {
+      const ap = r ? r['Age Pension'] : null;
+      const pop = r ? r['Total Population'] : null;
+      if (ap != null && pop && pop > 0) return (ap / pop) * 100;
+    }
+    return null;
+  }
+  function getDerivedLatestPeriod(key) {
+    if (key === '_pct_age_pension') return INDICATOR_LOOKUP['Age Pension']?.latestPeriod || '';
+    return '';
+  }
+
+  // Build cards HTML
+  let gridHtml = '';
+  let inGrid = false;
+  items.forEach(item => {
+    if (item.section) {
+      if (inGrid) { gridHtml += '</div>'; inGrid = false; }
+      gridHtml += `<div class="ind-section-label">${item.section}</div>`;
+      gridHtml += '<div class="ind-grid">';
+      inGrid = true;
+      return;
+    }
+    const { key, icon, label, highIsBad, derived } = item;
+    // Value
+    let rawVal, fmtVal, period, qdot, rankStr, trendHtml;
+    if (derived) {
+      rawVal = getDerivedValue(key, row);
+      fmtVal = rawVal != null ? rawVal.toFixed(1) + '%' : null;
+      period = getDerivedLatestPeriod(key);
+      qdot = '';
+      rankStr = '';
+      trendHtml = '';
+    } else {
+      rawVal = row ? row[key] : null;
+      const meta = INDICATOR_LABELS[key];
+      fmtVal = (rawVal != null && !isNaN(rawVal) && meta) ? meta.fmt(rawVal) : null;
+      const lu = INDICATOR_LOOKUP[key];
+      period = lu ? lu.latestPeriod : '';
+      // Quintile dot
+      const qColor = (row && rawVal != null) ? _quintileColor(row, key, allRows, highIsBad) : '#ccc';
+      qdot = `<span class="ic-qdot" style="background:${qColor}" title="Quintile relative to ${lgaName} SA2s"></span>`;
+      // Rank
+      rankStr = row ? _rankLabel(row, key, allRows, highIsBad) : '';
+      // Trend arrow (prior period)
+      const priorKey = 'Prior.' + key;
+      const priorVal = row ? row[priorKey] : null;
+      if (priorVal != null && rawVal != null) {
+        const delta = rawVal - priorVal;
+        const pct = Math.abs(priorVal) > 0 ? (Math.abs(delta) / Math.abs(priorVal) * 100).toFixed(1) : null;
+        const tooltip = pct ? `${delta>0?'+':''}${pct}% vs prior` : '';
+        if (Math.abs(delta) < 0.0001) {
+          trendHtml = `<span class="ic-trend flat" title="No change">→</span>`;
+        } else {
+          const isUp = delta > 0;
+          const good = highIsBad ? !isUp : isUp;
+          const arrow = isUp ? '▲' : '▼';
+          const cls = good ? 'up' : 'down';
+          trendHtml = `<span class="ic-trend ${cls}" title="${tooltip}">${arrow}</span>`;
+        }
+      } else {
+        trendHtml = '';
+      }
+    }
+    // Format period display
+    let periodDisplay = '';
+    if (period) {
+      try { periodDisplay = new Date(period).toLocaleDateString('en-AU',{month:'short',year:'numeric'}); } catch(e) { periodDisplay = period; }
+    }
+    const valueHtml = fmtVal != null
+      ? `<div class="ic-value">${fmtVal}</div>`
+      : `<div class="ic-value ic-na">n/a</div>`;
+    const cardClass = derived ? 'ind-card ic-derived' : 'ind-card';
+    const clickable = !derived;
+    const onclick = clickable ? `onclick="selectIndicatorFromCard('${key.replace(/'/g,"\\'")}')"; ` : '';
+    gridHtml += `
+      <div class="${cardClass}" ${onclick}title="${label}${rankStr ? ' — rank: '+rankStr+' in LGA' : ''}">
+        <div class="ic-icon">${icon}</div>
+        <div class="ic-label">${label}</div>
+        ${valueHtml}
+        <div class="ic-meta">
+          ${trendHtml}
+          ${qdot}
+          ${rankStr ? `<span class="ic-rank">${rankStr}</span>` : ''}
+          ${periodDisplay ? `<span class="ic-period" style="margin-left:${rankStr?'0':'auto'}">${periodDisplay}</span>` : ''}
+        </div>
+      </div>`;
+  });
+  if (inGrid) gridHtml += '</div>';
+
+  const btnLabel = _indShowAll ? '📌 Show key indicators' : '☰ Show all indicators';
+  const promptMsg = !row ? `<p style="color:#888;font-size:0.82rem;margin:0 0 12px">⬅ Select an SA2 from the left panel to see its indicators.</p>` : '';
+
+  wrap.innerHTML = `
+    <div class="ind-panel-hdr">
+      <div>
+        <h2>${sa2Name}</h2>
+        <span class="ind-sa2-label">${lgaName ? lgaName + ' — ' : ''}${nSA2} SA2s in LGA${rankStr||''}</span>
+      </div>
+      <button class="ind-show-all-btn" onclick="_indShowAll=!_indShowAll;renderIndicatorsPanel()">${btnLabel}</button>
+    </div>
+    ${promptMsg}
+    ${gridHtml}
+    <p style="font-size:0.65rem;color:#aab;margin-top:14px">Quintile dot: blue = strong relative to LGA peers, red = weak. Click a card to select that indicator on the map.</p>
+  `;
+}
+
+function selectIndicatorFromCard(key) {
+  const sel = document.getElementById('indicator-select');
+  if (sel) {
+    sel.value = key;
+    sel.dispatchEvent(new Event('change'));
+  }
+  showView('map');
+}
+
 function showView(view) {
   const mapEl = document.getElementById('map');
   const scatterWrap = document.getElementById('scatter-wrap');
   const intelligenceWrap = document.getElementById('intelligence-wrap');
+  const indicatorsWrap = document.getElementById('indicators-wrap');
   document.getElementById('map-tab-btn').classList.toggle('active', view === 'map');
   document.getElementById('scatter-tab-btn').classList.toggle('active', view === 'scatter');
+  document.getElementById('indicators-tab-btn').classList.toggle('active', view === 'indicators');
   document.getElementById('intelligence-tab-btn').classList.toggle('active', view === 'intelligence');
   mapEl.style.display = view === 'map' ? '' : 'none';
   scatterWrap.style.display = view === 'scatter' ? 'flex' : 'none';
   intelligenceWrap.style.display = view === 'intelligence' ? 'block' : 'none';
   intelligenceWrap.classList.toggle('visible', view === 'intelligence');
+  indicatorsWrap.style.display = view === 'indicators' ? 'block' : 'none';
+  indicatorsWrap.classList.toggle('visible', view === 'indicators');
   // If user manually navigates away from map, deactivate cluster overlay
   if (view !== 'map' && clusterOverlayActive) {
     clusterOverlayActive = false;
@@ -1426,6 +1671,7 @@ function showView(view) {
   }
   if (view === 'map') setTimeout(() => map.invalidateSize(), 50);
   if (view === 'scatter') renderScatter();
+  if (view === 'indicators') renderIndicatorsPanel();
   if (view === 'intelligence') renderIntelligence();
 }
 
