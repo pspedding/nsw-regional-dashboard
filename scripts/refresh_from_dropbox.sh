@@ -43,12 +43,29 @@ echo "========================================="
 # ── 1. Sync from Dropbox ──────────────────────────────────────────────
 echo ""
 echo ">> Step 1: Syncing from $DROPBOX_PATH ..."
+# Sync all xlsx/csv from Dropbox, then rename to canonical hyphenated names
 rclone copy "$DROPBOX_PATH" "$INPUTS_DIR" \
-  --include "Output-Mapped-SA2-Level-Data-Pivot-All-LGAs.xlsx" \
-  --include "Output-Indicator-Lookup.xlsx" \
-  --include "Output-Trends.csv" \
-  --include "Output-Mapped-SA2-Level-Data-Pivot-All-LGAs-Prior-Month.xlsx" \
+  --include "*.xlsx" \
+  --include "*.csv" \
   --progress
+
+# Normalize Dropbox filenames (spaces/dashes vary) to canonical names expected by scripts
+for SRC in \
+  "Output  - Indicator Lookup.xlsx" \
+  "Output - Indicator Lookup.xlsx"; do
+  [[ -f "$INPUTS_DIR/$SRC" ]] && mv -f "$INPUTS_DIR/$SRC" "$INPUTS_DIR/Output-Indicator-Lookup.xlsx" && echo "   Renamed: $SRC" || true
+done
+for SRC in \
+  "Output - Mapped SA2 Level Data (Pivot) - All LGAs.xlsx" \
+  "Output - Mapped SA2 Level Data (Pivot) - All LGAs - Prior Month.xlsx"; do
+  if [[ -f "$INPUTS_DIR/$SRC" ]]; then
+    if [[ "$SRC" == *"Prior Month"* ]]; then
+      mv -f "$INPUTS_DIR/$SRC" "$INPUTS_DIR/Output-Mapped-SA2-Level-Data-Pivot-All-LGAs-Prior-Month.xlsx" && echo "   Renamed: $SRC"
+    else
+      mv -f "$INPUTS_DIR/$SRC" "$INPUTS_DIR/Output-Mapped-SA2-Level-Data-Pivot-All-LGAs.xlsx" && echo "   Renamed: $SRC"
+    fi
+  fi
+done
 
 echo "   Files in inputs/:"
 ls -lh "$INPUTS_DIR"/*.xlsx "$INPUTS_DIR"/*.csv 2>/dev/null | awk '{print "   ", $5, $NF}'
@@ -190,3 +207,16 @@ echo ""
 echo "========================================="
 echo " Refresh complete!"
 echo "========================================="
+
+# ── Auto-schedule Buffer posts ────────────────────────────────────────────────
+echo ""
+echo "→ Scheduling Council data posts to Buffer (X + LinkedIn)..."
+source /etc/clawdbot/clawdbot.env
+cd /home/azureuser/council-work
+python3 social_posts_from_emails.py \
+  --since "$(date -d '45 days ago' +%Y-%m-%d)" \
+  --schedule-mwf "$(date -d 'next Monday' +%Y-%m-%d)" \
+  --schedule-time 09:00 \
+  --schedule-tz Australia/Sydney \
+  && echo "   ✅ Buffer posts scheduled — review at https://publish.buffer.com" \
+  || echo "   ❌ Buffer scheduling failed — run social_posts_from_emails.py manually"
