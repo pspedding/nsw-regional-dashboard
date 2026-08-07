@@ -460,7 +460,7 @@
 </div>
 
 <script src="indicator-lookup.js?v=1786145759"></script>
-<script src="data.js?v=1786146255"></script>
+<script src="data.js?v=1786147173"></script>
 <script>
 // ── CONFIG ──────────────────────────────────────────────────────────
 const INDICATOR_LABELS = {
@@ -866,6 +866,7 @@ function selectSA2(code) {
     }</div>`;
 
   updateRadar(row);
+  if (document.getElementById('indicators-wrap')?.style.display === 'block') renderIndicatorsPanel();
   // At a glance
   const lgaCode2 = currentLgaCode();
   const scope = lgaCode2 ? SA2_DATA.filter(r => String(r['LGA Code']) === lgaCode2) : SA2_DATA;
@@ -1459,10 +1460,12 @@ const CURATED_INDICATORS = [
   { key: 'Unit Rent (P/W)',             icon: '🏬', label: 'Unit Rent (p/w)',           highIsBad: false },
   { key: 'Number of dwellings approved',icon: '🔨', label: 'Dwelling Approvals',        highIsBad: false },
   { key: 'Value of building job(s)',    icon: '🏗️', label: 'Building Value',            highIsBad: false },
+  { key: 'Listing Visits per Property', icon: '👀', label: 'Listing Visits/Property',    highIsBad: false },
   // Tourism
   { section: 'Tourism' },
   { key: 'Airbnb Active Listings',      icon: '🛏️', label: 'Airbnb Active Listings',    highIsBad: false },
   { key: 'Airbnb Occupancy Rate',       icon: '📅', label: 'Airbnb Occupancy Rate',     highIsBad: false },
+  { key: 'Airbnb ADR',                  icon: '🏷️', label: 'Airbnb Avg Daily Rate',    highIsBad: false },
   { key: 'Airbnb  Gross Revenue',       icon: '💰', label: 'Airbnb Gross Revenue',      highIsBad: false },
   // Socio-Economic
   { section: 'Socio-Economic' },
@@ -1473,6 +1476,9 @@ const CURATED_INDICATORS = [
   // Crime
   { section: 'Crime' },
   { key: 'Theft Rate (per 1,000)',      icon: '🔒', label: 'Theft Rate (per 1k)',       highIsBad: true  },
+  { key: 'Assault Rate (per 1,000)',    icon: '🥊', label: 'Assault Rate (per 1k)',    highIsBad: true  },
+  { key: 'Malicious Damage to Property Rate (per 1,000)', icon: '💥', label: 'Malicious Damage (per 1k)', highIsBad: true },
+  { key: 'Drug Offences Rate (per 1,000)', icon: '💊', label: 'Drug Offences (per 1k)',  highIsBad: true  },
 ];
 
 // Quintile colour scale (1=best blue, 5=worst red) — direction-aware

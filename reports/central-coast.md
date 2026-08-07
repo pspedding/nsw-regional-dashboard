@@ -1,6 +1,6 @@
 # Central Coast SA2 Intelligence Report
 
-**Prepared: August 2026 | Indicators: May 2026 | Data Coverage: 30 SA2 areas, Central Coast LGA (NSW)**
+**Prepared: August 2026 | Indicators: June 2026 | Data Coverage: 30 SA2 areas, Central Coast LGA (NSW)**
 
 ## Executive Summary
 
