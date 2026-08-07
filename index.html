@@ -430,8 +430,8 @@
   </div>
 </div>
 
-<script src="indicator-lookup.js?v=1786087488"></script>
-<script src="data.js?v=1786087488"></script>
+<script src="indicator-lookup.js?v=1786087979"></script>
+<script src="data.js?v=1786087979"></script>
 <script>
 // ── CONFIG ──────────────────────────────────────────────────────────
 const INDICATOR_LABELS = {
@@ -965,12 +965,12 @@ async function sendQA() {
   });
 
   const systemMsg = `You are a regional economics analyst for Central Coast Council (NSW). ` +
-    `The dataset below contains CURRENT data for ${scopeName} SA2 suburbs, with indicators as at May 2026. ` +
+    `The dataset below contains CURRENT data for ${scopeName} SA2 suburbs, with indicators as at June 2026. ` +
     `This is real, live data — do NOT say it is outdated or refer to any other time period. ` +
     `You MUST answer using ONLY the numbers in the dataset below. Do NOT use any outside knowledge. ` +
     `Do NOT guess. If the answer is not in the dataset, say "The dataset does not contain that information." ` +
     `Be concise (2–4 sentences). Use specific suburb names and exact numbers from the data. ` +
-    `Dataset (May 2026):\n${JSON.stringify(rows)}`;
+    `Dataset (June 2026):\n${JSON.stringify(rows)}`;
 
   try {
     const resp = await fetch(qaEndpoint, {
