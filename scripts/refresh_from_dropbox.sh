@@ -174,6 +174,7 @@ git add data.js index.html indicator-lookup.js sa2_kpi_wide.csv \
         inputs/Output-Mapped-SA2-Level-Data-Pivot-All-LGAs.xlsx \
         inputs/Output-Indicator-Lookup.xlsx \
         inputs/Output-Trends.csv \
+        "inputs/Output  - Time-series Trends.xlsx" \
         reports/central-coast.md \
         reports/central-coast.docx 2>/dev/null || true
 

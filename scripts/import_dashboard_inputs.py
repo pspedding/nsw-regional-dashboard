@@ -22,7 +22,7 @@ DATA_XLSX = INPUT_DIR / "Output-Mapped-SA2-Level-Data-Pivot-All-LGAs.xlsx"
 LOOKUP_XLSX = INPUT_DIR / "Output-Indicator-Lookup.xlsx"
 PRIOR_XLSX = INPUT_DIR / "Output-Mapped-SA2-Level-Data-Pivot-All-LGAs-Prior-Month.xlsx"
 TRENDS_CSV = INPUT_DIR / "Output-Trends.csv"
-QUARTERLY_TRENDS_XLSX = INPUT_DIR / "Output-Trends-Quarterly.xlsx"
+QUARTERLY_TRENDS_XLSX = INPUT_DIR / "Output  - Time-series Trends.xlsx"
 SHAPEFILE = Path("/home/azureuser/council-work/sa2-dashboard/shapefile/SA2_2021_AUST_GDA2020.shp")
 
 DATA_JS = ROOT / "data.js"
@@ -39,6 +39,7 @@ TREND_COLUMN_MAP = {
     "Trend.Value of building job(s)": "Value of building job(s)",
     "Trend.Number of dwellings approved": "Number of dwellings approved",
     "Trend.Total Spend": "Total Spend",
+    "Trend.Listing Visits": "Listing Visits per Property",
     "Trend.House Price (Current)": "House Price (Current)",
     "Trend.House Rent (P/W)": "House Rent (P/W)",
     "Trend.Unit Price (Current)": "Unit Price (Current)",
@@ -56,6 +57,7 @@ TREND_SERIES_INDICATOR_MAP = {
     "Unemployment Rate": "Unemployment Rate (%)",
     "Age Pension": "Age Pension",
     "JobSeeker Payment": "JobSeeker Payment",
+    "Total Spend": "Total Spend",
 }
 
 ID_COLUMNS = {"SA2 Code", "SA2 Name", "Region (SA3)", "LGA Code", "LGA Name"}

@@ -1,246 +1,219 @@
-﻿SA2 Code,SA2 Name,Region (SA3),LGA Code,LGA Name,Trent.Labour Force,Trend.Unemployment,Trend.Unemployment Rate (%),Trend.Jobseeker,Trend.Value of building job(s),Trend.Number of dwellings approved,Trend.Visitor Spend,Trend.Resident Spend,Trend.House Price (Current),Trend.House Rent (P/W),Trend.Unit Price (Current),Trend.Unit Rent (P/W),Trend. Airbnb ADR,Trend.Airbnb Gross Revenue,Trend.Homelessness,Trend.Total Businesses,Trend.Healthcare Businesses,Trend.Tourism Businesses,Trend.Manufacturing Businesses
-120031394,Dulwich Hill - Lewisham,Strathfield - Burwood - Ashfield,14170,Inner West,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-115011555,Castle Hill - North,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+﻿SA2 Code,SA2 Name,Region (SA3),LGA Code,LGA Name,Trent.Labour Force,Trend.Unemployment,Trend.Unemployment Rate (%),Trend.Jobseeker,Trend.Total Spend,Trend.Value of building job(s),Trend.Number of dwellings approved,Trend.House Price (Current),Trend.Listing Visits,Trend.House Rent (P/W),Trend.Unit Price (Current),Trend.Unit Rent (P/W),Trend. Airbnb ADR,Trend.Airbnb Gross Revenue,Trend.Homelessness,Trend.Total Businesses,Trend.Healthcare Businesses,Trend.Tourism Businesses,Trend.Manufacturing Businesses
+120031394,Dulwich Hill - Lewisham,Strathfield - Burwood - Ashfield,14170,Inner West,Up,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+115011555,Castle Hill - North,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 122021691,North Narrabeen - Warriewood (South),Pittwater,15990,Northern Beaches,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 118021651,Coogee - Clovelly,Eastern Suburbs - South,16550,Randwick,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-122021421,Bayview - Elanora Heights,Pittwater,15990,Northern Beaches,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+122021421,Bayview - Elanora Heights,Pittwater,15990,Northern Beaches,Up,Down,Flat,Down,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 117031646,Ultimo,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111031233,Wallsend - Elermore Vale,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111031233,Wallsend - Elermore Vale,Newcastle,15900,Newcastle,Down,Up,Up,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 122031694,Dee Why (South) - North Curl Curl,Warringah,15990,Northern Beaches,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-115011554,Castle Hill - East,Baulkham Hills,14000,Hornsby,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-125021477,Ermington - Rydalmere,Carlingford,16260,Parramatta,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011029,Box Head - MacMasters Beach,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011041,Wamberal - Forresters Beach,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111031222,Adamstown - Kotara,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021046,Budgewoi - Buff Point - Halekulani,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-125041493,Toongabbie - Constitution Hill,Parramatta,16260,Parramatta,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+115011554,Castle Hill - East,Baulkham Hills,14000,Hornsby,Flat,Flat,Flat,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+125021477,Ermington - Rydalmere,Carlingford,16260,Parramatta,Down,Down,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111031222,Adamstown - Kotara,Newcastle,15900,Newcastle,Down,Up,Up,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+125041493,Toongabbie - Constitution Hill,Parramatta,16260,Parramatta,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 106021617,Tenambit - East Maitland,Maitland,15050,Maitland,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 122031692,Belrose,Warringah,15990,Northern Beaches,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 117031645,Sydney (South) - Haymarket,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021050,Lake Munmorah - Mannering Park,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021048,Gorokan - Kanwal - Charmhaven,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111021216,Bonnells Bay - Silverwater,Lake Macquarie - West,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021057,Wyong,Wyong,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Down,Flat,Down,Up,Up,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-120031395,Haberfield - Summer Hill,Strathfield - Burwood - Ashfield,14170,Inner West,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021053,The Entrance,Wyong,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Down,Flat,Down,Up,Up,Down,Down,Up,Down,Down,Flat,Flat,Flat,Flat,Flat
+111021216,Bonnells Bay - Silverwater,Lake Macquarie - West,14650,Lake Macquarie,Down,Up,Up,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102021057,Wyong,Wyong,11650,Central Coast (NSW),Up,Up,Up,Up,Down,Up,Flat,Up,Down,Down,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+120031395,Haberfield - Summer Hill,Strathfield - Burwood - Ashfield,14170,Inner West,Up,Up,Up,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102021053,The Entrance,Wyong,11650,Central Coast (NSW),Up,Up,Up,Down,Down,Up,Up,Down,Down,Up,Down,Up,Down,Up,Flat,Flat,Flat,Flat,Flat
 115041623,Box Hill - Nelson,Rouse Hill - McGraths Hill,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-106021114,Maitland,Maitland,15050,Maitland,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+106021114,Maitland,Maitland,15050,Maitland,Up,Down,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 118021652,Malabar - La Perouse,Eastern Suburbs - South,16550,Randwick,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111011211,Redhead,Lake Macquarie - East,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-104021085,Coffs Harbour - South,Coffs Harbour,11800,Coffs Harbour,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111011211,Redhead,Lake Macquarie - East,14650,Lake Macquarie,Down,Up,Up,Up,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+104021085,Coffs Harbour - South,Coffs Harbour,11800,Coffs Harbour,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 117031641,Pyrmont,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111011212,Swansea - Caves Beach,Lake Macquarie - East,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-122031432,Terrey Hills - Duffys Forest,Warringah,15990,Northern Beaches,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111011212,Swansea - Caves Beach,Lake Macquarie - East,14650,Lake Macquarie,Down,Up,Up,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+122031432,Terrey Hills - Duffys Forest,Warringah,15990,Northern Beaches,Up,Down,Down,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 122031696,Frenchs Forest - Oxford Falls,Warringah,15990,Northern Beaches,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 106021614,East Maitland - Metford,Maitland,15050,Maitland,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011028,Avoca Beach - Copacabana,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Flat,Down,Down,Up,Down,Up,Down,Down,Down,Flat,Flat,Flat,Flat,Flat
-117031331,Glebe - Forest Lodge,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111021215,Bolton Point - Teralba,Lake Macquarie - West,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111031234,Waratah - North Lambton,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011040,Umina - Booker Bay - Patonga,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-118021568,Maroubra - West,Eastern Suburbs - South,16550,Randwick,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102011028,Avoca Beach - Copacabana,Gosford,11650,Central Coast (NSW),Up,Up,Up,Down,Down,Up,Up,Down,Down,Up,Flat,Up,Up,Up,Flat,Flat,Flat,Flat,Flat
+117031331,Glebe - Forest Lodge,Sydney Inner City,17200,Sydney,Up,Down,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111021215,Bolton Point - Teralba,Lake Macquarie - West,14650,Lake Macquarie,Down,Up,Up,Down,Flat,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111031234,Waratah - North Lambton,Newcastle,15900,Newcastle,Down,Up,Up,Down,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+118021568,Maroubra - West,Eastern Suburbs - South,16550,Randwick,Down,Down,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 117031648,Zetland,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-121031408,Lindfield - Roseville,Ku-ring-gai,14500,Ku-ring-gai,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-104021086,Coramba - Nana Glen - Bucca,Coffs Harbour,11800,Coffs Harbour,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+121031408,Lindfield - Roseville,Ku-ring-gai,14500,Ku-ring-gai,Up,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+104021086,Coramba - Nana Glen - Bucca,Coffs Harbour,11800,Coffs Harbour,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 115021297,Dural - Kenthurst - Wisemans Fer,Dural - Wisemans Ferry,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 115021297,Dural - Kenthurst - Wisemans Fer,Dural - Wisemans Ferry,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021056,Warnervale - Wadalba,Wyong,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Up,Down,Up,Up,Down,Up,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021045,Blue Haven - San Remo,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011033,Kariong,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102021056,Warnervale - Wadalba,Wyong,11650,Central Coast (NSW),Up,Up,Up,Up,Down,Up,Up,Up,Down,Up,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 117031639,Chippendale,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111031229,Newcastle - Cooks Hill,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-117021327,Petersham - Stanmore,Marrickville - Sydenham - Petersham,14170,Inner West,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-108051169,Taree,Taree - Gloucester,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-121031407,Gordon - Killara,Ku-ring-gai,14500,Ku-ring-gai,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111031229,Newcastle - Cooks Hill,Newcastle,15900,Newcastle,Down,Up,Up,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+117021327,Petersham - Stanmore,Marrickville - Sydenham - Petersham,14170,Inner West,Up,Down,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+108051169,Taree,Taree - Gloucester,15240,Mid-Coast,Down,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+121031407,Gordon - Killara,Ku-ring-gai,14500,Ku-ring-gai,Up,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 104021088,Korora - Emerald Beach,Coffs Harbour,11800,Coffs Harbour,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 118011342,Centennial Park,Eastern Suburbs - North,16550,Randwick,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 108011153,Forster-Tuncurry Region,Great Lakes,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-108011153,Forster-Tuncurry Region,Great Lakes,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-108011154,Tuncurry,Great Lakes,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-125041491,Northmead,Parramatta,16260,Parramatta,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111021218,Morisset - Cooranbong,Lake Macquarie - West,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+108011153,Forster-Tuncurry Region,Great Lakes,15240,Mid-Coast,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+108011154,Tuncurry,Great Lakes,15240,Mid-Coast,Down,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+125041491,Northmead,Parramatta,16260,Parramatta,Down,Flat,Up,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111021218,Morisset - Cooranbong,Lake Macquarie - West,14650,Lake Macquarie,Down,Up,Up,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 111011209,Glendale - Cardiff - Hillsborough,Lake Macquarie - East,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111011209,Glendale - Cardiff - Hillsborough,Lake Macquarie - East,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-118021565,Kingsford,Eastern Suburbs - South,16550,Randwick,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111011209,Glendale - Cardiff - Hillsborough,Lake Macquarie - East,14650,Lake Macquarie,Down,Up,Up,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+118021565,Kingsford,Eastern Suburbs - South,16550,Randwick,Down,Down,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 120021675,Leichhardt,Leichhardt,14170,Inner West,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111021220,Wangi Wangi - Rathmines,Lake Macquarie - West,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-121031411,Turramurra,Ku-ring-gai,14500,Ku-ring-gai,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021054,Toukley - Norah Head,Wyong,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Down,Up,Down,Up,Up,Up,Up,Up,Up,Down,Flat,Flat,Flat,Flat,Flat
+111021220,Wangi Wangi - Rathmines,Lake Macquarie - West,14650,Lake Macquarie,Down,Up,Up,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+121031411,Turramurra,Ku-ring-gai,14500,Ku-ring-gai,Up,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102021054,Toukley - Norah Head,Wyong,11650,Central Coast (NSW),Up,Up,Up,Up,Down,Up,Up,Up,Down,Up,Up,Up,Up,Up,Flat,Flat,Flat,Flat,Flat
 122021690,Mona Vale - Warriewood (North),Pittwater,15990,Northern Beaches,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-125041489,North Parramatta,Parramatta,16260,Parramatta,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-125041494,Winston Hills,Parramatta,16260,Parramatta,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011043,Wyoming,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Up,Down,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-108011152,Forster,Great Lakes,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-106031124,Tea Gardens - Hawks Nest,Port Stephens,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111031230,Newcastle Port - Kooragang,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+125041489,North Parramatta,Parramatta,16260,Parramatta,Down,Down,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+125041494,Winston Hills,Parramatta,16260,Parramatta,Down,Down,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102011043,Wyoming,Gosford,11650,Central Coast (NSW),Up,Up,Up,Down,Down,Up,Up,Up,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+108011152,Forster,Great Lakes,15240,Mid-Coast,Down,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+106031124,Tea Gardens - Hawks Nest,Port Stephens,15240,Mid-Coast,Up,Down,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111031230,Newcastle Port - Kooragang,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 118021653,Matraville - Chifley,Eastern Suburbs - South,16550,Randwick,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011042,Woy Woy - Blackwall,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Down,Up,Down,Up,Up,Up,Up,Up,Down,Down,Flat,Flat,Flat,Flat,Flat
-126011496,Pennant Hills - Cheltenham,Pennant Hills - Epping,14000,Hornsby,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-118021564,Kensington (NSW),Eastern Suburbs - South,16550,Randwick,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-115011556,Castle Hill - South,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021056,Warnervale - Wadalba,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011039,Terrigal - North Avoca,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102011042,Woy Woy - Blackwall,Gosford,11650,Central Coast (NSW),Up,Up,Up,Flat,Down,Up,Up,Up,Down,Up,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat
+126011496,Pennant Hills - Cheltenham,Pennant Hills - Epping,14000,Hornsby,Flat,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+118021564,Kensington (NSW),Eastern Suburbs - South,16550,Randwick,Down,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+115011556,Castle Hill - South,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 104021091,Woolgoolga - Arrawarra,Coffs Harbour,11800,Coffs Harbour,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111011214,Warners Bay - Boolaroo,Lake Macquarie - East,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011028,Avoca Beach - Copacabana,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111021217,Edgeworth - Cameron Park,Lake Macquarie - West,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111011214,Warners Bay - Boolaroo,Lake Macquarie - East,14650,Lake Macquarie,Down,Up,Up,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111021217,Edgeworth - Cameron Park,Lake Macquarie - West,14650,Lake Macquarie,Down,Up,Up,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 118021654,South Coogee,Eastern Suburbs - South,16550,Randwick,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 115011290,Baulkham Hills (East),Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-115011290,Baulkham Hills (East),Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+115011290,Baulkham Hills (East),Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 108051170,Taree Surrounds,Taree - Gloucester,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 108051170,Taree Surrounds,Taree - Gloucester,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-115031300,Kurrajong Heights - Ebenezer,Hawkesbury,13800,Hawkesbury,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011041,Wamberal - Forresters Beach,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Down,Flat,Down,Down,Up,Flat,Up,Up,Up,Down,Flat,Flat,Flat,Flat,Flat
+115031300,Kurrajong Heights - Ebenezer,Hawkesbury,13800,Hawkesbury,Flat,Flat,Flat,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102011041,Wamberal - Forresters Beach,Gosford,11650,Central Coast (NSW),Up,Up,Up,Up,Down,Up,Up,Up,Down,Flat,Up,Down,Down,Up,Flat,Flat,Flat,Flat,Flat
 121021579,Wahroonga (West) - Waitara,Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 121021579,Wahroonga (West) - Waitara,Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111011210,Mount Hutton - Windale,Lake Macquarie - East,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-106021116,Maitland - North,Maitland,15050,Maitland,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111011210,Mount Hutton - Windale,Lake Macquarie - East,14650,Lake Macquarie,Down,Up,Up,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+106021116,Maitland - North,Maitland,15050,Maitland,Up,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 106021618,Thornton - Millers Forest,Maitland,15050,Maitland,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021053,The Entrance,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011040,Umina - Booker Bay - Patonga,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Up,Down,Down,Down,Up,Up,Up,Down,Down,Flat,Flat,Flat,Flat,Flat
-102021050,Lake Munmorah - Mannering Park,Wyong,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Up,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102011040,Umina - Booker Bay - Patonga,Gosford,11650,Central Coast (NSW),Up,Up,Up,Down,Down,Up,Up,Up,Down,Down,Up,Up,Up,Up,Flat,Flat,Flat,Flat,Flat
+102021050,Lake Munmorah - Mannering Park,Wyong,11650,Central Coast (NSW),Up,Up,Up,Flat,Down,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 106021615,Rutherford (North) - Aberglasslyn,Maitland,15050,Maitland,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021054,Toukley - Norah Head,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 117021636,Marrickville - North,Marrickville - Sydenham - Petersham,14170,Inner West,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-124041467,Windsor - Bligh Park,Richmond - Windsor,13800,Hawkesbury,Flat,Flat,Flat,Flat,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+124041467,Windsor - Bligh Park,Richmond - Windsor,13800,Hawkesbury,Flat,Flat,Flat,Flat,Flat,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 122031697,Narrabeen - Wheeler Heights,Warringah,15990,Northern Beaches,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 111031235,Wickham - Carrington - Tighes Hill,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111031235,Wickham - Carrington - Tighes Hill,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-115011296,West Pennant Hills,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111031235,Wickham - Carrington - Tighes Hill,Newcastle,15900,Newcastle,Down,Up,Up,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+115011296,West Pennant Hills,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Down,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 117031644,Sydney (North) - Millers Point,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011032,Gosford - Springfield,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021049,Jilliby - Yarramalong,Wyong,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Down,Flat,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-125021478,Oatlands - Dundas Valley,Carlingford,16260,Parramatta,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111031223,Beresfield - Hexham,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-121021403,Asquith - Mount Colah,Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102021049,Jilliby - Yarramalong,Wyong,11650,Central Coast (NSW),Up,Up,Up,Down,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+125021478,Oatlands - Dundas Valley,Carlingford,16260,Parramatta,Down,Up,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111031223,Beresfield - Hexham,Newcastle,15900,Newcastle,Down,Up,Up,Up,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+121021403,Asquith - Mount Colah,Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 106021616,Rutherford (South) - Telarah,Maitland,15050,Maitland,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011032,Gosford - Springfield,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Up,Up,Up,Down,Up,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102011032,Gosford - Springfield,Gosford,11650,Central Coast (NSW),Up,Up,Up,Up,Down,Down,Flat,Down,Down,Down,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 115011291,Baulkham Hills (West) - Bella Vista,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-115011291,Baulkham Hills (West) - Bella Vista,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011033,Kariong,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Down,Flat,Down,Up,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011035,Narara,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011031,Erina - Green Point,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Down,Flat,Down,Up,Down,Down,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011038,Saratoga - Davistown,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Down,Flat,Down,Up,Up,Up,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+115011291,Baulkham Hills (West) - Bella Vista,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Up,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102011033,Kariong,Gosford,11650,Central Coast (NSW),Up,Up,Up,Up,Up,Up,Flat,Up,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102011031,Erina - Green Point,Gosford,11650,Central Coast (NSW),Up,Up,Flat,Up,Down,Down,Flat,Down,Down,Up,Up,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102011038,Saratoga - Davistown,Gosford,11650,Central Coast (NSW),Up,Up,Up,Down,Up,Up,Up,Down,Up,Up,Up,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 117031647,Waterloo,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-117031329,Darlinghurst,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-104021084,Coffs Harbour - North,Coffs Harbour,11800,Coffs Harbour,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-121021578,Hornsby - West,Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111031225,Lambton - New Lambton,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-108011151,Bulahdelah - Stroud,Great Lakes,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021055,Tuggerah - Kangy Angy,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+117031329,Darlinghurst,Sydney Inner City,17200,Sydney,Up,Down,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+104021084,Coffs Harbour - North,Coffs Harbour,11800,Coffs Harbour,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+121021578,Hornsby - West,Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111031225,Lambton - New Lambton,Newcastle,15900,Newcastle,Down,Up,Up,Up,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+108011151,Bulahdelah - Stroud,Great Lakes,15240,Mid-Coast,Down,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 111021221,West Wallsend - Barnsley - Killingworth,Lake Macquarie - West,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111021221,West Wallsend - Barnsley - Killingworth,Lake Macquarie - West,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021045,Blue Haven - San Remo,Wyong,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Up,Down,Up,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111021221,West Wallsend - Barnsley - Killingworth,Lake Macquarie - West,14650,Lake Macquarie,Down,Up,Up,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102021045,Blue Haven - San Remo,Wyong,11650,Central Coast (NSW),Up,Up,Up,Up,Down,Up,Flat,Up,Up,Up,Up,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 115011621,Kellyville - East,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011043,Wyoming,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021044,Bateau Bay - Killarney Vale,Wyong,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Up,Down,Up,Up,Up,Up,Up,Down,Down,Flat,Flat,Flat,Flat,Flat
-102021057,Wyong,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011030,Calga - Kulnura,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Up,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111011208,Charlestown - Dudley,Lake Macquarie - East,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-115011558,Cherrybrook,Baulkham Hills,14000,Hornsby,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-117031336,Surry Hills,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-106031125,Williamtown - Medowie - Karuah,Port Stephens,16400,Port Stephens,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102021044,Bateau Bay - Killarney Vale,Wyong,11650,Central Coast (NSW),Up,Up,Up,Up,Down,Up,Flat,Up,Up,Up,Up,Up,Down,Down,Flat,Flat,Flat,Flat,Flat
+102011030,Calga - Kulnura,Gosford,11650,Central Coast (NSW),Up,Down,Flat,Down,Up,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111011208,Charlestown - Dudley,Lake Macquarie - East,14650,Lake Macquarie,Down,Up,Up,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+115011558,Cherrybrook,Baulkham Hills,14000,Hornsby,Flat,Flat,Flat,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+117031336,Surry Hills,Sydney Inner City,17200,Sydney,Up,Down,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+106031125,Williamtown - Medowie - Karuah,Port Stephens,16400,Port Stephens,Up,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 111011209,Glendale - Cardiff - Hillsboroug,Lake Macquarie - East,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 111011209,Glendale - Cardiff - Hillsboroug,Lake Macquarie - East,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111011206,Belmont - Bennetts Green,Lake Macquarie - East,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111011206,Belmont - Bennetts Green,Lake Macquarie - East,14650,Lake Macquarie,Down,Up,Up,Up,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 122031693,Collaroy - Collaroy Plateau,Warringah,15990,Northern Beaches,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-122031425,Cromer,Warringah,15990,Northern Beaches,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-106031119,Anna Bay,Port Stephens,16400,Port Stephens,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-106031122,Raymond Terrace,Port Stephens,16400,Port Stephens,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021051,Ourimbah - Fountaindale,Wyong,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Flat,Down,Up,Down,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-121021579,Waitara - Wahroonga (West),Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+122031425,Cromer,Warringah,15990,Northern Beaches,Up,Flat,Flat,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+106031119,Anna Bay,Port Stephens,16400,Port Stephens,Up,Down,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+106031122,Raymond Terrace,Port Stephens,16400,Port Stephens,Up,Down,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102021051,Ourimbah - Fountaindale,Wyong,11650,Central Coast (NSW),Up,Up,Up,Down,Down,Down,Up,Down,Down,Up,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+121021579,Waitara - Wahroonga (West),Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 121021579,Waitara - Wahroonga (West),Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111031231,Shortland - Jesmond,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011036,Niagara Park - Lisarow,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-106031121,Nelson Bay Peninsula,Port Stephens,16400,Port Stephens,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111031224,Hamilton - Broadmeadow,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021047,Chittaway Bay - Tumbi Umbi,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111031231,Shortland - Jesmond,Newcastle,15900,Newcastle,Down,Up,Up,Up,Flat,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+106031121,Nelson Bay Peninsula,Port Stephens,16400,Port Stephens,Up,Down,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111031224,Hamilton - Broadmeadow,Newcastle,15900,Newcastle,Down,Up,Up,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 115041625,Rouse Hill - Beaumont Hills,Rouse Hill - McGraths Hill,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-122021420,Avalon - Palm Beach,Pittwater,15990,Northern Beaches,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111021219,Toronto - Awaba,Lake Macquarie - West,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+122021420,Avalon - Palm Beach,Pittwater,15990,Northern Beaches,Up,Up,Up,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111021219,Toronto - Awaba,Lake Macquarie - West,14650,Lake Macquarie,Down,Up,Up,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 115011291,Baulkham Hills (West) - Bella Vi,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 115011291,Baulkham Hills (West) - Bella Vi,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011034,Kincumber - Picketts Valley,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-124041466,Richmond - Clarendon,Richmond - Windsor,13800,Hawkesbury,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-122011418,Balgowlah - Clontarf - Seaforth,Manly,15990,Northern Beaches,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+124041466,Richmond - Clarendon,Richmond - Windsor,13800,Hawkesbury,Flat,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+122011418,Balgowlah - Clontarf - Seaforth,Manly,15990,Northern Beaches,Up,Flat,Down,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 120021674,Annandale (NSW),Leichhardt,14170,Inner West,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 117021637,Marrickville - South,Marrickville - Sydenham - Petersham,14170,Inner West,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 117011324,Port Botany Industrial,Botany,16550,Randwick,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011031,Erina - Green Point,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-122021422,Newport - Bilgola,Pittwater,15990,Northern Beaches,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+122021422,Newport - Bilgola,Pittwater,15990,Northern Beaches,Up,Down,Down,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 117031642,Redfern,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011035,Narara,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Up,Up,Down,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021052,Summerland Point - Gwandalan,Wyong,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Down,Flat,Down,Down,Up,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-115011557,Castle Hill - West,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-125041490,North Rocks,Parramatta,16260,Parramatta,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021044,Bateau Bay - Killarney Vale,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-108051167,Gloucester,Taree - Gloucester,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-121031409,Pymble,Ku-ring-gai,14500,Ku-ring-gai,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102011035,Narara,Gosford,11650,Central Coast (NSW),Up,Up,Flat,Up,Down,Up,Up,Up,Down,Flat,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102021052,Summerland Point - Gwandalan,Wyong,11650,Central Coast (NSW),Up,Up,Up,Down,Down,Down,Flat,Down,Down,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+115011557,Castle Hill - West,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+125041490,North Rocks,Parramatta,16260,Parramatta,Down,Up,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+108051167,Gloucester,Taree - Gloucester,15240,Mid-Coast,Down,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+121031409,Pymble,Ku-ring-gai,14500,Ku-ring-gai,Up,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 111031235,Wickham - Carrington - Tighes Hi,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 111031235,Wickham - Carrington - Tighes Hi,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011029,Box Head - MacMasters Beach,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Flat,Down,Down,Down,Up,Down,Down,Down,Down,Flat,Flat,Flat,Flat,Flat
-111031226,Maryland - Fletcher - Minmi,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-115041301,Pitt Town - McGraths Hill,Rouse Hill - McGraths Hill,13800,Hawkesbury,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011037,Point Clare - Koolewong,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-118021569,Randwick - North,Eastern Suburbs - South,16550,Randwick,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102011029,Box Head - MacMasters Beach,Gosford,11650,Central Coast (NSW),Up,Up,Up,Up,Up,Up,Flat,Up,Down,Down,Up,Up,Up,Up,Flat,Flat,Flat,Flat,Flat
+111031226,Maryland - Fletcher - Minmi,Newcastle,15900,Newcastle,Down,Up,Up,Up,Flat,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+115041301,Pitt Town - McGraths Hill,Rouse Hill - McGraths Hill,13800,Hawkesbury,Flat,Flat,Flat,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+118021569,Randwick - North,Eastern Suburbs - South,16550,Randwick,Down,Down,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 111021221,West Wallsend - Barnsley - Killi,Lake Macquarie - West,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 111021221,West Wallsend - Barnsley - Killi,Lake Macquarie - West,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-120021387,Balmain,Leichhardt,14170,Inner West,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-117031330,Erskineville - Alexandria,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-106031120,Lemon Tree Passage - Tanilba Bay,Port Stephens,16400,Port Stephens,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+120021387,Balmain,Leichhardt,14170,Inner West,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+117031330,Erskineville - Alexandria,Sydney Inner City,17200,Sydney,Up,Down,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+106031120,Lemon Tree Passage - Tanilba Bay,Port Stephens,16400,Port Stephens,Up,Down,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 120031677,Ashfield - South,Strathfield - Burwood - Ashfield,14170,Inner West,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011036,Niagara Park - Lisarow,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Up,Up,Up,Down,Flat,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-121021406,Normanhurst - Thornleigh - Westleigh,Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-106031123,Seaham - Woodville,Port Stephens,16400,Port Stephens,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011039,Terrigal - North Avoca,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Flat,Down,Down,Up,Flat,Down,Flat,Down,Down,Flat,Flat,Flat,Flat,Flat
-115011553,Castle Hill - Central,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111031232,Stockton - Fullerton Cove,Newcastle,16400,Port Stephens,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102011036,Niagara Park - Lisarow,Gosford,11650,Central Coast (NSW),Up,Up,Up,Up,Down,Up,Up,Up,Down,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+121021406,Normanhurst - Thornleigh - Westleigh,Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+106031123,Seaham - Woodville,Port Stephens,16400,Port Stephens,Up,Down,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102011039,Terrigal - North Avoca,Gosford,11650,Central Coast (NSW),Up,Up,Up,Up,Down,Up,Flat,Up,Up,Down,Up,Flat,Down,Up,Flat,Flat,Flat,Flat,Flat
+115011553,Castle Hill - Central,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Up,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111031232,Stockton - Fullerton Cove,Newcastle,16400,Port Stephens,Down,Up,Up,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 115011622,Kellyville - West,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-121021577,Hornsby - East,Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-115011294,Glenhaven,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021047,Chittaway Bay - Tumbi Umbi,Wyong,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Flat,Down,Up,Down,Up,Up,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+121021577,Hornsby - East,Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+115011294,Glenhaven,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102021047,Chittaway Bay - Tumbi Umbi,Wyong,11650,Central Coast (NSW),Up,Up,Flat,Up,Down,Up,Up,Up,Down,Up,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 117031638,Camperdown - Darlington,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 120031676,Ashfield - North,Strathfield - Burwood - Ashfield,14170,Inner West,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-122031429,Freshwater - Brookvale,Warringah,15990,Northern Beaches,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+122031429,Freshwater - Brookvale,Warringah,15990,Northern Beaches,Up,Up,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 115041624,North Kellyville,Rouse Hill - McGraths Hill,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111031228,Merewether - The Junction,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-115031299,Bilpin - Colo - St Albans,Hawkesbury,13800,Hawkesbury,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021051,Ourimbah - Fountaindale,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-122031424,Beacon Hill - Narraweena,Warringah,15990,Northern Beaches,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111011213,Valentine - Eleebana,Lake Macquarie - East,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111031228,Merewether - The Junction,Newcastle,15900,Newcastle,Down,Up,Up,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+115031299,Bilpin - Colo - St Albans,Hawkesbury,13800,Hawkesbury,Flat,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+122031424,Beacon Hill - Narraweena,Warringah,15990,Northern Beaches,Up,Up,Up,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111011213,Valentine - Eleebana,Lake Macquarie - East,14650,Lake Macquarie,Down,Up,Flat,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 108011153,Forster-Tuncurry Surrounds,Great Lakes,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 108011153,Forster-Tuncurry Surrounds,Great Lakes,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021048,Gorokan - Kanwal - Charmhaven,Wyong,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Up,Up,Up,Up,Up,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-122031427,Forestville - Killarney Heights,Warringah,15990,Northern Beaches,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102021048,Gorokan - Kanwal - Charmhaven,Wyong,11650,Central Coast (NSW),Up,Up,Up,Up,Down,Up,Up,Up,Down,Down,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+122031427,Forestville - Killarney Heights,Warringah,15990,Northern Beaches,Up,Up,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 122031695,Dee Why - North,Warringah,15990,Northern Beaches,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-122031430,Manly Vale - Allambie Heights,Warringah,15990,Northern Beaches,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111011207,Belmont South - Blacksmiths,Lake Macquarie - East,14650,Lake Macquarie,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-122011419,Manly - Fairlight,Manly,15990,Northern Beaches,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-118021566,Maroubra - North,Eastern Suburbs - South,16550,Randwick,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+122031430,Manly Vale - Allambie Heights,Warringah,15990,Northern Beaches,Up,Down,Down,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111011207,Belmont South - Blacksmiths,Lake Macquarie - East,14650,Lake Macquarie,Down,Up,Up,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+122011419,Manly - Fairlight,Manly,15990,Northern Beaches,Up,Down,Flat,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+118021566,Maroubra - North,Eastern Suburbs - South,16550,Randwick,Down,Down,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 115011290,Baulkham Hills - East,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 115011290,Baulkham Hills - East,Baulkham Hills,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011034,Kincumber - Picketts Valley,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Down,Flat,Down,Down,Down,Up,Flat,Flat,Down,Down,Flat,Flat,Flat,Flat,Flat
+102011034,Kincumber - Picketts Valley,Gosford,11650,Central Coast (NSW),Up,Up,Flat,Down,Down,Down,Flat,Down,Down,Flat,Up,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat
+108051170,Taree Region,Taree - Gloucester,15240,Mid-Coast,Down,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 108051170,Taree Region,Taree - Gloucester,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-108051170,Taree Region,Taree - Gloucester,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021046,Budgewoi - Buff Point - Halekulani,Wyong,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Up,Flat,Down,Down,Up,Up,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-108051168,Old Bar - Manning Point - Red Head,Taree - Gloucester,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011038,Saratoga - Davistown,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-108051171,Wingham,Taree - Gloucester,15240,Mid-Coast,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-121031410,St Ives,Ku-ring-gai,14500,Ku-ring-gai,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011042,Woy Woy - Blackwall,,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-120021389,Lilyfield - Rozelle,Leichhardt,14170,Inner West,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-118021570,Randwick - South,Eastern Suburbs - South,16550,Randwick,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-115021298,Galston - Laughtondale,Dural - Wisemans Ferry,14000,Hornsby,Flat,Flat,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-117021328,Sydenham - Tempe - St Peters,Marrickville - Sydenham - Petersham,14170,Inner West,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-111031227,Mayfield - Warabrook,Newcastle,15900,Newcastle,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-121031412,Wahroonga (East) - Warrawee,Ku-ring-gai,14500,Ku-ring-gai,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-118021567,Maroubra - South,Eastern Suburbs - South,16550,Randwick,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-121021404,Berowra - Brooklyn - Cowan,Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102021046,Budgewoi - Buff Point - Halekulani,Wyong,11650,Central Coast (NSW),Up,Up,Up,Down,Down,Up,Up,Up,Down,Up,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+108051168,Old Bar - Manning Point - Red Head,Taree - Gloucester,15240,Mid-Coast,Down,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+108051171,Wingham,Taree - Gloucester,15240,Mid-Coast,Down,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+121031410,St Ives,Ku-ring-gai,14500,Ku-ring-gai,Up,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+120021389,Lilyfield - Rozelle,Leichhardt,14170,Inner West,Up,Down,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+118021570,Randwick - South,Eastern Suburbs - South,16550,Randwick,Down,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+115021298,Galston - Laughtondale,Dural - Wisemans Ferry,14000,Hornsby,Flat,Flat,Flat,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+117021328,Sydenham - Tempe - St Peters,Marrickville - Sydenham - Petersham,14170,Inner West,Up,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+111031227,Mayfield - Warabrook,Newcastle,15900,Newcastle,Down,Up,Up,Down,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+121031412,Wahroonga (East) - Warrawee,Ku-ring-gai,14500,Ku-ring-gai,Up,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+118021567,Maroubra - South,Eastern Suburbs - South,16550,Randwick,Down,Down,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+121021404,Berowra - Brooklyn - Cowan,Hornsby,14000,Hornsby,Flat,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 104021089,Sawtell - Boambee,Coffs Harbour,11800,Coffs Harbour,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 117031640,Newtown (NSW),Sydney Inner City,14170,Inner West,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102021055,Tuggerah - Kangy Angy,Wyong,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Down,Flat,Up,Up,Flat,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-117031333,Potts Point - Woolloomooloo,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-115021297,Dural - Kenthurst - Wisemans Ferry,Dural - Wisemans Ferry,17420,The Hills,Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102021055,Tuggerah - Kangy Angy,Wyong,11650,Central Coast (NSW),Up,Up,Up,Up,Down,Up,Flat,Up,Up,Flat,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+117031333,Potts Point - Woolloomooloo,Sydney Inner City,17200,Sydney,Up,Down,Down,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+115021297,Dural - Kenthurst - Wisemans Ferry,Dural - Wisemans Ferry,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Up,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 115021297,Dural - Kenthurst - Wisemans Ferry,Dural - Wisemans Ferry,17420,The Hills,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
 117031643,Rosebery - Beaconsfield,Sydney Inner City,17200,Sydney,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat,Flat
-102011037,Point Clare - Koolewong,Gosford,11650,Central Coast (NSW),Flat,Flat,Flat,Flat,Down,Flat,Flat,Flat,Up,Down,Up,Down,Flat,Flat,Flat,Flat,Flat,Flat,Flat
+102011037,Point Clare - Koolewong,Gosford,11650,Central Coast (NSW),Up,Up,Up,Up,Flat,Up,Up,Down,Down,Down,Down,Up,Flat,Flat,Flat,Flat,Flat,Flat,Flat
