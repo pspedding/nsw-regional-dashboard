@@ -1931,14 +1931,18 @@ function renderScatter() {
 }
 
 // ── URL PARAMS ─────────────────────────────────────────────────────────
+const VALID_VIEWS = ['map', 'scatter', 'indicators', 'intelligence'];
 function applyUrlParams() {
-  if (!LOCKED_LGA_CODE) return;
-  if (![...lgaSel.options].some(o => o.value === LOCKED_LGA_CODE)) return;
-  lgaSel.value = LOCKED_LGA_CODE;
-  if (lgaSection) lgaSection.style.display = 'none';
-  lgaSel.dispatchEvent(new Event('change'));
-  setTimeout(() => zoomToLga(LOCKED_LGA_CODE), 50);
-  setTimeout(() => zoomToLga(LOCKED_LGA_CODE), 300);
+  if (LOCKED_LGA_CODE) {
+    if (![...lgaSel.options].some(o => o.value === LOCKED_LGA_CODE)) return;
+    lgaSel.value = LOCKED_LGA_CODE;
+    if (lgaSection) lgaSection.style.display = 'none';
+    lgaSel.dispatchEvent(new Event('change'));
+    setTimeout(() => zoomToLga(LOCKED_LGA_CODE), 50);
+    setTimeout(() => zoomToLga(LOCKED_LGA_CODE), 300);
+  }
+  const tabParam = (PAGE_PARAMS.get('tab') || '').toLowerCase();
+  if (VALID_VIEWS.includes(tabParam)) showView(tabParam);
 }
 
 // ── ANALYTICS ──────────────────────────────────────────────────────────
